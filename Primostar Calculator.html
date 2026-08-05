@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primostar Calculator</title>
+    
+    <!-- Tailwind and Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: { preflight: false } // Fixes alignment issues
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header-section h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin: 0;
+        }
+
+        .header-section p {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-top: 5px;
+        }
+
+        /* SCOPED CSS - Only affects the calculator */
+        #ps-calculator-wrapper {
+            all: initial; 
+            font-family: 'Inter', sans-serif; 
+            display: block; 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            line-height: 1.5; 
+            color: #1f2937;
+        }
+        #ps-calculator-wrapper * { box-sizing: border-box; }
+        
+        /* THE FIX: Widening the level/hour boxes so they aren't squished */
+        #ps-calculator-wrapper .manual-level-input { 
+            background-color: #fff7ed !important; 
+            border: 1px solid #fed7aa !important; 
+            width: 85px !important; 
+            text-align: center !important;
+            padding: 6px !important;
+            display: inline-block !important;
+        }
+
+        /* Ensuring browser arrows (spinners) are visible */
+        #ps-calculator-wrapper input[type=number] {
+            appearance: auto !important;
+            -moz-appearance: number-input !important;
+            -webkit-appearance: number-input !important;
+        }
+
+        #ps-calculator-wrapper .card { background: #ffffff; border-radius: 12px; padding: 16px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-top: 4px solid #6366f1; margin-bottom: 20px; }
+        #ps-calculator-wrapper .card-green { border-top-color: #10b981; }
+        #ps-calculator-wrapper .card-orange { border-top-color: #f97316; }
+        #ps-calculator-wrapper .card-blue { border-top-color: #3b82f6; }
+        #ps-calculator-wrapper label { display: block; font-size: 0.7rem; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.025em; margin-bottom: 2px; margin-top: 8px; }
+        #ps-calculator-wrapper input[type=number] { width: 100%; border: 1px solid #d1d5db; border-radius: 4px; padding: 6px 10px; background-color: #f9fafb; font-weight: 500; color: #111827; font-size: 0.85rem; height: auto; }
+        #ps-calculator-wrapper input:focus { border-color: #6366f1; outline: none; background-color: #ffffff; }
+        #ps-calculator-wrapper .projection-box { background-color: #f0fdf4; border: 1px solid #dcfce7; border-radius: 8px; padding: 12px; margin-top: 15px; text-align: center; }
+        #ps-calculator-wrapper .results-section { background-color: #0f172a; color: white; border-radius: 16px; padding: 24px; margin-top: 32px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
+        
+        #ps-calculator-wrapper .val-large { font-weight: 800; line-height: 1.2; }
+        #ps-calculator-wrapper .val-primo { font-size: 1.75rem; color: #fbce1b; } 
+        #ps-calculator-wrapper .val-gear { font-size: 1.35rem; color: #ffffff; }
+        #ps-calculator-wrapper .val-hammer { font-size: 1.75rem; color: #f97316; }
+        
+        #ps-calculator-wrapper .adj-btn { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; background: #334155; border-radius: 3px; cursor: pointer; font-weight: bold; font-size: 12px; transition: background 0.2s; color: white !important; text-decoration: none; border:none; }
+        #ps-calculator-wrapper .adj-btn:hover { background: #475569; }
+        #ps-calculator-wrapper .adj-container { display: flex; align-items: center; gap: 4px; margin-left: 6px; }
+        #ps-calculator-wrapper .adj-container-hidden { visibility: hidden; pointer-events: none; }
+        #ps-calculator-wrapper input[type="checkbox"] { appearance: checkbox !important; -webkit-appearance: checkbox !important; width: 14px; height: 14px; display: inline-block; vertical-align: middle; }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <h1>Primostar Calculator</h1>
+        <p>written by Avalon (Blessed Divider)</p>
+    </div>
+
+    <div id="ps-calculator-wrapper">
+        <div class="max-w-5xl mx-auto py-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" style="display: grid;">
+                <!-- SEASON INFO -->
+                <div class="card">
+                    <h2 class="text-base font-bold text-slate-800 border-b pb-1 mb-2" style="margin-top:0">Season Info</h2>
+                    <label>Target Primo Stars</label>
+                    <input type="number" id="target_primostars" value="100">
+                    <label>Time Remaining</label>
+                    <div class="flex gap-3" style="display:flex">
+                        <div class="flex-1" style="flex:1"><span class="text-[9px] text-gray-400 uppercase font-bold">Days</span><input type="number" id="rem_days"></div>
+                        <div class="flex-1" style="flex:1"><span class="text-[9px] text-gray-400 uppercase font-bold">Hours</span><input type="number" id="rem_hours"></div>
+                    </div>
+                    <div class="mt-4 space-y-2 p-3 bg-gray-50 rounded-lg border border-gray-100" style="margin-top:1rem">
+                        <label class="flex items-center gap-2 cursor-pointer mt-0 font-medium normal-case text-gray-700 text-xs" style="display:flex; align-items:center">
+                            <input type="checkbox" id="use_stamina" checked="" style="margin-right:8px"> Spend Stamina on Raw Ore
+                        </label>
+                        <div>
+                            <label class="flex items-center gap-2 cursor-pointer mt-0 font-medium normal-case text-gray-700 text-xs" style="display:flex; align-items:center">
+                                <input type="checkbox" id="skip_skills" checked="" onchange="toggleInputs()" style="margin-right:8px"> Max Skills (Season Cap)
+                            </label>
+                            <div id="manual_skill_box" style="display:none; padding-left:1.5rem">
+                                <span class="text-[9px] text-orange-600 font-bold uppercase">Current Lv</span>
+                                <input type="number" id="input_skill_lv" value="100" class="manual-level-input">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="flex items-center gap-2 cursor-pointer mt-0 font-medium normal-case text-gray-700 text-xs" style="display:flex; align-items:center">
+                                <input type="checkbox" id="skip_fantomon" checked="" onchange="toggleInputs()" style="margin-right:8px"> Max Fantomon (Season Cap)
+                            </label>
+                            <div id="manual_fanto_box" style="display:none; padding-left:1.5rem">
+                                <span class="text-[9px] text-orange-600 font-bold uppercase">Current Lv</span>
+                                <input type="number" id="input_fanto_lv" value="100" class="manual-level-input">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="flex items-center gap-2 cursor-pointer mt-0 font-medium normal-case text-gray-700 text-xs" style="display:flex; align-items:center">
+                                <input type="checkbox" id="skip_relics" checked="" onchange="toggleInputs()" style="margin-right:8px"> Max Relics (Season Cap)
+                            </label>
+                            <div id="manual_relic_box" style="display:none; padding-left:1.5rem">
+                                <span class="text-[9px] text-orange-600 font-bold uppercase">Current Lv</span>
+                                <input type="number" id="input_relic_lv" value="10" class="manual-level-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CHARACTER -->
+                <div class="card card-green">
+                    <h2 class="text-base font-bold text-emerald-800 border-b pb-1 mb-2" style="margin-top:0">Character</h2>
+                    <label>Current Character Level</label>
+                    <input type="number" id="char_lv" value="100" oninput="resetManualFlags()">
+                    <label>Current Character EXP</label>
+                    <input type="number" id="char_exp" value="0">
+                    <label>Hourly EXP (Bed)</label>
+                    <input type="number" id="hourly_exp" value="50000">
+
+                    <div class="mt-4 border-t pt-2 flex items-center flex-wrap gap-2" style="display:flex; align-items:center; border-top: 1px solid #eee; margin-top:10px; padding-top:10px">
+                        <label class="flex items-center gap-2 cursor-pointer mt-0 font-medium normal-case text-gray-700 text-xs" style="display:flex; align-items:center">
+                            <input type="checkbox" id="save_exp_check" onchange="toggleInputs()" style="margin-right:8px"> save EXP for next Season
+                        </label>
+                        <div id="save_exp_box" style="display:none; align-items:center; gap:6px">
+                            <span class="adj-btn" onclick="adjSaveExp(-1)">-</span>
+                            <input type="number" id="save_exp_hours" value="36" min="0" max="36" class="manual-level-input">
+                            <span class="adj-btn" onclick="adjSaveExp(1)">+</span>
+                            <span class="text-[10px] text-gray-500 font-bold uppercase">hours</span>
+                        </div>
+                    </div>
+                    
+                    <div class="projection-box">
+                        <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-wider">End-of-Season Projection:</span>
+                        <div id="eos_char_lv" class="text-xl font-black text-emerald-700 mt-1">Lv 100 (0%)</div>
+                    </div>
+                </div>
+
+                <!-- EQUIPMENT -->
+                <div class="card card-orange">
+                    <h2 class="text-base font-bold text-orange-800 border-b pb-1 mb-2" style="margin-top:0">Equipment Levels</h2>
+                    <div class="grid grid-cols-2 gap-x-3 gap-y-0" style="display:grid; grid-template-columns: 1fr 1fr; gap: 0 10px">
+                        <div><label>Weapon</label><input type="number" id="eq_1" value="100" oninput="resetGearFlag()"></div>
+                        <div><label>Sub-Weapon</label><input type="number" id="eq_2" value="100" oninput="resetGearFlag()"></div>
+                        <div><label>Helmet</label><input type="number" id="eq_3" value="100" oninput="resetGearFlag()"></div>
+                        <div><label>Armor</label><input type="number" id="eq_4" value="100" oninput="resetGearFlag()"></div>
+                        <div class="col-span-2" style="grid-column: span 2"><label>Boots</label><input type="number" id="eq_5" value="100" oninput="resetGearFlag()"></div>
+                    </div>
+                </div>
+
+                <!-- CART / RESOURCES -->
+                <div class="card card-blue">
+                    <h2 class="text-base font-bold text-blue-800 border-b pb-1 mb-2" style="margin-top:0">Cart &amp; Saved Resources</h2>
+                    <div class="grid grid-cols-2 gap-4" style="display:grid; grid-template-columns: 1fr 1fr; gap:16px">
+                        <div class="space-y-3">
+                            <span class="text-[9px] font-bold text-gray-400 uppercase border-b block pb-0.5" style="display:block; border-bottom:1px solid #eee">Hourly Cart</span>
+                            <div><label class="mt-0">Raw Ore</label><input type="number" id="cart_ore" value="1000"></div>
+                            <div><label>Essence</label><input type="number" id="cart_essence" value="100"></div>
+                            <div><label>Chrono Sand</label><input type="number" id="cart_sand" value="500"></div>
+                            <div><label>Treats</label><input type="number" id="cart_treats" value="10"></div>
+                        </div>
+                        <div class="space-y-3">
+                            <span class="text-[9px] font-bold text-gray-400 uppercase border-b block pb-0.5" style="display:block; border-bottom:1px solid #eee">Saved</span>
+                            <div><label class="mt-0">Raw Ore</label><input type="number" id="saved_ore" value="0"></div>
+                            <div><label>Essence</label><input type="number" id="saved_essence" value="0"></div>
+                            <div><label>Chrono Sand</label><input type="number" id="saved_sand" value="0"></div>
+                            <div><label>Treats</label><input type="number" id="saved_treats" value="0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESULTS SECTION -->
+            <div class="results-section">
+                <h2 class="text-xl font-bold text-yellow-400 mb-6 border-b border-slate-700 pb-3 tracking-tight" style="margin-top:0">End-of-Season Calculation Results</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10" style="display:grid; gap:40px">
+                    <div class="space-y-3">
+                        <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3" style="margin:0">Projected Score Limit</h3>
+                        <div class="flex justify-between items-center text-sm" style="display:flex; justify-content:space-between; align-items:center"><span class="text-slate-300">Char Level Score</span><span id="res_char_score" class="font-bold text-white">0</span></div>
+                        
+                        <div class="flex justify-between items-center border-t border-slate-800 pt-1 text-sm" style="display:flex; justify-content:space-between; border-top:1px solid #1e293b; padding-top:4px">
+                            <div class="flex items-center" style="display:flex; align-items:center"><span class="text-slate-300">Skill Score (Lv <span id="label_skill_lv"></span>)</span><div id="adj_skill" class="adj-container"><span class="adj-btn" onclick="adj('skill', -1)">-</span><span class="adj-btn" onclick="adj('skill', 1)">+</span></div></div>
+                            <span id="res_skill_score" class="font-bold text-white">0</span>
+                        </div>
+                        <div id="missing_essence_div" class="pl-4 space-y-1 text-[11px]" style="padding-left:1rem"><div class="flex justify-between text-rose-400 italic" style="display:flex; justify-content:space-between"><span>Missing Essence:</span><span id="res_miss_essence">0</span></div><div class="flex justify-between text-yellow-500 font-bold uppercase" style="display:flex; justify-content:space-between"><span>Knuckles Needed:</span><span id="res_knuckles">0</span></div></div>
+                        
+                        <div class="flex justify-between items-center border-t border-slate-800 pt-1 text-sm" style="display:flex; justify-content:space-between; border-top:1px solid #1e293b; padding-top:4px">
+                            <div class="flex items-center" style="display:flex; align-items:center"><span class="text-slate-300">Fantomon Score (Lv <span id="label_fanto_lv"></span>)</span><div id="adj_fanto" class="adj-container"><span class="adj-btn" onclick="adj('fanto', -1)">-</span><span class="adj-btn" onclick="adj('fanto', 1)">+</span></div></div>
+                            <span id="res_fanto_score" class="font-bold text-white">0</span>
+                        </div>
+                        <div id="missing_treats_div" class="pl-4 text-[11px]" style="padding-left:1rem"><div class="flex justify-between text-yellow-500 font-bold uppercase" style="display:flex; justify-content:space-between"><span>Treats Needed (Items):</span><span id="res_miss_treats">0</span></div></div>
+                        
+                        <div class="flex justify-between items-center border-t border-slate-800 pt-1 text-sm" style="display:flex; justify-content:space-between; border-top:1px solid #1e293b; padding-top:4px">
+                            <div class="flex items-center" style="display:flex; align-items:center"><span class="text-slate-300">Relic Score (Lv <span id="label_relic_lv"></span>)</span><div id="adj_relic" class="adj-container"><span class="adj-btn" onclick="adj('relic', -1)">-</span><span class="adj-btn" onclick="adj('relic', 1)">+</span></div></div>
+                            <span id="res_relic_score" class="font-bold text-emerald-400">0</span>
+                        </div>
+                        <div id="missing_sand_div" class="pl-4 space-y-1 text-[11px]" style="padding-left:1rem"><div class="flex justify-between text-rose-400 italic" style="display:flex; justify-content:space-between"><span>Missing Sand:</span><span id="res_miss_sand">0</span></div><div class="flex justify-between text-yellow-500 font-bold uppercase" style="display:flex; justify-content:space-between"><span>Shovels Needed:</span><span id="res_shovels">0</span></div></div>
+                        
+                        <div class="flex justify-between items-center border-t border-slate-800 pt-1 text-sm" style="display:flex; justify-content:space-between; border-top:1px solid #1e293b; padding-top:4px">
+                            <div class="flex items-center" style="display:flex; align-items:center"><span class="text-slate-300">Equipment Score (Lv <span id="label_gear_lv"></span>)</span><div class="adj-container"><span class="adj-btn" onclick="adj('gear', -1)">-</span><span class="adj-btn" onclick="adj('gear', 1)">+</span></div></div>
+                            <span id="res_cur_eq_score" class="font-bold text-white">0</span>
+                        </div>
+                        <div id="missing_gear_ore_div" class="pl-4 space-y-1 text-[11px] hidden" style="padding-left:1rem"><div class="flex justify-between text-rose-400 italic" style="display:flex; justify-content:space-between"><span>Missing Ore:</span><span id="res_miss_ore_gear">0</span></div><div class="flex justify-between text-yellow-500 font-bold uppercase" style="display:flex; justify-content:space-between"><span>Hammers Needed:</span><span id="res_hammers_gear">0</span></div></div>
+                        
+                        <div class="pt-4 border-t-2 border-slate-700" style="margin-top:1.5rem; border-top:2px solid #334155; padding-top:1rem">
+                            <div class="flex justify-between items-center mb-3" style="display:flex; justify-content:space-between"><span class="text-[10px] font-bold text-slate-300 uppercase">Total Score:</span><span id="res_total_score" class="text-lg font-black text-white">0</span></div>
+                            <div class="bg-slate-800/50 p-3 rounded-xl flex justify-between items-center border border-slate-700" style="display:flex; justify-content:space-between; background:rgba(30,41,59,0.5); padding:12px; border-radius:12px">
+                                <span class="text-xs font-bold text-yellow-400 uppercase tracking-widest">Projected Primostars:</span>
+                                <span id="res_total_primo" class="val-large val-primo">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3" style="margin:0">Required for Target</h3>
+                        <div class="flex justify-between items-center text-sm" style="display:flex; justify-content:space-between"><span class="text-slate-300">Points Needed from Gear:</span><span id="req_score" class="font-bold text-white">0</span></div>
+                        <div class="bg-indigo-950/40 p-3.5 rounded-xl flex justify-between items-center border border-indigo-500/30" style="display:flex; justify-content:space-between; background:rgba(30,27,75,0.4); border:1px solid rgba(99,102,241,0.3); padding:14px; border-radius:12px">
+                            <span class="text-[10px] font-bold text-white uppercase tracking-wider">Avg Gear Lv Required:</span>
+                            <span id="req_gear_lv" class="val-large val-gear">Lv 100</span>
+                        </div>
+                        <div class="pt-4 space-y-2 text-[10px] font-bold text-slate-400 uppercase border-t border-slate-800" style="margin-top:1rem; border-top:1px solid #1e293b; padding-top:1rem">
+                            <div class="flex justify-between" style="display:flex; justify-content:space-between"><span>Raw Ore Req:</span><span id="req_ore_total" class="text-white">0</span></div>
+                            <div class="flex justify-between" style="display:flex; justify-content:space-between"><span>Ore from Cart:</span><span id="ore_cart" class="text-white">0</span></div>
+                            <div class="flex justify-between" style="display:flex; justify-content:space-between"><span>Ore from Stamina:</span><span id="ore_stamina" class="text-white">0</span></div>
+                            <div class="flex justify-between pt-2 border-t border-slate-800 text-slate-200 font-black" style="display:flex; justify-content:space-between; border-top:1px solid #1e293b; padding-top:8px"><span>Total Available:</span><span id="ore_projected">0</span></div>
+                            <div class="flex justify-between text-rose-500 font-black" style="display:flex; justify-content:space-between"><span>Missing Raw Ore:</span><span id="ore_missing">0</span></div>
+                        </div>
+                        <div class="bg-orange-950/30 p-4 rounded-xl border border-orange-500/20 flex justify-between items-center mt-4" style="display:flex; justify-content:space-between; background:rgba(67,20,7,0.3); border:1px solid rgba(249,115,22,0.2); padding:16px; border-radius:12px">
+                            <span class="text-[10px] font-black text-orange-400 uppercase italic tracking-tight">Iron Hammers Needed</span>
+                            <span id="hammers_needed" class="val-large val-hammer">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        const CONFIG = {
+            endDate: new Date('2026-07-10T13:00:00Z'), 
+            lvThresh: 100, relicThresh: 10, fixedPrimo: 10,
+            pts: { char: 100, gear: 38, skill: 13, fanto: 14, relic: 57 },
+            slots: { skill: 8, fanto: 4, relic: 20, gear: 5 },
+            items: { hammer: 610, shovel: 568, knuckles: 1000, treatExp: 50 },
+            staminaYield: 900,
+            charExpTable: {
+                100: 886086, 101: 888547, 102: 926501, 103: 964086, 104: 1012164,
+                105: 1054111, 106: 1096529, 107: 1135645, 108: 1174997, 109: 1214584,
+                110: 1258533, 111: 1303677, 112: 1348574, 113: 1393941, 114: 1439780,
+                115: 1486091, 116: 1532872, 117: 1580125, 118: 1627849, 119: 1676044,
+                120: 1730017, 121: 1783360, 122: 1833196, max: 1833196
+            },
+            oreTable: { 100: 9280, 101: 9375, 102: 9465, 103: 9560, 104: 9650, 105: 9745, 106: 9835, 107: 9930, 108: 10025, 109: 10115 }
+        };
+
+        let manualTargets = { skill: null, fanto: null, relic: null, gear: null };
+        let overrideFlags = { gear: false, skill: false, fanto: false, relic: false };
+
+        window.resetGearFlag = function() { overrideFlags.gear = false; calculate(); }
+        window.resetManualFlags = function() { overrideFlags.skill = false; overrideFlags.fanto = false; overrideFlags.relic = false; calculate(); }
+
+        window.adj = function(type, delta) {
+            overrideFlags[type] = true;
+            manualTargets[type] += delta;
+            if (manualTargets[type] < 0) manualTargets[type] = 0;
+            calculate();
+        }
+
+        window.adjSaveExp = function(delta) {
+            const el = document.getElementById('save_exp_hours');
+            let val = parseInt(el.value) + delta;
+            if (val < 0) val = 0;
+            if (val > 36) val = 36;
+            el.value = val;
+            calculate();
+        }
+
+        function saveInputs() {
+            const data = { inputs: {}, manualTargets: manualTargets, overrideFlags: overrideFlags };
+            document.querySelectorAll('#ps-calculator-wrapper input').forEach(el => {
+                if (el.id === 'rem_days' || el.id === 'rem_hours') return;
+                data.inputs[el.id] = el.type === 'checkbox' ? el.checked : el.value;
+            });
+            localStorage.setItem('sword_staff_save_v2', JSON.stringify(data));
+        }
+
+        function loadInputs() {
+            const raw = localStorage.getItem('sword_staff_save_v2');
+            if (!raw) return;
+            const data = JSON.parse(raw);
+            if (data.inputs) {
+                Object.keys(data.inputs).forEach(id => {
+                    const el = document.getElementById(id);
+                    if (!el) return;
+                    if (el.type === 'checkbox') el.checked = data.inputs[id];
+                    else el.value = data.inputs[id];
+                });
+            }
+            if (data.manualTargets) manualTargets = data.manualTargets;
+            if (data.overrideFlags) overrideFlags = data.overrideFlags;
+        }
+
+        window.toggleInputs = function() {
+            const skipSkill = document.getElementById('skip_skills').checked;
+            const skipFanto = document.getElementById('skip_fantomon').checked;
+            const skipRelic = document.getElementById('skip_relics').checked;
+            const saveExp = document.getElementById('save_exp_check').checked;
+            document.getElementById('manual_skill_box').style.display = skipSkill ? 'none' : 'block';
+            document.getElementById('manual_fanto_box').style.display = skipFanto ? 'none' : 'block';
+            document.getElementById('manual_relic_box').style.display = skipRelic ? 'none' : 'block';
+            document.getElementById('save_exp_box').style.display = saveExp ? 'flex' : 'none';
+            document.getElementById('adj_skill').classList.toggle('adj-container-hidden', skipSkill);
+            document.getElementById('adj_fanto').classList.toggle('adj-container-hidden', skipFanto);
+            document.getElementById('adj_relic').classList.toggle('adj-container-hidden', skipRelic);
+            calculate();
+        }
+
+        function calculate() {
+            document.querySelectorAll('#ps-calculator-wrapper input[type=number]').forEach(input => { if (parseFloat(input.value) < 0) input.value = 0; });
+            const hDays = parseFloat(document.getElementById('rem_days').value) || 0;
+            const hHours = parseFloat(document.getElementById('rem_hours').value) || 0;
+            const bonusHours = Math.floor(hDays) * 2;
+            const baseProductionHours = (hDays * 24) + hHours + bonusHours;
+            let charProductionHours = baseProductionHours;
+            if (document.getElementById('save_exp_check').checked) charProductionHours = Math.max(0, charProductionHours - (parseInt(document.getElementById('save_exp_hours').value) || 0));
+
+            let curCharLv = parseInt(document.getElementById('char_lv').value) || 0;
+            let curCharExp = parseInt(document.getElementById('char_exp').value) || 0;
+            let totalExpPool = (charProductionHours * (parseInt(document.getElementById('hourly_exp').value) || 0)) + curCharExp;
+            let eosCharLv = curCharLv;
+            while(true) {
+                let req = CONFIG.charExpTable[eosCharLv] || CONFIG.charExpTable.max;
+                if (totalExpPool >= req) { totalExpPool -= req; eosCharLv++; } else { break; }
+            }
+            const charFrac = totalExpPool / (CONFIG.charExpTable[eosCharLv] || CONFIG.charExpTable.max);
+            const charScore = (eosCharLv - CONFIG.lvThresh + charFrac) * CONFIG.pts.char;
+            document.getElementById('eos_char_lv').innerText = `Lv ${eosCharLv} (${Math.floor(charFrac*100)}%)`;
+            document.getElementById('res_char_score').innerText = Math.floor(charScore).toLocaleString();
+
+            const capSkill = eosCharLv;
+            const capFanto = Math.floor(eosCharLv / 10) * 10 + 10;
+            const capRelic = capFanto / 10;
+            if (document.getElementById('skip_skills').checked || !overrideFlags.skill) manualTargets.skill = capSkill;
+            if (document.getElementById('skip_fantomon').checked || !overrideFlags.fanto) manualTargets.fanto = capFanto;
+            if (document.getElementById('skip_relics').checked || !overrideFlags.relic) manualTargets.relic = capRelic;
+
+            const gearLvs = [parseInt(document.getElementById('eq_1').value)||100, parseInt(document.getElementById('eq_2').value)||100, parseInt(document.getElementById('eq_3').value)||100, parseInt(document.getElementById('eq_4').value)||100, parseInt(document.getElementById('eq_5').value)||100];
+            if (!overrideFlags.gear) manualTargets.gear = Math.ceil(gearLvs.reduce((a,b)=>a+b, 0) / 5);
+
+            const skillScoreVal = Math.max(0, manualTargets.skill - CONFIG.lvThresh) * CONFIG.slots.skill * CONFIG.pts.skill;
+            let essNeeded = 0;
+            const userSkillCur = parseInt(document.getElementById('input_skill_lv').value) || 100;
+            for(let i=userSkillCur; i < manualTargets.skill; i++) essNeeded += (6025 + (i - CONFIG.lvThresh) * 60) * CONFIG.slots.skill;
+            const essGen = (baseProductionHours * (parseFloat(document.getElementById('cart_essence').value) || 0)) + (parseInt(document.getElementById('saved_essence').value) || 0);
+
+            const fantoScoreVal = Math.max(0, manualTargets.fanto - CONFIG.lvThresh) * CONFIG.slots.fanto * CONFIG.pts.fanto;
+            let fantoExpNeeded = 0;
+            const userFantoCur = parseInt(document.getElementById('input_fanto_lv').value) || 100;
+            for(let i=userFantoCur; i < manualTargets.fanto; i++) fantoExpNeeded += (26300 + (i - CONFIG.lvThresh) * 500) * CONFIG.slots.fanto;
+            const treatExpGen = (baseProductionHours * (parseFloat(document.getElementById('cart_treats').value) || 0) + (parseInt(document.getElementById('saved_treats').value) || 0)) * CONFIG.items.treatExp;
+
+            const relicScoreVal = Math.max(0, manualTargets.relic - CONFIG.relicThresh) * CONFIG.slots.relic * CONFIG.pts.relic;
+            let sandNeeded = 0;
+            const userRelicCur = parseInt(document.getElementById('input_relic_lv').value) || 10;
+            for(let i=userRelicCur; i < manualTargets.relic; i++) sandNeeded += (16000 + (i - CONFIG.relicThresh) * 1600) * CONFIG.slots.relic;
+            const sandGen = (baseProductionHours * (parseFloat(document.getElementById('cart_sand').value) || 0)) + (parseInt(document.getElementById('saved_sand').value) || 0);
+
+            const gearScoreVal = Math.max(0, manualTargets.gear - CONFIG.lvThresh) * CONFIG.slots.gear * CONFIG.pts.gear;
+            let gearOreNeeded = 0;
+            for (let cur of gearLvs) { for (let l = cur; l < manualTargets.gear; l++) gearOreNeeded += (l < 110) ? (CONFIG.oreTable[l] || (310 + 90 * l)) : (310 + 90 * l); }
+            const availOreForCalc = (baseProductionHours * (parseFloat(document.getElementById('cart_ore').value) || 0)) + (document.getElementById('use_stamina').checked ? (baseProductionHours * CONFIG.staminaYield) : 0) + (parseInt(document.getElementById('saved_ore').value) || 0);
+            
+            const totalScore = charScore + skillScoreVal + fantoScoreVal + relicScoreVal + gearScoreVal;
+            document.getElementById('res_total_score').innerText = Math.floor(totalScore).toLocaleString();
+            document.getElementById('res_total_primo').innerText = Math.floor(totalScore / 100) + CONFIG.fixedPrimo;
+
+            document.getElementById('label_skill_lv').innerText = manualTargets.skill;
+            document.getElementById('label_fanto_lv').innerText = manualTargets.fanto;
+            document.getElementById('label_relic_lv').innerText = manualTargets.relic;
+            document.getElementById('label_gear_lv').innerText = manualTargets.gear;
+            document.getElementById('res_skill_score').innerText = Math.floor(skillScoreVal).toLocaleString();
+            document.getElementById('res_fanto_score').innerText = Math.floor(fantoScoreVal).toLocaleString();
+            document.getElementById('res_relic_score').innerText = Math.floor(relicScoreVal).toLocaleString();
+            document.getElementById('res_cur_eq_score').innerText = Math.floor(gearScoreVal).toLocaleString();
+            document.getElementById('res_miss_essence').innerText = Math.floor(Math.max(0, essNeeded - essGen)).toLocaleString();
+            document.getElementById('res_knuckles').innerText = Math.ceil(Math.max(0, essNeeded - essGen) / CONFIG.items.knuckles).toLocaleString();
+            document.getElementById('res_miss_treats').innerText = Math.ceil(Math.max(0, fantoExpNeeded - treatExpGen) / CONFIG.items.treatExp).toLocaleString();
+            document.getElementById('res_miss_sand').innerText = Math.floor(Math.max(0, sandNeeded - sandGen)).toLocaleString();
+            document.getElementById('res_shovels').innerText = Math.ceil(Math.max(0, sandNeeded - sandGen) / CONFIG.items.shovel).toLocaleString();
+            document.getElementById('res_miss_ore_gear').innerText = Math.floor(Math.max(0, gearOreNeeded - availOreForCalc)).toLocaleString();
+            document.getElementById('res_hammers_gear').innerText = Math.ceil(Math.max(0, gearOreNeeded - availOreForCalc) / CONFIG.items.hammer).toLocaleString();
+
+            const targetPrimo = parseInt(document.getElementById('target_primostars').value) || 0;
+            const pointsFromGearNeeded = Math.max(0, ((targetPrimo - CONFIG.fixedPrimo) * 100) - (charScore + skillScoreVal + fantoScoreVal + relicScoreVal));
+            const finalReqGearLv = Math.ceil(CONFIG.lvThresh + ((pointsFromGearNeeded / CONFIG.pts.gear) / CONFIG.slots.gear));
+            let targetOreReq = 0;
+            for (let cur of gearLvs) { for (let l = cur; l < finalReqGearLv; l++) targetOreReq += (l < 110) ? (CONFIG.oreTable[l] || (310 + 90 * l)) : (310 + 90 * l); }
+
+            document.getElementById('req_score').innerText = Math.floor(pointsFromGearNeeded).toLocaleString();
+            document.getElementById('req_gear_lv').innerText = `Lv ${finalReqGearLv}`;
+            document.getElementById('req_ore_total').innerText = Math.floor(targetOreReq).toLocaleString();
+            document.getElementById('ore_cart').innerText = Math.floor(baseProductionHours * (parseFloat(document.getElementById('cart_ore').value) || 0)).toLocaleString();
+            document.getElementById('ore_stamina').innerText = Math.floor(document.getElementById('use_stamina').checked ? (baseProductionHours * CONFIG.staminaYield) : 0).toLocaleString();
+            document.getElementById('ore_projected').innerText = Math.floor(availOreForCalc).toLocaleString();
+            document.getElementById('ore_missing').innerText = Math.floor(Math.max(0, targetOreReq - availOreForCalc)).toLocaleString();
+            document.getElementById('hammers_needed').innerText = Math.ceil(Math.max(0, targetOreReq - availOreForCalc) / CONFIG.items.hammer).toLocaleString();
+
+            document.getElementById('missing_essence_div').style.display = (essNeeded - essGen) <= 0 ? 'none' : 'block';
+            document.getElementById('missing_treats_div').style.display = (fantoExpNeeded - treatExpGen) <= 0 ? 'none' : 'block';
+            document.getElementById('missing_sand_div').style.display = (sandNeeded - sandGen) <= 0 ? 'none' : 'block';
+            document.getElementById('missing_gear_ore_div').style.display = (gearOreNeeded - availOreForCalc) <= 0 ? 'none' : 'block';
+            saveInputs();
+        }
+
+        document.querySelectorAll('#ps-calculator-wrapper input').forEach(input => input.addEventListener('input', calculate));
+        const diff = CONFIG.endDate - new Date();
+        const initialHours = diff <= 0 ? 0 : diff / (1000 * 60 * 60);
+        document.getElementById('rem_days').value = Math.max(0, Math.floor(initialHours / 24));
+        document.getElementById('rem_hours').value = Math.max(0, Math.floor(initialHours % 24));
+        loadInputs(); calculate(); toggleInputs();
+    })();
+    </script>
+</body>
+</html>
