@@ -421,7 +421,7 @@
             
             const totalScore = charScore + skillScoreVal + fantoScoreVal + relicScoreVal + gearScoreVal;
             document.getElementById('res_total_score').innerText = Math.floor(totalScore).toLocaleString();
-            document.getElementById('res_total_primo').innerText = Math.floor(totalScore / CONFIG.rate) + CONFIG.fixedPrimo + document.getElementById('past_primostars').value;
+            document.getElementById('res_total_primo').innerText = Math.floor(totalScore / CONFIG.rate) + CONFIG.fixedPrimo + Number(document.getElementById('past_primostars').value);
 
             document.getElementById('label_skill_lv').innerText = manualTargets.skill;
             document.getElementById('label_fanto_lv').innerText = manualTargets.fanto;
