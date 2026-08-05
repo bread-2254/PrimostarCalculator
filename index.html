@@ -401,19 +401,22 @@
 
             const skillScoreVal = Math.max(0, manualTargets.skill - CONFIG.lvThresh) * CONFIG.slots.skill * CONFIG.pts.skill;
             let essNeeded = 0;
-            const userSkillCur = parseInt(document.getElementById('input_skill_lv').value) || CONFIG.lvThresh;
+            let userSkillCur = parseInt(document.getElementById('input_skill_lv').value) || CONFIG.lvThresh;
+            if (document.getElementById('skip_skills').checked || !overrideFlags.skill) userSkillCur = capSkill;
             for(let i=userSkillCur; i < manualTargets.skill; i++) essNeeded += (CONFIG.base.essense + (i - CONFIG.lvThresh) * CONFIG.perlvl.essense) * CONFIG.slots.skill;
             const essGen = (baseProductionHours * (parseFloat(document.getElementById('cart_essence').value) || 0)) + (parseInt(document.getElementById('saved_essence').value) || 0);
 
             const fantoScoreVal = Math.max(0, manualTargets.fanto - CONFIG.lvThresh) * CONFIG.slots.fanto * CONFIG.pts.fanto;
             let fantoExpNeeded = 0;
-            const userFantoCur = parseInt(document.getElementById('input_fanto_lv').value) || CONFIG.lvThresh;
+            let userFantoCur = parseInt(document.getElementById('input_fanto_lv').value) || CONFIG.lvThresh;
+            if (document.getElementById('skip_fantomon').checked || !overrideFlags.fanto) userFantoCur = capFanto;
             for(let i=userFantoCur; i < manualTargets.fanto; i++) fantoExpNeeded += (CONFIG.base.treatExp + (i - CONFIG.lvThresh) * CONFIG.perlvl.treatExp) * CONFIG.slots.fanto;
             const treatExpGen = (baseProductionHours * (parseFloat(document.getElementById('cart_treats').value) || 0) + (parseInt(document.getElementById('saved_treats').value) || 0)) * CONFIG.items.treatExp;
 
             const relicScoreVal = Math.max(0, manualTargets.relic - CONFIG.relicThresh) * CONFIG.slots.relic * CONFIG.pts.relic;
             let sandNeeded = 0;
-            const userRelicCur = parseInt(document.getElementById('input_relic_lv').value) || CONFIG.relicThresh;
+            let userRelicCur = parseInt(document.getElementById('input_relic_lv').value) || CONFIG.relicThresh;
+            if (document.getElementById('skip_relics').checked || !overrideFlags.relic) userRelicCur = capRelic;
             for(let i=userRelicCur; i < manualTargets.relic; i++) sandNeeded += (CONFIG.base.sand + (i - CONFIG.relicThresh) * CONFIG.perlvl.sand) * CONFIG.slots.relic;
             const sandGen = (baseProductionHours * (parseFloat(document.getElementById('cart_sand').value) || 0)) + (parseInt(document.getElementById('saved_sand').value) || 0);
 
