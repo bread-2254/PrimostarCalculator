@@ -105,7 +105,7 @@
                 <div class="card">
                     <h2 class="text-base font-bold text-slate-800 border-b pb-1 mb-2" style="margin-top:0">Season Info</h2>
                     <label>Target Primo Stars</label>
-                    <input type="number" id="target_primostars" value="100">
+                    <input type="number" id="target_primostars" value="680">
                     <label>Time Remaining</label>
                     <div class="flex gap-3" style="display:flex">
                         <div class="flex-1" style="flex:1"><span class="text-[9px] text-gray-400 uppercase font-bold">Days</span><input type="number" id="rem_days"></div>
@@ -121,7 +121,7 @@
                             </label>
                             <div id="manual_skill_box" style="display:none; padding-left:1.5rem">
                                 <span class="text-[9px] text-orange-600 font-bold uppercase">Current Lv</span>
-                                <input type="number" id="input_skill_lv" value="100" class="manual-level-input">
+                                <input type="number" id="input_skill_lv" value="130" class="manual-level-input">
                             </div>
                         </div>
                         <div>
@@ -130,7 +130,7 @@
                             </label>
                             <div id="manual_fanto_box" style="display:none; padding-left:1.5rem">
                                 <span class="text-[9px] text-orange-600 font-bold uppercase">Current Lv</span>
-                                <input type="number" id="input_fanto_lv" value="100" class="manual-level-input">
+                                <input type="number" id="input_fanto_lv" value="130" class="manual-level-input">
                             </div>
                         </div>
                         <div>
@@ -139,7 +139,7 @@
                             </label>
                             <div id="manual_relic_box" style="display:none; padding-left:1.5rem">
                                 <span class="text-[9px] text-orange-600 font-bold uppercase">Current Lv</span>
-                                <input type="number" id="input_relic_lv" value="10" class="manual-level-input">
+                                <input type="number" id="input_relic_lv" value="13" class="manual-level-input">
                             </div>
                         </div>
                     </div>
@@ -149,11 +149,11 @@
                 <div class="card card-green">
                     <h2 class="text-base font-bold text-emerald-800 border-b pb-1 mb-2" style="margin-top:0">Character</h2>
                     <label>Current Character Level</label>
-                    <input type="number" id="char_lv" value="100" oninput="resetManualFlags()">
+                    <input type="number" id="char_lv" value="130" oninput="resetManualFlags()">
                     <label>Current Character EXP</label>
                     <input type="number" id="char_exp" value="0">
                     <label>Hourly EXP (Bed)</label>
-                    <input type="number" id="hourly_exp" value="50000">
+                    <input type="number" id="hourly_exp" value="400000">
 
                     <div class="mt-4 border-t pt-2 flex items-center flex-wrap gap-2" style="display:flex; align-items:center; border-top: 1px solid #eee; margin-top:10px; padding-top:10px">
                         <label class="flex items-center gap-2 cursor-pointer mt-0 font-medium normal-case text-gray-700 text-xs" style="display:flex; align-items:center">
@@ -169,7 +169,7 @@
                     
                     <div class="projection-box">
                         <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-wider">End-of-Season Projection:</span>
-                        <div id="eos_char_lv" class="text-xl font-black text-emerald-700 mt-1">Lv 100 (0%)</div>
+                        <div id="eos_char_lv" class="text-xl font-black text-emerald-700 mt-1">Lv 130 (0%)</div>
                     </div>
                 </div>
 
@@ -177,11 +177,11 @@
                 <div class="card card-orange">
                     <h2 class="text-base font-bold text-orange-800 border-b pb-1 mb-2" style="margin-top:0">Equipment Levels</h2>
                     <div class="grid grid-cols-2 gap-x-3 gap-y-0" style="display:grid; grid-template-columns: 1fr 1fr; gap: 0 10px">
-                        <div><label>Weapon</label><input type="number" id="eq_1" value="100" oninput="resetGearFlag()"></div>
-                        <div><label>Sub-Weapon</label><input type="number" id="eq_2" value="100" oninput="resetGearFlag()"></div>
-                        <div><label>Helmet</label><input type="number" id="eq_3" value="100" oninput="resetGearFlag()"></div>
-                        <div><label>Armor</label><input type="number" id="eq_4" value="100" oninput="resetGearFlag()"></div>
-                        <div class="col-span-2" style="grid-column: span 2"><label>Boots</label><input type="number" id="eq_5" value="100" oninput="resetGearFlag()"></div>
+                        <div><label>Weapon</label><input type="number" id="eq_1" value="130" oninput="resetGearFlag()"></div>
+                        <div><label>Sub-Weapon</label><input type="number" id="eq_2" value="130" oninput="resetGearFlag()"></div>
+                        <div><label>Helmet</label><input type="number" id="eq_3" value="130" oninput="resetGearFlag()"></div>
+                        <div><label>Armor</label><input type="number" id="eq_4" value="130" oninput="resetGearFlag()"></div>
+                        <div class="col-span-2" style="grid-column: span 2"><label>Boots</label><input type="number" id="eq_5" value="130" oninput="resetGearFlag()"></div>
                     </div>
                 </div>
 
@@ -191,10 +191,10 @@
                     <div class="grid grid-cols-2 gap-4" style="display:grid; grid-template-columns: 1fr 1fr; gap:16px">
                         <div class="space-y-3">
                             <span class="text-[9px] font-bold text-gray-400 uppercase border-b block pb-0.5" style="display:block; border-bottom:1px solid #eee">Hourly Cart</span>
-                            <div><label class="mt-0">Raw Ore</label><input type="number" id="cart_ore" value="1000"></div>
-                            <div><label>Essence</label><input type="number" id="cart_essence" value="100"></div>
-                            <div><label>Chrono Sand</label><input type="number" id="cart_sand" value="500"></div>
-                            <div><label>Treats</label><input type="number" id="cart_treats" value="10"></div>
+                            <div><label class="mt-0">Raw Ore</label><input type="number" id="cart_ore" value="0"></div>
+                            <div><label>Essence</label><input type="number" id="cart_essence" value="0"></div>
+                            <div><label>Chrono Sand</label><input type="number" id="cart_sand" value="0"></div>
+                            <div><label>Treats</label><input type="number" id="cart_treats" value="0"></div>
                         </div>
                         <div class="space-y-3">
                             <span class="text-[9px] font-bold text-gray-400 uppercase border-b block pb-0.5" style="display:block; border-bottom:1px solid #eee">Saved</span>
