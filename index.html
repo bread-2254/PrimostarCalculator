@@ -282,13 +282,13 @@
             slots: { skill: 8, fanto: 4, relic: 20, gear: 5 },
             items: { hammer: 1200, shovel: 920, knuckles: 1500, treatExp: 50 },
             staminaYield: 1416,
-            charExpTable: {},
+            charExpTable: {max: 1000000000000000000},
             base: { ore: 16900, sand: 30000, essense: 11900, treatExp: 56800 },
             perlvl: { ore: 150, sand: 3500, essense: 100, treatExp: 500 }
         };
 
         function buildExpTable(season) {
-          const table = {};
+          const table = {max: 1000000000000000000};
           (expRequiredData || []).forEach(entry => {
             if (entry.season === season) table[entry.level] = entry.exp;
           });
