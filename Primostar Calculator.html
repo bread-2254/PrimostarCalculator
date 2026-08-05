@@ -276,20 +276,29 @@
     (function() {
         const CONFIG = {
             endDate: new Date('2026-07-10T13:00:00Z'), 
-            lvThresh: 100, relicThresh: 10, fixedPrimo: 10,
-            pts: { char: 100, gear: 38, skill: 13, fanto: 14, relic: 57 },
+            lvThresh: 130, relicThresh: 13, fixedPrimo: 45,
+            pts: { char: 100, gear: 18, skill: 7, fanto: 8, relic: 33 },
             slots: { skill: 8, fanto: 4, relic: 20, gear: 5 },
-            items: { hammer: 610, shovel: 568, knuckles: 1000, treatExp: 50 },
-            staminaYield: 900,
-            charExpTable: {
-                100: 886086, 101: 888547, 102: 926501, 103: 964086, 104: 1012164,
-                105: 1054111, 106: 1096529, 107: 1135645, 108: 1174997, 109: 1214584,
-                110: 1258533, 111: 1303677, 112: 1348574, 113: 1393941, 114: 1439780,
-                115: 1486091, 116: 1532872, 117: 1580125, 118: 1627849, 119: 1676044,
-                120: 1730017, 121: 1783360, 122: 1833196, max: 1833196
-            },
+            items: { hammer: 1200, shovel: 920, knuckles: 1500, treatExp: 50 },
+            staminaYield: 1416,
+            charExpTable: {},
             oreTable: { 100: 9280, 101: 9375, 102: 9465, 103: 9560, 104: 9650, 105: 9745, 106: 9835, 107: 9930, 108: 10025, 109: 10115 }
         };
+
+        function buildExpTable(season) {
+          const table = {};
+          (expRequiredData || []).forEach(entry => {
+            if (entry.season === season) table[entry.level] = entry.exp;
+          });
+          return table;
+        }
+        let expRequiredData = [];
+        fetch('./exp_required.json')
+          .then(response => response.json())
+          .then(data => {
+              expRequiredData = data;
+              CONFIG.charExpTable = buildExpTable(2);
+          });
 
         let manualTargets = { skill: null, fanto: null, relic: null, gear: null };
         let overrideFlags = { gear: false, skill: false, fanto: false, relic: false };
