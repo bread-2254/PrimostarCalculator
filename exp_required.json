@@ -1,0 +1,6092 @@
+[
+    {
+        "level": 1,
+        "exp": 80,
+        "season": 1
+    },
+    {
+        "level": 2,
+        "exp": 90,
+        "season": 1
+    },
+    {
+        "level": 3,
+        "exp": 90,
+        "season": 1
+    },
+    {
+        "level": 4,
+        "exp": 90,
+        "season": 1
+    },
+    {
+        "level": 5,
+        "exp": 90,
+        "season": 1
+    },
+    {
+        "level": 6,
+        "exp": 90,
+        "season": 1
+    },
+    {
+        "level": 7,
+        "exp": 90,
+        "season": 1
+    },
+    {
+        "level": 8,
+        "exp": 90,
+        "season": 1
+    },
+    {
+        "level": 9,
+        "exp": 100,
+        "season": 1
+    },
+    {
+        "level": 10,
+        "exp": 350,
+        "season": 1
+    },
+    {
+        "level": 11,
+        "exp": 355,
+        "season": 1
+    },
+    {
+        "level": 12,
+        "exp": 360,
+        "season": 1
+    },
+    {
+        "level": 13,
+        "exp": 370,
+        "season": 1
+    },
+    {
+        "level": 14,
+        "exp": 375,
+        "season": 1
+    },
+    {
+        "level": 15,
+        "exp": 390,
+        "season": 1
+    },
+    {
+        "level": 16,
+        "exp": 400,
+        "season": 1
+    },
+    {
+        "level": 17,
+        "exp": 450,
+        "season": 1
+    },
+    {
+        "level": 18,
+        "exp": 500,
+        "season": 1
+    },
+    {
+        "level": 19,
+        "exp": 500,
+        "season": 1
+    },
+    {
+        "level": 20,
+        "exp": 1483,
+        "season": 1
+    },
+    {
+        "level": 21,
+        "exp": 1844,
+        "season": 1
+    },
+    {
+        "level": 22,
+        "exp": 1865,
+        "season": 1
+    },
+    {
+        "level": 23,
+        "exp": 1916,
+        "season": 1
+    },
+    {
+        "level": 24,
+        "exp": 2043,
+        "season": 1
+    },
+    {
+        "level": 25,
+        "exp": 2067,
+        "season": 1
+    },
+    {
+        "level": 26,
+        "exp": 2169,
+        "season": 1
+    },
+    {
+        "level": 27,
+        "exp": 2437,
+        "season": 1
+    },
+    {
+        "level": 28,
+        "exp": 2536,
+        "season": 1
+    },
+    {
+        "level": 29,
+        "exp": 2860,
+        "season": 1
+    },
+    {
+        "level": 30,
+        "exp": 2995,
+        "season": 1
+    },
+    {
+        "level": 31,
+        "exp": 3607,
+        "season": 1
+    },
+    {
+        "level": 32,
+        "exp": 3794,
+        "season": 1
+    },
+    {
+        "level": 33,
+        "exp": 3876,
+        "season": 1
+    },
+    {
+        "level": 34,
+        "exp": 3996,
+        "season": 1
+    },
+    {
+        "level": 35,
+        "exp": 4261,
+        "season": 1
+    },
+    {
+        "level": 36,
+        "exp": 4289,
+        "season": 1
+    },
+    {
+        "level": 37,
+        "exp": 4510,
+        "season": 1
+    },
+    {
+        "level": 38,
+        "exp": 4928,
+        "season": 1
+    },
+    {
+        "level": 39,
+        "exp": 5086,
+        "season": 1
+    },
+    {
+        "level": 40,
+        "exp": 17203,
+        "season": 1
+    },
+    {
+        "level": 41,
+        "exp": 19189,
+        "season": 1
+    },
+    {
+        "level": 42,
+        "exp": 21484,
+        "season": 1
+    },
+    {
+        "level": 43,
+        "exp": 21509,
+        "season": 1
+    },
+    {
+        "level": 44,
+        "exp": 23052,
+        "season": 1
+    },
+    {
+        "level": 45,
+        "exp": 24627,
+        "season": 1
+    },
+    {
+        "level": 46,
+        "exp": 25480,
+        "season": 1
+    },
+    {
+        "level": 47,
+        "exp": 26852,
+        "season": 1
+    },
+    {
+        "level": 48,
+        "exp": 29068,
+        "season": 1
+    },
+    {
+        "level": 49,
+        "exp": 32008,
+        "season": 1
+    },
+    {
+        "level": 50,
+        "exp": 33168,
+        "season": 1
+    },
+    {
+        "level": 51,
+        "exp": 33332,
+        "season": 1
+    },
+    {
+        "level": 52,
+        "exp": 34095,
+        "season": 1
+    },
+    {
+        "level": 53,
+        "exp": 35628,
+        "season": 1
+    },
+    {
+        "level": 54,
+        "exp": 35929,
+        "season": 1
+    },
+    {
+        "level": 55,
+        "exp": 37680,
+        "season": 1
+    },
+    {
+        "level": 56,
+        "exp": 38331,
+        "season": 1
+    },
+    {
+        "level": 57,
+        "exp": 38878,
+        "season": 1
+    },
+    {
+        "level": 58,
+        "exp": 39016,
+        "season": 1
+    },
+    {
+        "level": 59,
+        "exp": 41731,
+        "season": 1
+    },
+    {
+        "level": 60,
+        "exp": 43128,
+        "season": 1
+    },
+    {
+        "level": 61,
+        "exp": 45042,
+        "season": 1
+    },
+    {
+        "level": 62,
+        "exp": 45412,
+        "season": 1
+    },
+    {
+        "level": 63,
+        "exp": 47152,
+        "season": 1
+    },
+    {
+        "level": 64,
+        "exp": 47282,
+        "season": 1
+    },
+    {
+        "level": 65,
+        "exp": 47340,
+        "season": 1
+    },
+    {
+        "level": 66,
+        "exp": 50487,
+        "season": 1
+    },
+    {
+        "level": 67,
+        "exp": 53076,
+        "season": 1
+    },
+    {
+        "level": 68,
+        "exp": 54257,
+        "season": 1
+    },
+    {
+        "level": 69,
+        "exp": 54405,
+        "season": 1
+    },
+    {
+        "level": 70,
+        "exp": 197114,
+        "season": 1
+    },
+    {
+        "level": 71,
+        "exp": 310414,
+        "season": 1
+    },
+    {
+        "level": 72,
+        "exp": 330204,
+        "season": 1
+    },
+    {
+        "level": 73,
+        "exp": 334735,
+        "season": 1
+    },
+    {
+        "level": 74,
+        "exp": 348791,
+        "season": 1
+    },
+    {
+        "level": 75,
+        "exp": 360389,
+        "season": 1
+    },
+    {
+        "level": 76,
+        "exp": 360701,
+        "season": 1
+    },
+    {
+        "level": 77,
+        "exp": 362826,
+        "season": 1
+    },
+    {
+        "level": 78,
+        "exp": 378632,
+        "season": 1
+    },
+    {
+        "level": 79,
+        "exp": 379059,
+        "season": 1
+    },
+    {
+        "level": 80,
+        "exp": 408765,
+        "season": 1
+    },
+    {
+        "level": 81,
+        "exp": 440713,
+        "season": 1
+    },
+    {
+        "level": 82,
+        "exp": 464670,
+        "season": 1
+    },
+    {
+        "level": 83,
+        "exp": 467234,
+        "season": 1
+    },
+    {
+        "level": 84,
+        "exp": 477970,
+        "season": 1
+    },
+    {
+        "level": 85,
+        "exp": 484690,
+        "season": 1
+    },
+    {
+        "level": 86,
+        "exp": 509874,
+        "season": 1
+    },
+    {
+        "level": 87,
+        "exp": 513879,
+        "season": 1
+    },
+    {
+        "level": 88,
+        "exp": 527583,
+        "season": 1
+    },
+    {
+        "level": 89,
+        "exp": 532378,
+        "season": 1
+    },
+    {
+        "level": 90,
+        "exp": 583801,
+        "season": 1
+    },
+    {
+        "level": 91,
+        "exp": 612907,
+        "season": 1
+    },
+    {
+        "level": 92,
+        "exp": 643189,
+        "season": 1
+    },
+    {
+        "level": 93,
+        "exp": 644274,
+        "season": 1
+    },
+    {
+        "level": 94,
+        "exp": 670957,
+        "season": 1
+    },
+    {
+        "level": 95,
+        "exp": 678226,
+        "season": 1
+    },
+    {
+        "level": 96,
+        "exp": 706678,
+        "season": 1
+    },
+    {
+        "level": 97,
+        "exp": 712891,
+        "season": 1
+    },
+    {
+        "level": 98,
+        "exp": 749807,
+        "season": 1
+    },
+    {
+        "level": 99,
+        "exp": 751452,
+        "season": 1
+    },
+    {
+        "level": 100,
+        "exp": 886086,
+        "season": 1
+    },
+    {
+        "level": 101,
+        "exp": 888547,
+        "season": 1
+    },
+    {
+        "level": 102,
+        "exp": 926501,
+        "season": 1
+    },
+    {
+        "level": 103,
+        "exp": 964086,
+        "season": 1
+    },
+    {
+        "level": 104,
+        "exp": 1012164,
+        "season": 1
+    },
+    {
+        "level": 105,
+        "exp": 1054111,
+        "season": 1
+    },
+    {
+        "level": 106,
+        "exp": 1096529,
+        "season": 1
+    },
+    {
+        "level": 107,
+        "exp": 1135645,
+        "season": 1
+    },
+    {
+        "level": 108,
+        "exp": 1174997,
+        "season": 1
+    },
+    {
+        "level": 109,
+        "exp": 1214584,
+        "season": 1
+    },
+    {
+        "level": 110,
+        "exp": 1258533,
+        "season": 1
+    },
+    {
+        "level": 111,
+        "exp": 1303677,
+        "season": 1
+    },
+    {
+        "level": 112,
+        "exp": 1348574,
+        "season": 1
+    },
+    {
+        "level": 113,
+        "exp": 1393941,
+        "season": 1
+    },
+    {
+        "level": 114,
+        "exp": 1439780,
+        "season": 1
+    },
+    {
+        "level": 115,
+        "exp": 1486091,
+        "season": 1
+    },
+    {
+        "level": 116,
+        "exp": 1532872,
+        "season": 1
+    },
+    {
+        "level": 117,
+        "exp": 1580125,
+        "season": 1
+    },
+    {
+        "level": 118,
+        "exp": 1627849,
+        "season": 1
+    },
+    {
+        "level": 119,
+        "exp": 1676044,
+        "season": 1
+    },
+    {
+        "level": 120,
+        "exp": 1730017,
+        "season": 1
+    },
+    {
+        "level": 121,
+        "exp": 1783360,
+        "season": 1
+    },
+    {
+        "level": 122,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 123,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 124,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 125,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 126,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 127,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 128,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 129,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 130,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 131,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 132,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 133,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 134,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 135,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 136,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 137,
+        "exp": 1833196,
+        "season": 1
+    },
+    {
+        "level": 1,
+        "exp": 80,
+        "season": 2
+    },
+    {
+        "level": 2,
+        "exp": 90,
+        "season": 2
+    },
+    {
+        "level": 3,
+        "exp": 90,
+        "season": 2
+    },
+    {
+        "level": 4,
+        "exp": 90,
+        "season": 2
+    },
+    {
+        "level": 5,
+        "exp": 90,
+        "season": 2
+    },
+    {
+        "level": 6,
+        "exp": 90,
+        "season": 2
+    },
+    {
+        "level": 7,
+        "exp": 90,
+        "season": 2
+    },
+    {
+        "level": 8,
+        "exp": 90,
+        "season": 2
+    },
+    {
+        "level": 9,
+        "exp": 100,
+        "season": 2
+    },
+    {
+        "level": 10,
+        "exp": 350,
+        "season": 2
+    },
+    {
+        "level": 11,
+        "exp": 355,
+        "season": 2
+    },
+    {
+        "level": 12,
+        "exp": 360,
+        "season": 2
+    },
+    {
+        "level": 13,
+        "exp": 370,
+        "season": 2
+    },
+    {
+        "level": 14,
+        "exp": 375,
+        "season": 2
+    },
+    {
+        "level": 15,
+        "exp": 390,
+        "season": 2
+    },
+    {
+        "level": 16,
+        "exp": 400,
+        "season": 2
+    },
+    {
+        "level": 17,
+        "exp": 450,
+        "season": 2
+    },
+    {
+        "level": 18,
+        "exp": 500,
+        "season": 2
+    },
+    {
+        "level": 19,
+        "exp": 500,
+        "season": 2
+    },
+    {
+        "level": 20,
+        "exp": 1483,
+        "season": 2
+    },
+    {
+        "level": 21,
+        "exp": 1844,
+        "season": 2
+    },
+    {
+        "level": 22,
+        "exp": 1865,
+        "season": 2
+    },
+    {
+        "level": 23,
+        "exp": 1916,
+        "season": 2
+    },
+    {
+        "level": 24,
+        "exp": 2043,
+        "season": 2
+    },
+    {
+        "level": 25,
+        "exp": 2067,
+        "season": 2
+    },
+    {
+        "level": 26,
+        "exp": 2169,
+        "season": 2
+    },
+    {
+        "level": 27,
+        "exp": 2437,
+        "season": 2
+    },
+    {
+        "level": 28,
+        "exp": 2536,
+        "season": 2
+    },
+    {
+        "level": 29,
+        "exp": 2860,
+        "season": 2
+    },
+    {
+        "level": 30,
+        "exp": 2995,
+        "season": 2
+    },
+    {
+        "level": 31,
+        "exp": 3607,
+        "season": 2
+    },
+    {
+        "level": 32,
+        "exp": 3794,
+        "season": 2
+    },
+    {
+        "level": 33,
+        "exp": 3876,
+        "season": 2
+    },
+    {
+        "level": 34,
+        "exp": 3996,
+        "season": 2
+    },
+    {
+        "level": 35,
+        "exp": 4261,
+        "season": 2
+    },
+    {
+        "level": 36,
+        "exp": 4289,
+        "season": 2
+    },
+    {
+        "level": 37,
+        "exp": 4510,
+        "season": 2
+    },
+    {
+        "level": 38,
+        "exp": 4928,
+        "season": 2
+    },
+    {
+        "level": 39,
+        "exp": 5086,
+        "season": 2
+    },
+    {
+        "level": 40,
+        "exp": 17203,
+        "season": 2
+    },
+    {
+        "level": 41,
+        "exp": 19189,
+        "season": 2
+    },
+    {
+        "level": 42,
+        "exp": 21484,
+        "season": 2
+    },
+    {
+        "level": 43,
+        "exp": 21509,
+        "season": 2
+    },
+    {
+        "level": 44,
+        "exp": 23052,
+        "season": 2
+    },
+    {
+        "level": 45,
+        "exp": 24627,
+        "season": 2
+    },
+    {
+        "level": 46,
+        "exp": 25480,
+        "season": 2
+    },
+    {
+        "level": 47,
+        "exp": 26852,
+        "season": 2
+    },
+    {
+        "level": 48,
+        "exp": 29068,
+        "season": 2
+    },
+    {
+        "level": 49,
+        "exp": 32008,
+        "season": 2
+    },
+    {
+        "level": 50,
+        "exp": 33168,
+        "season": 2
+    },
+    {
+        "level": 51,
+        "exp": 33332,
+        "season": 2
+    },
+    {
+        "level": 52,
+        "exp": 34095,
+        "season": 2
+    },
+    {
+        "level": 53,
+        "exp": 35628,
+        "season": 2
+    },
+    {
+        "level": 54,
+        "exp": 35929,
+        "season": 2
+    },
+    {
+        "level": 55,
+        "exp": 37680,
+        "season": 2
+    },
+    {
+        "level": 56,
+        "exp": 38331,
+        "season": 2
+    },
+    {
+        "level": 57,
+        "exp": 38878,
+        "season": 2
+    },
+    {
+        "level": 58,
+        "exp": 39016,
+        "season": 2
+    },
+    {
+        "level": 59,
+        "exp": 41731,
+        "season": 2
+    },
+    {
+        "level": 60,
+        "exp": 43128,
+        "season": 2
+    },
+    {
+        "level": 61,
+        "exp": 45042,
+        "season": 2
+    },
+    {
+        "level": 62,
+        "exp": 45412,
+        "season": 2
+    },
+    {
+        "level": 63,
+        "exp": 47152,
+        "season": 2
+    },
+    {
+        "level": 64,
+        "exp": 47282,
+        "season": 2
+    },
+    {
+        "level": 65,
+        "exp": 47340,
+        "season": 2
+    },
+    {
+        "level": 66,
+        "exp": 50487,
+        "season": 2
+    },
+    {
+        "level": 67,
+        "exp": 53076,
+        "season": 2
+    },
+    {
+        "level": 68,
+        "exp": 54257,
+        "season": 2
+    },
+    {
+        "level": 69,
+        "exp": 54405,
+        "season": 2
+    },
+    {
+        "level": 70,
+        "exp": 197114,
+        "season": 2
+    },
+    {
+        "level": 71,
+        "exp": 310414,
+        "season": 2
+    },
+    {
+        "level": 72,
+        "exp": 330204,
+        "season": 2
+    },
+    {
+        "level": 73,
+        "exp": 334735,
+        "season": 2
+    },
+    {
+        "level": 74,
+        "exp": 348791,
+        "season": 2
+    },
+    {
+        "level": 75,
+        "exp": 360389,
+        "season": 2
+    },
+    {
+        "level": 76,
+        "exp": 360701,
+        "season": 2
+    },
+    {
+        "level": 77,
+        "exp": 362826,
+        "season": 2
+    },
+    {
+        "level": 78,
+        "exp": 378632,
+        "season": 2
+    },
+    {
+        "level": 79,
+        "exp": 379059,
+        "season": 2
+    },
+    {
+        "level": 80,
+        "exp": 408765,
+        "season": 2
+    },
+    {
+        "level": 81,
+        "exp": 440713,
+        "season": 2
+    },
+    {
+        "level": 82,
+        "exp": 464670,
+        "season": 2
+    },
+    {
+        "level": 83,
+        "exp": 467234,
+        "season": 2
+    },
+    {
+        "level": 84,
+        "exp": 477970,
+        "season": 2
+    },
+    {
+        "level": 85,
+        "exp": 484690,
+        "season": 2
+    },
+    {
+        "level": 86,
+        "exp": 509874,
+        "season": 2
+    },
+    {
+        "level": 87,
+        "exp": 513879,
+        "season": 2
+    },
+    {
+        "level": 88,
+        "exp": 527583,
+        "season": 2
+    },
+    {
+        "level": 89,
+        "exp": 532378,
+        "season": 2
+    },
+    {
+        "level": 90,
+        "exp": 583801,
+        "season": 2
+    },
+    {
+        "level": 91,
+        "exp": 612907,
+        "season": 2
+    },
+    {
+        "level": 92,
+        "exp": 643189,
+        "season": 2
+    },
+    {
+        "level": 93,
+        "exp": 644274,
+        "season": 2
+    },
+    {
+        "level": 94,
+        "exp": 670957,
+        "season": 2
+    },
+    {
+        "level": 95,
+        "exp": 678226,
+        "season": 2
+    },
+    {
+        "level": 96,
+        "exp": 706678,
+        "season": 2
+    },
+    {
+        "level": 97,
+        "exp": 712891,
+        "season": 2
+    },
+    {
+        "level": 98,
+        "exp": 749807,
+        "season": 2
+    },
+    {
+        "level": 99,
+        "exp": 751452,
+        "season": 2
+    },
+    {
+        "level": 100,
+        "exp": 886000,
+        "season": 2
+    },
+    {
+        "level": 101,
+        "exp": 3027527,
+        "season": 2
+    },
+    {
+        "level": 102,
+        "exp": 3032011,
+        "season": 2
+    },
+    {
+        "level": 103,
+        "exp": 3117883,
+        "season": 2
+    },
+    {
+        "level": 104,
+        "exp": 3191855,
+        "season": 2
+    },
+    {
+        "level": 105,
+        "exp": 3220513,
+        "season": 2
+    },
+    {
+        "level": 106,
+        "exp": 3258763,
+        "season": 2
+    },
+    {
+        "level": 107,
+        "exp": 3346658,
+        "season": 2
+    },
+    {
+        "level": 108,
+        "exp": 3389858,
+        "season": 2
+    },
+    {
+        "level": 109,
+        "exp": 3548753,
+        "season": 2
+    },
+    {
+        "level": 110,
+        "exp": 3631694,
+        "season": 2
+    },
+    {
+        "level": 111,
+        "exp": 3771824,
+        "season": 2
+    },
+    {
+        "level": 112,
+        "exp": 3796167,
+        "season": 2
+    },
+    {
+        "level": 113,
+        "exp": 3866624,
+        "season": 2
+    },
+    {
+        "level": 114,
+        "exp": 3924404,
+        "season": 2
+    },
+    {
+        "level": 115,
+        "exp": 4029348,
+        "season": 2
+    },
+    {
+        "level": 116,
+        "exp": 4101565,
+        "season": 2
+    },
+    {
+        "level": 117,
+        "exp": 4245434,
+        "season": 2
+    },
+    {
+        "level": 118,
+        "exp": 4245686,
+        "season": 2
+    },
+    {
+        "level": 119,
+        "exp": 4514881,
+        "season": 2
+    },
+    {
+        "level": 120,
+        "exp": 4566377,
+        "season": 2
+    },
+    {
+        "level": 121,
+        "exp": 4752888,
+        "season": 2
+    },
+    {
+        "level": 122,
+        "exp": 4860000,
+        "season": 2
+    },
+    {
+        "level": 123,
+        "exp": 5012377,
+        "season": 2
+    },
+    {
+        "level": 124,
+        "exp": 5016341,
+        "season": 2
+    },
+    {
+        "level": 125,
+        "exp": 5178619,
+        "season": 2
+    },
+    {
+        "level": 126,
+        "exp": 5229563,
+        "season": 2
+    },
+    {
+        "level": 127,
+        "exp": 5423881,
+        "season": 2
+    },
+    {
+        "level": 128,
+        "exp": 5459728,
+        "season": 2
+    },
+    {
+        "level": 129,
+        "exp": 6335318,
+        "season": 2
+    },
+    {
+        "level": 130,
+        "exp": 6342809,
+        "season": 2
+    },
+    {
+        "level": 131,
+        "exp": 6791971,
+        "season": 2
+    },
+    {
+        "level": 132,
+        "exp": 7349165,
+        "season": 2
+    },
+    {
+        "level": 133,
+        "exp": 7896724,
+        "season": 2
+    },
+    {
+        "level": 134,
+        "exp": 8431041,
+        "season": 2
+    },
+    {
+        "level": 135,
+        "exp": 8948504,
+        "season": 2
+    },
+    {
+        "level": 136,
+        "exp": 9536985,
+        "season": 2
+    },
+    {
+        "level": 137,
+        "exp": 10062872,
+        "season": 2
+    },
+    {
+        "level": 138,
+        "exp": 10591166,
+        "season": 2
+    },
+    {
+        "level": 139,
+        "exp": 11201308,
+        "season": 2
+    },
+    {
+        "level": 140,
+        "exp": 11280750,
+        "season": 2
+    },
+    {
+        "level": 141,
+        "exp": 11334730,
+        "season": 2
+    },
+    {
+        "level": 142,
+        "exp": 11387696,
+        "season": 2
+    },
+    {
+        "level": 143,
+        "exp": 11440662,
+        "season": 2
+    },
+    {
+        "level": 144,
+        "exp": 11493628,
+        "season": 2
+    },
+    {
+        "level": 145,
+        "exp": 11546594,
+        "season": 2
+    },
+    {
+        "level": 146,
+        "exp": 11599560,
+        "season": 2
+    },
+    {
+        "level": 147,
+        "exp": 11652526,
+        "season": 2
+    },
+    {
+        "level": 148,
+        "exp": 11679009,
+        "season": 2
+    },
+    {
+        "level": 149,
+        "exp": 11731975,
+        "season": 2
+    },
+    {
+        "level": 150,
+        "exp": 11784941,
+        "season": 2
+    },
+    {
+        "level": 151,
+        "exp": 11811613,
+        "season": 2
+    },
+    {
+        "level": 152,
+        "exp": 11838097,
+        "season": 2
+    },
+    {
+        "level": 153,
+        "exp": 11864580,
+        "season": 2
+    },
+    {
+        "level": 154,
+        "exp": 11917547,
+        "season": 2
+    },
+    {
+        "level": 155,
+        "exp": 11970514,
+        "season": 2
+    },
+    {
+        "level": 156,
+        "exp": 12049964,
+        "season": 2
+    },
+    {
+        "level": 157,
+        "exp": 12155898,
+        "season": 2
+    },
+    {
+        "level": 158,
+        "exp": 12208865,
+        "season": 2
+    },
+    {
+        "level": 159,
+        "exp": 12261832,
+        "season": 2
+    },
+    {
+        "level": 160,
+        "exp": 12314799,
+        "season": 2
+    },
+    {
+        "level": 161,
+        "exp": 12394079,
+        "season": 2
+    },
+    {
+        "level": 162,
+        "exp": 12447046,
+        "season": 2
+    },
+    {
+        "level": 163,
+        "exp": 12500012,
+        "season": 2
+    },
+    {
+        "level": 164,
+        "exp": 12500012,
+        "season": 2
+    },
+    {
+        "level": 165,
+        "exp": 12526495,
+        "season": 2
+    },
+    {
+        "level": 166,
+        "exp": 12579461,
+        "season": 2
+    },
+    {
+        "level": 167,
+        "exp": 12632427,
+        "season": 2
+    },
+    {
+        "level": 168,
+        "exp": 12658910,
+        "season": 2
+    },
+    {
+        "level": 169,
+        "exp": 12711876,
+        "season": 2
+    },
+    {
+        "level": 170,
+        "exp": 12764842,
+        "season": 2
+    },
+    {
+        "level": 171,
+        "exp": 12817637,
+        "season": 2
+    },
+    {
+        "level": 172,
+        "exp": 12870602,
+        "season": 2
+    },
+    {
+        "level": 173,
+        "exp": 12950050,
+        "season": 2
+    },
+    {
+        "level": 174,
+        "exp": 13029499,
+        "season": 2
+    },
+    {
+        "level": 175,
+        "exp": 13082464,
+        "season": 2
+    },
+    {
+        "level": 176,
+        "exp": 13135429,
+        "season": 2
+    },
+    {
+        "level": 177,
+        "exp": 13188395,
+        "season": 2
+    },
+    {
+        "level": 178,
+        "exp": 13214878,
+        "season": 2
+    },
+    {
+        "level": 179,
+        "exp": 13267843,
+        "season": 2
+    },
+    {
+        "level": 180,
+        "exp": 13320809,
+        "season": 2
+    },
+    {
+        "level": 181,
+        "exp": 13372809,
+        "season": 2
+    },
+    {
+        "level": 182,
+        "exp": 13399290,
+        "season": 2
+    },
+    {
+        "level": 183,
+        "exp": 13425771,
+        "season": 2
+    },
+    {
+        "level": 184,
+        "exp": 13452251,
+        "season": 2
+    },
+    {
+        "level": 185,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 186,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 187,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 188,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 189,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 190,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 191,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 192,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 193,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 194,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 195,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 196,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 197,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 198,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 199,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 200,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 201,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 202,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 203,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 204,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 205,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 206,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 207,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 208,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 209,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 210,
+        "exp": 13478732,
+        "season": 2
+    },
+    {
+        "level": 130,
+        "exp": 22859655,
+        "season": 3
+    },
+    {
+        "level": 131,
+        "exp": 23541185,
+        "season": 3
+    },
+    {
+        "level": 132,
+        "exp": 23587156,
+        "season": 3
+    },
+    {
+        "level": 133,
+        "exp": 24290510,
+        "season": 3
+    },
+    {
+        "level": 134,
+        "exp": 24337860,
+        "season": 3
+    },
+    {
+        "level": 135,
+        "exp": 25112507,
+        "season": 3
+    },
+    {
+        "level": 136,
+        "exp": 25161277,
+        "season": 3
+    },
+    {
+        "level": 137,
+        "exp": 25962089,
+        "season": 3
+    },
+    {
+        "level": 138,
+        "exp": 26062556,
+        "season": 3
+    },
+    {
+        "level": 139,
+        "exp": 26920314,
+        "season": 3
+    },
+    {
+        "level": 140,
+        "exp": 27780149,
+        "season": 3
+    },
+    {
+        "level": 141,
+        "exp": 28608441,
+        "season": 3
+    },
+    {
+        "level": 142,
+        "exp": 28773140,
+        "season": 3
+    },
+    {
+        "level": 143,
+        "exp": 29687769,
+        "season": 3
+    },
+    {
+        "level": 144,
+        "exp": 29800863,
+        "season": 3
+    },
+    {
+        "level": 145,
+        "exp": 30864506,
+        "season": 3
+    },
+    {
+        "level": 146,
+        "exp": 30980992,
+        "season": 3
+    },
+    {
+        "level": 147,
+        "exp": 32025290,
+        "season": 3
+    },
+    {
+        "level": 148,
+        "exp": 32205262,
+        "season": 3
+    },
+    {
+        "level": 149,
+        "exp": 33270698,
+        "season": 3
+    },
+    {
+        "level": 150,
+        "exp": 34387276,
+        "season": 3
+    },
+    {
+        "level": 151,
+        "exp": 35609150,
+        "season": 3
+    },
+    {
+        "level": 152,
+        "exp": 35871344,
+        "season": 3
+    },
+    {
+        "level": 153,
+        "exp": 37143639,
+        "season": 3
+    },
+    {
+        "level": 154,
+        "exp": 37211154,
+        "season": 3
+    },
+    {
+        "level": 155,
+        "exp": 38460179,
+        "season": 3
+    },
+    {
+        "level": 156,
+        "exp": 38529719,
+        "season": 3
+    },
+    {
+        "level": 157,
+        "exp": 39822474,
+        "season": 3
+    },
+    {
+        "level": 158,
+        "exp": 40037353,
+        "season": 3
+    },
+    {
+        "level": 159,
+        "exp": 43248083,
+        "season": 3
+    },
+    {
+        "level": 160,
+        "exp": 44969859,
+        "season": 3
+    },
+    {
+        "level": 161,
+        "exp": 48762878,
+        "season": 3
+    },
+    {
+        "level": 162,
+        "exp": 52604320,
+        "season": 3
+    },
+    {
+        "level": 163,
+        "exp": 56396556,
+        "season": 3
+    },
+    {
+        "level": 164,
+        "exp": 60225668,
+        "season": 3
+    },
+    {
+        "level": 165,
+        "exp": 63980989,
+        "season": 3
+    },
+    {
+        "level": 166,
+        "exp": 67994521,
+        "season": 3
+    },
+    {
+        "level": 167,
+        "exp": 71934262,
+        "season": 3
+    },
+    {
+        "level": 168,
+        "exp": 76039985,
+        "season": 3
+    },
+    {
+        "level": 169,
+        "exp": 80194876,
+        "season": 3
+    },
+    {
+        "level": 170,
+        "exp": 80600630,
+        "season": 3
+    },
+    {
+        "level": 171,
+        "exp": 81009637,
+        "season": 3
+    },
+    {
+        "level": 172,
+        "exp": 81415408,
+        "season": 3
+    },
+    {
+        "level": 173,
+        "exp": 81685922,
+        "season": 3
+    },
+    {
+        "level": 174,
+        "exp": 81821179,
+        "season": 3
+    },
+    {
+        "level": 175,
+        "exp": 82226950,
+        "season": 3
+    },
+    {
+        "level": 176,
+        "exp": 82632720,
+        "season": 3
+    },
+    {
+        "level": 177,
+        "exp": 82903234,
+        "season": 3
+    },
+    {
+        "level": 178,
+        "exp": 83309005,
+        "season": 3
+    },
+    {
+        "level": 179,
+        "exp": 83714776,
+        "season": 3
+    },
+    {
+        "level": 180,
+        "exp": 83985290,
+        "season": 3
+    },
+    {
+        "level": 181,
+        "exp": 84388130,
+        "season": 3
+    },
+    {
+        "level": 182,
+        "exp": 84658635,
+        "season": 3
+    },
+    {
+        "level": 183,
+        "exp": 84929139,
+        "season": 3
+    },
+    {
+        "level": 184,
+        "exp": 85334896,
+        "season": 3
+    },
+    {
+        "level": 185,
+        "exp": 85605400,
+        "season": 3
+    },
+    {
+        "level": 186,
+        "exp": 85875905,
+        "season": 3
+    },
+    {
+        "level": 187,
+        "exp": 86281661,
+        "season": 3
+    },
+    {
+        "level": 188,
+        "exp": 86552166,
+        "season": 3
+    },
+    {
+        "level": 189,
+        "exp": 86822670,
+        "season": 3
+    },
+    {
+        "level": 190,
+        "exp": 86957923,
+        "season": 3
+    },
+    {
+        "level": 191,
+        "exp": 87237117,
+        "season": 3
+    },
+    {
+        "level": 192,
+        "exp": 87507648,
+        "season": 3
+    },
+    {
+        "level": 193,
+        "exp": 87913445,
+        "season": 3
+    },
+    {
+        "level": 194,
+        "exp": 103526684,
+        "season": 3
+    },
+    {
+        "level": 195,
+        "exp": 114131779,
+        "season": 3
+    },
+    {
+        "level": 196,
+        "exp": 114434891,
+        "season": 3
+    },
+    {
+        "level": 197,
+        "exp": 114586448,
+        "season": 3
+    },
+    {
+        "level": 198,
+        "exp": 114889559,
+        "season": 3
+    },
+    {
+        "level": 199,
+        "exp": 115192672,
+        "season": 3
+    },
+    {
+        "level": 200,
+        "exp": 115344229,
+        "season": 3
+    },
+    {
+        "level": 201,
+        "exp": 115928916,
+        "season": 3
+    },
+    {
+        "level": 202,
+        "exp": 116231965,
+        "season": 3
+    },
+    {
+        "level": 203,
+        "exp": 116686535,
+        "season": 3
+    },
+    {
+        "level": 204,
+        "exp": 116838059,
+        "season": 3
+    },
+    {
+        "level": 205,
+        "exp": 117444154,
+        "season": 3
+    },
+    {
+        "level": 206,
+        "exp": 117747201,
+        "season": 3
+    },
+    {
+        "level": 207,
+        "exp": 117898726,
+        "season": 3
+    },
+    {
+        "level": 208,
+        "exp": 118353296,
+        "season": 3
+    },
+    {
+        "level": 209,
+        "exp": 118656343,
+        "season": 3
+    },
+    {
+        "level": 210,
+        "exp": 118807868,
+        "season": 3
+    },
+    {
+        "level": 211,
+        "exp": 119120332,
+        "season": 3
+    },
+    {
+        "level": 212,
+        "exp": 119271871,
+        "season": 3
+    },
+    {
+        "level": 213,
+        "exp": 119726482,
+        "season": 3
+    },
+    {
+        "level": 214,
+        "exp": 120029557,
+        "season": 3
+    },
+    {
+        "level": 215,
+        "exp": 120181095,
+        "season": 3
+    },
+    {
+        "level": 216,
+        "exp": 120484169,
+        "season": 3
+    },
+    {
+        "level": 217,
+        "exp": 120787245,
+        "season": 3
+    },
+    {
+        "level": 218,
+        "exp": 121090319,
+        "season": 3
+    },
+    {
+        "level": 219,
+        "exp": 105899150,
+        "season": 3
+    },
+    {
+        "level": 220,
+        "exp": 106656837,
+        "season": 3
+    },
+    {
+        "level": 221,
+        "exp": 106969019,
+        "season": 3
+    },
+    {
+        "level": 222,
+        "exp": 107120569,
+        "season": 3
+    },
+    {
+        "level": 223,
+        "exp": 107423670,
+        "season": 3
+    },
+    {
+        "level": 224,
+        "exp": 107726771,
+        "season": 3
+    },
+    {
+        "level": 225,
+        "exp": 108332972,
+        "season": 3
+    },
+    {
+        "level": 226,
+        "exp": 108484523,
+        "season": 3
+    },
+    {
+        "level": 227,
+        "exp": 109242275,
+        "season": 3
+    },
+    {
+        "level": 228,
+        "exp": 109545375,
+        "season": 3
+    },
+    {
+        "level": 229,
+        "exp": 109696926,
+        "season": 3
+    },
+    {
+        "level": 230,
+        "exp": 110000026,
+        "season": 3
+    },
+    {
+        "level": 231,
+        "exp": 110293284,
+        "season": 3
+    },
+    {
+        "level": 232,
+        "exp": 110444820,
+        "season": 3
+    },
+    {
+        "level": 233,
+        "exp": 110747894,
+        "season": 3
+    },
+    {
+        "level": 234,
+        "exp": 111050968,
+        "season": 3
+    },
+    {
+        "level": 235,
+        "exp": 111657115,
+        "season": 3
+    },
+    {
+        "level": 236,
+        "exp": 111808652,
+        "season": 3
+    },
+    {
+        "level": 237,
+        "exp": 111960189,
+        "season": 3
+    },
+    {
+        "level": 238,
+        "exp": 112263263,
+        "season": 3
+    },
+    {
+        "level": 239,
+        "exp": 112414799,
+        "season": 3
+    },
+    {
+        "level": 240,
+        "exp": 112717873,
+        "season": 3
+    },
+    {
+        "level": 241,
+        "exp": 113019510,
+        "season": 3
+    },
+    {
+        "level": 242,
+        "exp": 113322580,
+        "season": 3
+    },
+    {
+        "level": 243,
+        "exp": 113625650,
+        "season": 3
+    },
+    {
+        "level": 244,
+        "exp": 113777185,
+        "season": 3
+    },
+    {
+        "level": 245,
+        "exp": 114080255,
+        "season": 3
+    },
+    {
+        "level": 246,
+        "exp": 114080255,
+        "season": 3
+    },
+    {
+        "level": 247,
+        "exp": 114231790,
+        "season": 3
+    },
+    {
+        "level": 248,
+        "exp": 114231790,
+        "season": 3
+    },
+    {
+        "level": 249,
+        "exp": 114383325,
+        "season": 3
+    },
+    {
+        "level": 250,
+        "exp": 114498509,
+        "season": 3
+    },
+    {
+        "level": 251,
+        "exp": 114534860,
+        "season": 3
+    },
+    {
+        "level": 252,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 253,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 254,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 255,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 256,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 257,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 258,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 259,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 260,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 261,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 262,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 263,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 264,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 265,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 266,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 267,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 268,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 269,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 270,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 271,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 272,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 273,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 274,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 275,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 276,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 277,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 278,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 279,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 280,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 281,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 282,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 283,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 284,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 285,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 286,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 287,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 288,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 289,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 290,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 291,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 292,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 293,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 294,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 295,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 296,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 297,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 298,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 299,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 300,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 301,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 302,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 303,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 304,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 305,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 306,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 307,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 308,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 309,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 310,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 311,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 312,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 313,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 314,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 315,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 316,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 317,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 318,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 319,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 320,
+        "exp": 114649996,
+        "season": 3
+    },
+    {
+        "level": 1,
+        "exp": 80,
+        "season": 4
+    },
+    {
+        "level": 2,
+        "exp": 90,
+        "season": 4
+    },
+    {
+        "level": 3,
+        "exp": 90,
+        "season": 4
+    },
+    {
+        "level": 4,
+        "exp": 90,
+        "season": 4
+    },
+    {
+        "level": 5,
+        "exp": 90,
+        "season": 4
+    },
+    {
+        "level": 6,
+        "exp": 90,
+        "season": 4
+    },
+    {
+        "level": 7,
+        "exp": 90,
+        "season": 4
+    },
+    {
+        "level": 8,
+        "exp": 90,
+        "season": 4
+    },
+    {
+        "level": 9,
+        "exp": 100,
+        "season": 4
+    },
+    {
+        "level": 10,
+        "exp": 350,
+        "season": 4
+    },
+    {
+        "level": 11,
+        "exp": 355,
+        "season": 4
+    },
+    {
+        "level": 12,
+        "exp": 360,
+        "season": 4
+    },
+    {
+        "level": 13,
+        "exp": 370,
+        "season": 4
+    },
+    {
+        "level": 14,
+        "exp": 375,
+        "season": 4
+    },
+    {
+        "level": 15,
+        "exp": 390,
+        "season": 4
+    },
+    {
+        "level": 16,
+        "exp": 400,
+        "season": 4
+    },
+    {
+        "level": 17,
+        "exp": 450,
+        "season": 4
+    },
+    {
+        "level": 18,
+        "exp": 500,
+        "season": 4
+    },
+    {
+        "level": 19,
+        "exp": 500,
+        "season": 4
+    },
+    {
+        "level": 20,
+        "exp": 1483,
+        "season": 4
+    },
+    {
+        "level": 21,
+        "exp": 1844,
+        "season": 4
+    },
+    {
+        "level": 22,
+        "exp": 1865,
+        "season": 4
+    },
+    {
+        "level": 23,
+        "exp": 1916,
+        "season": 4
+    },
+    {
+        "level": 24,
+        "exp": 2043,
+        "season": 4
+    },
+    {
+        "level": 25,
+        "exp": 2067,
+        "season": 4
+    },
+    {
+        "level": 26,
+        "exp": 2169,
+        "season": 4
+    },
+    {
+        "level": 27,
+        "exp": 2437,
+        "season": 4
+    },
+    {
+        "level": 28,
+        "exp": 2536,
+        "season": 4
+    },
+    {
+        "level": 29,
+        "exp": 2860,
+        "season": 4
+    },
+    {
+        "level": 30,
+        "exp": 2995,
+        "season": 4
+    },
+    {
+        "level": 31,
+        "exp": 3607,
+        "season": 4
+    },
+    {
+        "level": 32,
+        "exp": 3794,
+        "season": 4
+    },
+    {
+        "level": 33,
+        "exp": 3876,
+        "season": 4
+    },
+    {
+        "level": 34,
+        "exp": 3996,
+        "season": 4
+    },
+    {
+        "level": 35,
+        "exp": 4261,
+        "season": 4
+    },
+    {
+        "level": 36,
+        "exp": 4289,
+        "season": 4
+    },
+    {
+        "level": 37,
+        "exp": 4510,
+        "season": 4
+    },
+    {
+        "level": 38,
+        "exp": 4928,
+        "season": 4
+    },
+    {
+        "level": 39,
+        "exp": 5086,
+        "season": 4
+    },
+    {
+        "level": 40,
+        "exp": 17203,
+        "season": 4
+    },
+    {
+        "level": 41,
+        "exp": 19189,
+        "season": 4
+    },
+    {
+        "level": 42,
+        "exp": 21484,
+        "season": 4
+    },
+    {
+        "level": 43,
+        "exp": 21509,
+        "season": 4
+    },
+    {
+        "level": 44,
+        "exp": 23052,
+        "season": 4
+    },
+    {
+        "level": 45,
+        "exp": 24627,
+        "season": 4
+    },
+    {
+        "level": 46,
+        "exp": 25480,
+        "season": 4
+    },
+    {
+        "level": 47,
+        "exp": 26852,
+        "season": 4
+    },
+    {
+        "level": 48,
+        "exp": 29068,
+        "season": 4
+    },
+    {
+        "level": 49,
+        "exp": 32008,
+        "season": 4
+    },
+    {
+        "level": 50,
+        "exp": 33168,
+        "season": 4
+    },
+    {
+        "level": 51,
+        "exp": 33332,
+        "season": 4
+    },
+    {
+        "level": 52,
+        "exp": 34095,
+        "season": 4
+    },
+    {
+        "level": 53,
+        "exp": 35628,
+        "season": 4
+    },
+    {
+        "level": 54,
+        "exp": 35929,
+        "season": 4
+    },
+    {
+        "level": 55,
+        "exp": 37680,
+        "season": 4
+    },
+    {
+        "level": 56,
+        "exp": 38331,
+        "season": 4
+    },
+    {
+        "level": 57,
+        "exp": 38878,
+        "season": 4
+    },
+    {
+        "level": 58,
+        "exp": 39016,
+        "season": 4
+    },
+    {
+        "level": 59,
+        "exp": 41731,
+        "season": 4
+    },
+    {
+        "level": 60,
+        "exp": 43128,
+        "season": 4
+    },
+    {
+        "level": 61,
+        "exp": 45042,
+        "season": 4
+    },
+    {
+        "level": 62,
+        "exp": 45412,
+        "season": 4
+    },
+    {
+        "level": 63,
+        "exp": 47152,
+        "season": 4
+    },
+    {
+        "level": 64,
+        "exp": 47282,
+        "season": 4
+    },
+    {
+        "level": 65,
+        "exp": 47340,
+        "season": 4
+    },
+    {
+        "level": 66,
+        "exp": 50487,
+        "season": 4
+    },
+    {
+        "level": 67,
+        "exp": 53076,
+        "season": 4
+    },
+    {
+        "level": 68,
+        "exp": 54257,
+        "season": 4
+    },
+    {
+        "level": 69,
+        "exp": 54405,
+        "season": 4
+    },
+    {
+        "level": 70,
+        "exp": 197114,
+        "season": 4
+    },
+    {
+        "level": 71,
+        "exp": 310414,
+        "season": 4
+    },
+    {
+        "level": 72,
+        "exp": 330204,
+        "season": 4
+    },
+    {
+        "level": 73,
+        "exp": 334735,
+        "season": 4
+    },
+    {
+        "level": 74,
+        "exp": 348791,
+        "season": 4
+    },
+    {
+        "level": 75,
+        "exp": 360389,
+        "season": 4
+    },
+    {
+        "level": 76,
+        "exp": 360701,
+        "season": 4
+    },
+    {
+        "level": 77,
+        "exp": 362826,
+        "season": 4
+    },
+    {
+        "level": 78,
+        "exp": 378632,
+        "season": 4
+    },
+    {
+        "level": 79,
+        "exp": 379059,
+        "season": 4
+    },
+    {
+        "level": 80,
+        "exp": 408765,
+        "season": 4
+    },
+    {
+        "level": 81,
+        "exp": 440713,
+        "season": 4
+    },
+    {
+        "level": 82,
+        "exp": 464670,
+        "season": 4
+    },
+    {
+        "level": 83,
+        "exp": 467234,
+        "season": 4
+    },
+    {
+        "level": 84,
+        "exp": 477970,
+        "season": 4
+    },
+    {
+        "level": 85,
+        "exp": 484690,
+        "season": 4
+    },
+    {
+        "level": 86,
+        "exp": 509874,
+        "season": 4
+    },
+    {
+        "level": 87,
+        "exp": 513879,
+        "season": 4
+    },
+    {
+        "level": 88,
+        "exp": 527583,
+        "season": 4
+    },
+    {
+        "level": 89,
+        "exp": 532378,
+        "season": 4
+    },
+    {
+        "level": 90,
+        "exp": 583801,
+        "season": 4
+    },
+    {
+        "level": 91,
+        "exp": 612907,
+        "season": 4
+    },
+    {
+        "level": 92,
+        "exp": 643189,
+        "season": 4
+    },
+    {
+        "level": 93,
+        "exp": 644274,
+        "season": 4
+    },
+    {
+        "level": 94,
+        "exp": 670957,
+        "season": 4
+    },
+    {
+        "level": 95,
+        "exp": 678226,
+        "season": 4
+    },
+    {
+        "level": 96,
+        "exp": 706678,
+        "season": 4
+    },
+    {
+        "level": 97,
+        "exp": 712891,
+        "season": 4
+    },
+    {
+        "level": 98,
+        "exp": 749807,
+        "season": 4
+    },
+    {
+        "level": 99,
+        "exp": 751452,
+        "season": 4
+    },
+    {
+        "level": 100,
+        "exp": 2904398,
+        "season": 4
+    },
+    {
+        "level": 101,
+        "exp": 3027527,
+        "season": 4
+    },
+    {
+        "level": 102,
+        "exp": 3032011,
+        "season": 4
+    },
+    {
+        "level": 103,
+        "exp": 3117883,
+        "season": 4
+    },
+    {
+        "level": 104,
+        "exp": 3191855,
+        "season": 4
+    },
+    {
+        "level": 105,
+        "exp": 3220513,
+        "season": 4
+    },
+    {
+        "level": 106,
+        "exp": 3258763,
+        "season": 4
+    },
+    {
+        "level": 107,
+        "exp": 3346658,
+        "season": 4
+    },
+    {
+        "level": 108,
+        "exp": 3389858,
+        "season": 4
+    },
+    {
+        "level": 109,
+        "exp": 3548753,
+        "season": 4
+    },
+    {
+        "level": 110,
+        "exp": 3631694,
+        "season": 4
+    },
+    {
+        "level": 111,
+        "exp": 3771824,
+        "season": 4
+    },
+    {
+        "level": 112,
+        "exp": 3796167,
+        "season": 4
+    },
+    {
+        "level": 113,
+        "exp": 3866624,
+        "season": 4
+    },
+    {
+        "level": 114,
+        "exp": 3924404,
+        "season": 4
+    },
+    {
+        "level": 115,
+        "exp": 4029348,
+        "season": 4
+    },
+    {
+        "level": 116,
+        "exp": 4101565,
+        "season": 4
+    },
+    {
+        "level": 117,
+        "exp": 4245434,
+        "season": 4
+    },
+    {
+        "level": 118,
+        "exp": 4245686,
+        "season": 4
+    },
+    {
+        "level": 119,
+        "exp": 4514881,
+        "season": 4
+    },
+    {
+        "level": 120,
+        "exp": 4566377,
+        "season": 4
+    },
+    {
+        "level": 121,
+        "exp": 4752888,
+        "season": 4
+    },
+    {
+        "level": 122,
+        "exp": 4866448,
+        "season": 4
+    },
+    {
+        "level": 123,
+        "exp": 5012377,
+        "season": 4
+    },
+    {
+        "level": 124,
+        "exp": 5016341,
+        "season": 4
+    },
+    {
+        "level": 125,
+        "exp": 5178619,
+        "season": 4
+    },
+    {
+        "level": 126,
+        "exp": 5229563,
+        "season": 4
+    },
+    {
+        "level": 127,
+        "exp": 5423881,
+        "season": 4
+    },
+    {
+        "level": 128,
+        "exp": 5459728,
+        "season": 4
+    },
+    {
+        "level": 129,
+        "exp": 6335318,
+        "season": 4
+    },
+    {
+        "level": 130,
+        "exp": 22859655,
+        "season": 4
+    },
+    {
+        "level": 131,
+        "exp": 23541185,
+        "season": 4
+    },
+    {
+        "level": 132,
+        "exp": 23587156,
+        "season": 4
+    },
+    {
+        "level": 133,
+        "exp": 24290510,
+        "season": 4
+    },
+    {
+        "level": 134,
+        "exp": 24337860,
+        "season": 4
+    },
+    {
+        "level": 135,
+        "exp": 25112507,
+        "season": 4
+    },
+    {
+        "level": 136,
+        "exp": 25161277,
+        "season": 4
+    },
+    {
+        "level": 137,
+        "exp": 25962089,
+        "season": 4
+    },
+    {
+        "level": 138,
+        "exp": 26062556,
+        "season": 4
+    },
+    {
+        "level": 139,
+        "exp": 26920314,
+        "season": 4
+    },
+    {
+        "level": 140,
+        "exp": 27780149,
+        "season": 4
+    },
+    {
+        "level": 141,
+        "exp": 28608441,
+        "season": 4
+    },
+    {
+        "level": 142,
+        "exp": 28773140,
+        "season": 4
+    },
+    {
+        "level": 143,
+        "exp": 29687769,
+        "season": 4
+    },
+    {
+        "level": 144,
+        "exp": 29800863,
+        "season": 4
+    },
+    {
+        "level": 145,
+        "exp": 30864506,
+        "season": 4
+    },
+    {
+        "level": 146,
+        "exp": 30980992,
+        "season": 4
+    },
+    {
+        "level": 147,
+        "exp": 32025290,
+        "season": 4
+    },
+    {
+        "level": 148,
+        "exp": 32205262,
+        "season": 4
+    },
+    {
+        "level": 149,
+        "exp": 33270698,
+        "season": 4
+    },
+    {
+        "level": 150,
+        "exp": 34387276,
+        "season": 4
+    },
+    {
+        "level": 151,
+        "exp": 35609150,
+        "season": 4
+    },
+    {
+        "level": 152,
+        "exp": 35871344,
+        "season": 4
+    },
+    {
+        "level": 153,
+        "exp": 37143639,
+        "season": 4
+    },
+    {
+        "level": 154,
+        "exp": 37211154,
+        "season": 4
+    },
+    {
+        "level": 155,
+        "exp": 38460179,
+        "season": 4
+    },
+    {
+        "level": 156,
+        "exp": 38529719,
+        "season": 4
+    },
+    {
+        "level": 157,
+        "exp": 39822474,
+        "season": 4
+    },
+    {
+        "level": 158,
+        "exp": 40037353,
+        "season": 4
+    },
+    {
+        "level": 159,
+        "exp": 43248083,
+        "season": 4
+    },
+    {
+        "level": 160,
+        "exp": 384397189,
+        "season": 4
+    },
+    {
+        "level": 161,
+        "exp": 395865205,
+        "season": 4
+    },
+    {
+        "level": 162,
+        "exp": 396350698,
+        "season": 4
+    },
+    {
+        "level": 163,
+        "exp": 409177436,
+        "season": 4
+    },
+    {
+        "level": 164,
+        "exp": 409177436,
+        "season": 4
+    },
+    {
+        "level": 165,
+        "exp": 422418979,
+        "season": 4
+    },
+    {
+        "level": 166,
+        "exp": 422934039,
+        "season": 4
+    },
+    {
+        "level": 167,
+        "exp": 437149695,
+        "season": 4
+    },
+    {
+        "level": 168,
+        "exp": 438210719,
+        "season": 4
+    },
+    {
+        "level": 169,
+        "exp": 453833849,
+        "season": 4
+    },
+    {
+        "level": 170,
+        "exp": 468396986,
+        "season": 4
+    },
+    {
+        "level": 171,
+        "exp": 484113075,
+        "season": 4
+    },
+    {
+        "level": 172,
+        "exp": 485851805,
+        "season": 4
+    },
+    {
+        "level": 173,
+        "exp": 502143700,
+        "season": 4
+    },
+    {
+        "level": 174,
+        "exp": 503337628,
+        "season": 4
+    },
+    {
+        "level": 175,
+        "exp": 519592952,
+        "season": 4
+    },
+    {
+        "level": 176,
+        "exp": 520822698,
+        "season": 4
+    },
+    {
+        "level": 177,
+        "exp": 538272785,
+        "season": 4
+    },
+    {
+        "level": 178,
+        "exp": 540172742,
+        "season": 4
+    },
+    {
+        "level": 179,
+        "exp": 557963011,
+        "season": 4
+    },
+    {
+        "level": 180,
+        "exp": 576777448,
+        "season": 4
+    },
+    {
+        "level": 181,
+        "exp": 595380011,
+        "season": 4
+    },
+    {
+        "level": 182,
+        "exp": 596764450,
+        "season": 4
+    },
+    {
+        "level": 183,
+        "exp": 617434129,
+        "season": 4
+    },
+    {
+        "level": 184,
+        "exp": 620286073,
+        "season": 4
+    },
+    {
+        "level": 185,
+        "exp": 641012583,
+        "season": 4
+    },
+    {
+        "level": 186,
+        "exp": 642481335,
+        "season": 4
+    },
+    {
+        "level": 187,
+        "exp": 663183389,
+        "season": 4
+    },
+    {
+        "level": 188,
+        "exp": 665452610,
+        "season": 4
+    },
+    {
+        "level": 189,
+        "exp": 744690971,
+        "season": 4
+    },
+    {
+        "level": 190,
+        "exp": 804233453,
+        "season": 4
+    },
+    {
+        "level": 191,
+        "exp": 864436925,
+        "season": 4
+    },
+    {
+        "level": 192,
+        "exp": 925029631,
+        "season": 4
+    },
+    {
+        "level": 193,
+        "exp": 986011570,
+        "season": 4
+    },
+    {
+        "level": 194,
+        "exp": 1047382743,
+        "season": 4
+    },
+    {
+        "level": 195,
+        "exp": 1110376404,
+        "season": 4
+    },
+    {
+        "level": 196,
+        "exp": 1173889043,
+        "season": 4
+    },
+    {
+        "level": 197,
+        "exp": 1235194660,
+        "season": 4
+    },
+    {
+        "level": 198,
+        "exp": 1298187639,
+        "season": 4
+    },
+    {
+        "level": 199,
+        "exp": 1302471254,
+        "season": 4
+    },
+    {
+        "level": 200,
+        "exp": 1305533399,
+        "season": 4
+    },
+    {
+        "level": 201,
+        "exp": 1306961497,
+        "season": 4
+    },
+    {
+        "level": 202,
+        "exp": 1309817693,
+        "season": 4
+    },
+    {
+        "level": 203,
+        "exp": 1312673889,
+        "season": 4
+    },
+    {
+        "level": 204,
+        "exp": 1315530085,
+        "season": 4
+    },
+    {
+        "level": 205,
+        "exp": 1318386280,
+        "season": 4
+    },
+    {
+        "level": 206,
+        "exp": 1321242476,
+        "season": 4
+    },
+    {
+        "level": 207,
+        "exp": 1322670574,
+        "season": 4
+    },
+    {
+        "level": 208,
+        "exp": 1325526770,
+        "season": 4
+    },
+    {
+        "level": 209,
+        "exp": 1328382966,
+        "season": 4
+    },
+    {
+        "level": 210,
+        "exp": 1331308702,
+        "season": 4
+    },
+    {
+        "level": 211,
+        "exp": 1334165048,
+        "season": 4
+    },
+    {
+        "level": 212,
+        "exp": 1337021393,
+        "season": 4
+    },
+    {
+        "level": 213,
+        "exp": 1339877738,
+        "season": 4
+    },
+    {
+        "level": 214,
+        "exp": 1342734083,
+        "season": 4
+    },
+    {
+        "level": 215,
+        "exp": 1345590428,
+        "season": 4
+    },
+    {
+        "level": 216,
+        "exp": 1348446774,
+        "season": 4
+    },
+    {
+        "level": 217,
+        "exp": 1351303119,
+        "season": 4
+    },
+    {
+        "level": 218,
+        "exp": 1354159464,
+        "season": 4
+    },
+    {
+        "level": 219,
+        "exp": 1357015809,
+        "season": 4
+    },
+    {
+        "level": 220,
+        "exp": 1359833971,
+        "season": 4
+    },
+    {
+        "level": 221,
+        "exp": 1362690236,
+        "season": 4
+    },
+    {
+        "level": 222,
+        "exp": 1365546501,
+        "season": 4
+    },
+    {
+        "level": 223,
+        "exp": 1368402766,
+        "season": 4
+    },
+    {
+        "level": 224,
+        "exp": 1369830899,
+        "season": 4
+    },
+    {
+        "level": 225,
+        "exp": 1372687164,
+        "season": 4
+    },
+    {
+        "level": 226,
+        "exp": 1375543428,
+        "season": 4
+    },
+    {
+        "level": 227,
+        "exp": 1378399693,
+        "season": 4
+    },
+    {
+        "level": 228,
+        "exp": 1381255958,
+        "season": 4
+    },
+    {
+        "level": 229,
+        "exp": 1384112223,
+        "season": 4
+    },
+    {
+        "level": 230,
+        "exp": 1385490351,
+        "season": 4
+    },
+    {
+        "level": 231,
+        "exp": 1388346513,
+        "season": 4
+    },
+    {
+        "level": 232,
+        "exp": 1391202675,
+        "season": 4
+    },
+    {
+        "level": 233,
+        "exp": 1392630756,
+        "season": 4
+    },
+    {
+        "level": 234,
+        "exp": 1395486917,
+        "season": 4
+    },
+    {
+        "level": 235,
+        "exp": 1398343079,
+        "season": 4
+    },
+    {
+        "level": 236,
+        "exp": 1401199241,
+        "season": 4
+    },
+    {
+        "level": 237,
+        "exp": 1404055402,
+        "season": 4
+    },
+    {
+        "level": 238,
+        "exp": 1406911564,
+        "season": 4
+    },
+    {
+        "level": 239,
+        "exp": 1408339645,
+        "season": 4
+    },
+    {
+        "level": 240,
+        "exp": 1411302011,
+        "season": 4
+    },
+    {
+        "level": 241,
+        "exp": 1414158388,
+        "season": 4
+    },
+    {
+        "level": 242,
+        "exp": 1417014765,
+        "season": 4
+    },
+    {
+        "level": 243,
+        "exp": 1419871142,
+        "season": 4
+    },
+    {
+        "level": 244,
+        "exp": 1422727519,
+        "season": 4
+    },
+    {
+        "level": 245,
+        "exp": 1425583895,
+        "season": 4
+    },
+    {
+        "level": 246,
+        "exp": 1427012084,
+        "season": 4
+    },
+    {
+        "level": 247,
+        "exp": 1429868461,
+        "season": 4
+    },
+    {
+        "level": 248,
+        "exp": 1432724838,
+        "season": 4
+    },
+    {
+        "level": 249,
+        "exp": 1435581215,
+        "season": 4
+    },
+    {
+        "level": 250,
+        "exp": 1436995360,
+        "season": 4
+    },
+    {
+        "level": 251,
+        "exp": 1439851709,
+        "season": 4
+    },
+    {
+        "level": 252,
+        "exp": 1442708058,
+        "season": 4
+    },
+    {
+        "level": 253,
+        "exp": 1445564407,
+        "season": 4
+    },
+    {
+        "level": 254,
+        "exp": 1448420756,
+        "season": 4
+    },
+    {
+        "level": 255,
+        "exp": 1451277105,
+        "season": 4
+    },
+    {
+        "level": 256,
+        "exp": 1454133454,
+        "season": 4
+    },
+    {
+        "level": 257,
+        "exp": 1455561628,
+        "season": 4
+    },
+    {
+        "level": 258,
+        "exp": 1458417977,
+        "season": 4
+    },
+    {
+        "level": 259,
+        "exp": 1461274326,
+        "season": 4
+    },
+    {
+        "level": 260,
+        "exp": 1463946577,
+        "season": 4
+    },
+    {
+        "level": 261,
+        "exp": 1466802567,
+        "season": 4
+    },
+    {
+        "level": 262,
+        "exp": 1469658556,
+        "season": 4
+    },
+    {
+        "level": 263,
+        "exp": 1472514546,
+        "season": 4
+    },
+    {
+        "level": 264,
+        "exp": 1473942540,
+        "season": 4
+    },
+    {
+        "level": 265,
+        "exp": 1476798530,
+        "season": 4
+    },
+    {
+        "level": 266,
+        "exp": 1479654519,
+        "season": 4
+    },
+    {
+        "level": 267,
+        "exp": 1482510509,
+        "season": 4
+    },
+    {
+        "level": 268,
+        "exp": 1485366498,
+        "season": 4
+    },
+    {
+        "level": 269,
+        "exp": 1488222487,
+        "season": 4
+    },
+    {
+        "level": 270,
+        "exp": 1491390587,
+        "season": 4
+    },
+    {
+        "level": 271,
+        "exp": 1494247175,
+        "season": 4
+    },
+    {
+        "level": 272,
+        "exp": 1497103763,
+        "season": 4
+    },
+    {
+        "level": 273,
+        "exp": 1498532057,
+        "season": 4
+    },
+    {
+        "level": 274,
+        "exp": 1501388645,
+        "season": 4
+    },
+    {
+        "level": 275,
+        "exp": 1504245233,
+        "season": 4
+    },
+    {
+        "level": 276,
+        "exp": 1507101820,
+        "season": 4
+    },
+    {
+        "level": 277,
+        "exp": 1509958408,
+        "season": 4
+    },
+    {
+        "level": 278,
+        "exp": 1511386702,
+        "season": 4
+    },
+    {
+        "level": 279,
+        "exp": 1514243290,
+        "season": 4
+    },
+    {
+        "level": 280,
+        "exp": 1516329564,
+        "season": 4
+    },
+    {
+        "level": 281,
+        "exp": 1519184700,
+        "season": 4
+    },
+    {
+        "level": 282,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 283,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 284,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 285,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 286,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 287,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 288,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 289,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 290,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 291,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 292,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 293,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 294,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 295,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 296,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 297,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 298,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 299,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 300,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 301,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 302,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 303,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 304,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 305,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 306,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 307,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 308,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 309,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 310,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 311,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 312,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 313,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 314,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 315,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 316,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 317,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 318,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 319,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 320,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 321,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 322,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 323,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 324,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 325,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 326,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 327,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 328,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 329,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 330,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 331,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 332,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 333,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 334,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 335,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 336,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 337,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 338,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 339,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 340,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 341,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 342,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 343,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 344,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 345,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 346,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 347,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 348,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 349,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 350,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 351,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 352,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 353,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 354,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 355,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 356,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 357,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 358,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 359,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 360,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 361,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 362,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 363,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 364,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 365,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 366,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 367,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 368,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 369,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 370,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 371,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 372,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 373,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 374,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 375,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 376,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 377,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 378,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 379,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 380,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 381,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 382,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 383,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 384,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 385,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 386,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 387,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 388,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 389,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 390,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 391,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 392,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 393,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 394,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 395,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 396,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 397,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 398,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 399,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 400,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 401,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 402,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 403,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 404,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 405,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 406,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 407,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 408,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 409,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 410,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 411,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 412,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 413,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 414,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 415,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 416,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 417,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 418,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 419,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 420,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 421,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 422,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 423,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 424,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 425,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 426,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 427,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 428,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 429,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 430,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 431,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 432,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 433,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 434,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 435,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 436,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 437,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 438,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 439,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 440,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 441,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 442,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 443,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 444,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 445,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 446,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 447,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 448,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 449,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 450,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 451,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 452,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 453,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 454,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 455,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 456,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 457,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 458,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 459,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 460,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 461,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 462,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 463,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 464,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 465,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 466,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 467,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 468,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 469,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 470,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 471,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 472,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 473,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 474,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 475,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 476,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 477,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 478,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 479,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 480,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 481,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 482,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 483,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 484,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 485,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 486,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 487,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 488,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 489,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 490,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 491,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 492,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 493,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 494,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 495,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 496,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 497,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 498,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 499,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 500,
+        "exp": 1522039835,
+        "season": 4
+    },
+    {
+        "level": 191,
+        "exp": 2620623845,
+        "season": 5
+    },
+    {
+        "level": 192,
+        "exp": 2703801921,
+        "season": 5
+    },
+    {
+        "level": 193,
+        "exp": 2703801921,
+        "season": 5
+    },
+    {
+        "level": 194,
+        "exp": 2792192360,
+        "season": 5
+    },
+    {
+        "level": 195,
+        "exp": 2794759820,
+        "season": 5
+    },
+    {
+        "level": 196,
+        "exp": 2888754553,
+        "season": 5
+    },
+    {
+        "level": 197,
+        "exp": 2888754553,
+        "season": 5
+    },
+    {
+        "level": 198,
+        "exp": 2980438827,
+        "season": 5
+    },
+    {
+        "level": 199,
+        "exp": 2980438827,
+        "season": 5
+    },
+    {
+        "level": 200,
+        "exp": 3096164727,
+        "season": 5
+    },
+    {
+        "level": 201,
+        "exp": 3194748619,
+        "season": 5
+    },
+    {
+        "level": 202,
+        "exp": 3295905907,
+        "season": 5
+    },
+    {
+        "level": 203,
+        "exp": 3301859736,
+        "season": 5
+    },
+    {
+        "level": 204,
+        "exp": 3403342750,
+        "season": 5
+    },
+    {
+        "level": 205,
+        "exp": 3406408972,
+        "season": 5
+    },
+    {
+        "level": 206,
+        "exp": 3520595075,
+        "season": 5
+    },
+    {
+        "level": 207,
+        "exp": 3520595075,
+        "season": 5
+    },
+    {
+        "level": 208,
+        "exp": 3632079837,
+        "season": 5
+    },
+    {
+        "level": 209,
+        "exp": 3638585746,
+        "season": 5
+    },
+    {
+        "level": 210,
+        "exp": 3764255949,
+        "season": 5
+    },
+    {
+        "level": 211,
+        "exp": 3875294137,
+        "season": 5
+    },
+    {
+        "level": 212,
+        "exp": 3997808227,
+        "season": 5
+    },
+    {
+        "level": 213,
+        "exp": 4001361860,
+        "season": 5
+    },
+    {
+        "level": 214,
+        "exp": 4124210958,
+        "season": 5
+    },
+    {
+        "level": 215,
+        "exp": 4127871200,
+        "season": 5
+    },
+    {
+        "level": 216,
+        "exp": 4265935534,
+        "season": 5
+    },
+    {
+        "level": 217,
+        "exp": 4269705583,
+        "season": 5
+    },
+    {
+        "level": 218,
+        "exp": 4611633646,
+        "season": 5
+    },
+    {
+        "level": 219,
+        "exp": 4819261842,
+        "season": 5
+    },
+    {
+        "level": 220,
+        "exp": 5241197635,
+        "season": 5
+    },
+    {
+        "level": 221,
+        "exp": 5463561867,
+        "season": 5
+    },
+    {
+        "level": 222,
+        "exp": 5897456119,
+        "season": 5
+    },
+    {
+        "level": 223,
+        "exp": 6333530684,
+        "season": 5
+    },
+    {
+        "level": 224,
+        "exp": 6771785560,
+        "season": 5
+    },
+    {
+        "level": 225,
+        "exp": 7199857482,
+        "season": 5
+    },
+    {
+        "level": 226,
+        "exp": 7648291229,
+        "season": 5
+    },
+    {
+        "level": 227,
+        "exp": 8099632058,
+        "season": 5
+    },
+    {
+        "level": 228,
+        "exp": 8553879969,
+        "season": 5
+    },
+    {
+        "level": 229,
+        "exp": 9011034962,
+        "season": 5
+    },
+    {
+        "level": 230,
+        "exp": 9455099919,
+        "season": 5
+    },
+    {
+        "level": 231,
+        "exp": 9472937158,
+        "season": 5
+    },
+    {
+        "level": 232,
+        "exp": 9488937390,
+        "season": 5
+    },
+    {
+        "level": 233,
+        "exp": 9488937390,
+        "season": 5
+    },
+    {
+        "level": 234,
+        "exp": 9488937390,
+        "season": 5
+    },
+    {
+        "level": 235,
+        "exp": 9504937622,
+        "season": 5
+    },
+    {
+        "level": 236,
+        "exp": 9552938319,
+        "season": 5
+    },
+    {
+        "level": 237,
+        "exp": 9560938435,
+        "season": 5
+    },
+    {
+        "level": 238,
+        "exp": 9560938435,
+        "season": 5
+    },
+    {
+        "level": 239,
+        "exp": 9576938667,
+        "season": 5
+    },
+    {
+        "level": 240,
+        "exp": 9576938667,
+        "season": 5
+    },
+    {
+        "level": 241,
+        "exp": 9592210130,
+        "season": 5
+    },
+    {
+        "level": 242,
+        "exp": 9592210130,
+        "season": 5
+    },
+    {
+        "level": 243,
+        "exp": 9592210130,
+        "season": 5
+    },
+    {
+        "level": 244,
+        "exp": 9592210130,
+        "season": 5
+    },
+    {
+        "level": 245,
+        "exp": 9608209145,
+        "season": 5
+    },
+    {
+        "level": 246,
+        "exp": 9608209145,
+        "season": 5
+    },
+    {
+        "level": 247,
+        "exp": 9608209145,
+        "season": 5
+    },
+    {
+        "level": 248,
+        "exp": 9608209145,
+        "season": 5
+    },
+    {
+        "level": 249,
+        "exp": 9616208652,
+        "season": 5
+    },
+    {
+        "level": 250,
+        "exp": 9616208652,
+        "season": 5
+    },
+    {
+        "level": 251,
+        "exp": 9631501763,
+        "season": 5
+    },
+    {
+        "level": 252,
+        "exp": 9695493123,
+        "season": 5
+    },
+    {
+        "level": 253,
+        "exp": 9703492043,
+        "season": 5
+    },
+    {
+        "level": 254,
+        "exp": 9711490963,
+        "season": 5
+    },
+    {
+        "level": 255,
+        "exp": 9711490963,
+        "season": 5
+    },
+    {
+        "level": 256,
+        "exp": 9727488802,
+        "season": 5
+    },
+    {
+        "level": 257,
+        "exp": 9735487722,
+        "season": 5
+    },
+    {
+        "level": 258,
+        "exp": 9759484482,
+        "season": 5
+    },
+    {
+        "level": 259,
+        "exp": 9759484482,
+        "season": 5
+    },
+    {
+        "level": 260,
+        "exp": 9759484482,
+        "season": 5
+    },
+    {
+        "level": 261,
+        "exp": 9785529212,
+        "season": 5
+    },
+    {
+        "level": 262,
+        "exp": 9809531003,
+        "season": 5
+    },
+    {
+        "level": 263,
+        "exp": 9809531003,
+        "season": 5
+    },
+    {
+        "level": 264,
+        "exp": 9825532198,
+        "season": 5
+    },
+    {
+        "level": 265,
+        "exp": 9849533990,
+        "season": 5
+    },
+    {
+        "level": 266,
+        "exp": 9873535781,
+        "season": 5
+    },
+    {
+        "level": 267,
+        "exp": 9897537573,
+        "season": 5
+    },
+    {
+        "level": 268,
+        "exp": 9945541156,
+        "season": 5
+    },
+    {
+        "level": 269,
+        "exp": 9953541754,
+        "season": 5
+    },
+    {
+        "level": 270,
+        "exp": 9961542351,
+        "season": 5
+    },
+    {
+        "level": 271,
+        "exp": 9967495071,
+        "season": 5
+    },
+    {
+        "level": 272,
+        "exp": 9975494022,
+        "season": 5
+    },
+    {
+        "level": 273,
+        "exp": 9983492973,
+        "season": 5
+    },
+    {
+        "level": 274,
+        "exp": 9983492973,
+        "season": 5
+    },
+    {
+        "level": 275,
+        "exp": 9991491924,
+        "season": 5
+    },
+    {
+        "level": 276,
+        "exp": 9991491924,
+        "season": 5
+    },
+    {
+        "level": 277,
+        "exp": 9991491924,
+        "season": 5
+    },
+    {
+        "level": 278,
+        "exp": 9991491924,
+        "season": 5
+    },
+    {
+        "level": 279,
+        "exp": 9991491924,
+        "season": 5
+    },
+    {
+        "level": 280,
+        "exp": 9991491924,
+        "season": 5
+    },
+    {
+        "level": 281,
+        "exp": 9992732141,
+        "season": 5
+    },
+    {
+        "level": 282,
+        "exp": 9992732141,
+        "season": 5
+    },
+    {
+        "level": 283,
+        "exp": 9992732141,
+        "season": 5
+    },
+    {
+        "level": 284,
+        "exp": 10040731815,
+        "season": 5
+    },
+    {
+        "level": 285,
+        "exp": 10040731815,
+        "season": 5
+    },
+    {
+        "level": 286,
+        "exp": 10056731706,
+        "season": 5
+    },
+    {
+        "level": 287,
+        "exp": 10072731597,
+        "season": 5
+    },
+    {
+        "level": 288,
+        "exp": 10128731216,
+        "season": 5
+    },
+    {
+        "level": 289,
+        "exp": 10136731162,
+        "season": 5
+    },
+    {
+        "level": 290,
+        "exp": 10160730999,
+        "season": 5
+    },
+    {
+        "level": 291,
+        "exp": 10168827598,
+        "season": 5
+    },
+    {
+        "level": 292,
+        "exp": 10168827598,
+        "season": 5
+    },
+    {
+        "level": 293,
+        "exp": 10176827619,
+        "season": 5
+    },
+    {
+        "level": 294,
+        "exp": 10184827641,
+        "season": 5
+    },
+    {
+        "level": 295,
+        "exp": 10192827663,
+        "season": 5
+    },
+    {
+        "level": 296,
+        "exp": 10208827706,
+        "season": 5
+    },
+    {
+        "level": 297,
+        "exp": 10216827728,
+        "season": 5
+    },
+    {
+        "level": 298,
+        "exp": 10216827728,
+        "season": 5
+    },
+    {
+        "level": 299,
+        "exp": 10224827750,
+        "season": 5
+    },
+    {
+        "level": 300,
+        "exp": 10224827750,
+        "season": 5
+    },
+    {
+        "level": 301,
+        "exp": 10240386648,
+        "season": 5
+    },
+    {
+        "level": 302,
+        "exp": 10256386001,
+        "season": 5
+    },
+    {
+        "level": 303,
+        "exp": 10288384708,
+        "season": 5
+    },
+    {
+        "level": 304,
+        "exp": 10288384708,
+        "season": 5
+    },
+    {
+        "level": 305,
+        "exp": 10288384708,
+        "season": 5
+    },
+    {
+        "level": 306,
+        "exp": 10288384708,
+        "season": 5
+    },
+    {
+        "level": 307,
+        "exp": 10288384708,
+        "season": 5
+    },
+    {
+        "level": 308,
+        "exp": 10288384708,
+        "season": 5
+    },
+    {
+        "level": 309,
+        "exp": 10288384708,
+        "season": 5
+    },
+    {
+        "level": 310,
+        "exp": 10296384384,
+        "season": 5
+    },
+    {
+        "level": 311,
+        "exp": 10325676141,
+        "season": 5
+    },
+    {
+        "level": 312,
+        "exp": 10349668870,
+        "season": 5
+    },
+    {
+        "level": 313,
+        "exp": 10357666447,
+        "season": 5
+    },
+    {
+        "level": 314,
+        "exp": 10481462149,
+        "season": 5
+    },
+    {
+        "level": 315,
+        "exp": 10605257850,
+        "season": 5
+    },
+    {
+        "level": 316,
+        "exp": 10729053552,
+        "season": 5
+    },
+    {
+        "level": 317,
+        "exp": 10852849253,
+        "season": 5
+    },
+    {
+        "level": 318,
+        "exp": 10976644955,
+        "season": 5
+    },
+    {
+        "level": 319,
+        "exp": 11100440657,
+        "season": 5
+    },
+    {
+        "level": 320,
+        "exp": 11224236358,
+        "season": 5
+    },
+    {
+        "level": 321,
+        "exp": 11348032060,
+        "season": 5
+    },
+    {
+        "level": 322,
+        "exp": 11471827761,
+        "season": 5
+    },
+    {
+        "level": 323,
+        "exp": 11595623463,
+        "season": 5
+    },
+    {
+        "level": 324,
+        "exp": 11719419165,
+        "season": 5
+    },
+    {
+        "level": 325,
+        "exp": 11843214866,
+        "season": 5
+    },
+    {
+        "level": 326,
+        "exp": 11967010568,
+        "season": 5
+    },
+    {
+        "level": 327,
+        "exp": 12090806269,
+        "season": 5
+    },
+    {
+        "level": 328,
+        "exp": 12214601971,
+        "season": 5
+    },
+    {
+        "level": 329,
+        "exp": 12338397672,
+        "season": 5
+    },
+    {
+        "level": 330,
+        "exp": 12462193374,
+        "season": 5
+    },
+    {
+        "level": 331,
+        "exp": 12585989076,
+        "season": 5
+    },
+    {
+        "level": 332,
+        "exp": 12709784777,
+        "season": 5
+    },
+    {
+        "level": 333,
+        "exp": 12833580479,
+        "season": 5
+    },
+    {
+        "level": 334,
+        "exp": 12957376180,
+        "season": 5
+    },
+    {
+        "level": 335,
+        "exp": 13081171882,
+        "season": 5
+    },
+    {
+        "level": 336,
+        "exp": 13204967584,
+        "season": 5
+    },
+    {
+        "level": 337,
+        "exp": 13328763285,
+        "season": 5
+    },
+    {
+        "level": 338,
+        "exp": 13452558987,
+        "season": 5
+    },
+    {
+        "level": 339,
+        "exp": 13576354688,
+        "season": 5
+    },
+    {
+        "level": 340,
+        "exp": 13700150390,
+        "season": 5
+    },
+    {
+        "level": 341,
+        "exp": 13823946092,
+        "season": 5
+    },
+    {
+        "level": 342,
+        "exp": 13947741793,
+        "season": 5
+    },
+    {
+        "level": 343,
+        "exp": 14071537495,
+        "season": 5
+    },
+    {
+        "level": 344,
+        "exp": 14195333196,
+        "season": 5
+    },
+    {
+        "level": 345,
+        "exp": 14319128898,
+        "season": 5
+    },
+    {
+        "level": 346,
+        "exp": 14442924600,
+        "season": 5
+    },
+    {
+        "level": 347,
+        "exp": 14566720301,
+        "season": 5
+    },
+    {
+        "level": 348,
+        "exp": 14690516003,
+        "season": 5
+    },
+    {
+        "level": 349,
+        "exp": 14814311704,
+        "season": 5
+    },
+    {
+        "level": 350,
+        "exp": 14938107406,
+        "season": 5
+    },
+    {
+        "level": 351,
+        "exp": 15061903108,
+        "season": 5
+    },
+    {
+        "level": 352,
+        "exp": 15185698809,
+        "season": 5
+    },
+    {
+        "level": 353,
+        "exp": 15309494511,
+        "season": 5
+    },
+    {
+        "level": 354,
+        "exp": 15433290212,
+        "season": 5
+    },
+    {
+        "level": 355,
+        "exp": 15557085914,
+        "season": 5
+    },
+    {
+        "level": 356,
+        "exp": 15680881615,
+        "season": 5
+    },
+    {
+        "level": 357,
+        "exp": 15804677317,
+        "season": 5
+    },
+    {
+        "level": 358,
+        "exp": 15928473019,
+        "season": 5
+    },
+    {
+        "level": 359,
+        "exp": 16052268720,
+        "season": 5
+    },
+    {
+        "level": 360,
+        "exp": 16176064422,
+        "season": 5
+    },
+    {
+        "level": 361,
+        "exp": 16299860123,
+        "season": 5
+    },
+    {
+        "level": 362,
+        "exp": 16423655825,
+        "season": 5
+    },
+    {
+        "level": 363,
+        "exp": 16547451527,
+        "season": 5
+    },
+    {
+        "level": 364,
+        "exp": 16671247228,
+        "season": 5
+    },
+    {
+        "level": 365,
+        "exp": 16795042930,
+        "season": 5
+    },
+    {
+        "level": 366,
+        "exp": 16918838631,
+        "season": 5
+    },
+    {
+        "level": 367,
+        "exp": 17042634333,
+        "season": 5
+    },
+    {
+        "level": 368,
+        "exp": 17166430035,
+        "season": 5
+    },
+    {
+        "level": 369,
+        "exp": 17290225736,
+        "season": 5
+    },
+    {
+        "level": 370,
+        "exp": 17414021438,
+        "season": 5
+    }
+]
