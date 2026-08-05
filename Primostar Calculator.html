@@ -282,7 +282,8 @@
             items: { hammer: 1200, shovel: 920, knuckles: 1500, treatExp: 50 },
             staminaYield: 1416,
             charExpTable: {},
-            oreTable: { 100: 9280, 101: 9375, 102: 9465, 103: 9560, 104: 9650, 105: 9745, 106: 9835, 107: 9930, 108: 10025, 109: 10115 }
+            base: { ore: 16900, sand: 30000, essense: 11900, treatExp: 56800 },
+            perlvl: { ore: 150, sand: 3500, essense: 100, treatExp: 500 }
         };
 
         function buildExpTable(season) {
@@ -397,24 +398,24 @@
             const skillScoreVal = Math.max(0, manualTargets.skill - CONFIG.lvThresh) * CONFIG.slots.skill * CONFIG.pts.skill;
             let essNeeded = 0;
             const userSkillCur = parseInt(document.getElementById('input_skill_lv').value) || 100;
-            for(let i=userSkillCur; i < manualTargets.skill; i++) essNeeded += (6025 + (i - CONFIG.lvThresh) * 60) * CONFIG.slots.skill;
+            for(let i=userSkillCur; i < manualTargets.skill; i++) essNeeded += (CONFIG.base.essense + (i - CONFIG.lvThresh) * CONFIG.perlvl.essense) * CONFIG.slots.skill;
             const essGen = (baseProductionHours * (parseFloat(document.getElementById('cart_essence').value) || 0)) + (parseInt(document.getElementById('saved_essence').value) || 0);
 
             const fantoScoreVal = Math.max(0, manualTargets.fanto - CONFIG.lvThresh) * CONFIG.slots.fanto * CONFIG.pts.fanto;
             let fantoExpNeeded = 0;
             const userFantoCur = parseInt(document.getElementById('input_fanto_lv').value) || 100;
-            for(let i=userFantoCur; i < manualTargets.fanto; i++) fantoExpNeeded += (26300 + (i - CONFIG.lvThresh) * 500) * CONFIG.slots.fanto;
+            for(let i=userFantoCur; i < manualTargets.fanto; i++) fantoExpNeeded += (CONFIG.base.treatExp + (i - CONFIG.lvThresh) * CONFIG.perlvl.treatExp) * CONFIG.slots.fanto;
             const treatExpGen = (baseProductionHours * (parseFloat(document.getElementById('cart_treats').value) || 0) + (parseInt(document.getElementById('saved_treats').value) || 0)) * CONFIG.items.treatExp;
 
             const relicScoreVal = Math.max(0, manualTargets.relic - CONFIG.relicThresh) * CONFIG.slots.relic * CONFIG.pts.relic;
             let sandNeeded = 0;
             const userRelicCur = parseInt(document.getElementById('input_relic_lv').value) || 10;
-            for(let i=userRelicCur; i < manualTargets.relic; i++) sandNeeded += (16000 + (i - CONFIG.relicThresh) * 1600) * CONFIG.slots.relic;
+            for(let i=userRelicCur; i < manualTargets.relic; i++) sandNeeded += (CONFIG.base.sand + (i - CONFIG.relicThresh) * CONFIG.perlvl.sand) * CONFIG.slots.relic;
             const sandGen = (baseProductionHours * (parseFloat(document.getElementById('cart_sand').value) || 0)) + (parseInt(document.getElementById('saved_sand').value) || 0);
 
             const gearScoreVal = Math.max(0, manualTargets.gear - CONFIG.lvThresh) * CONFIG.slots.gear * CONFIG.pts.gear;
             let gearOreNeeded = 0;
-            for (let cur of gearLvs) { for (let l = cur; l < manualTargets.gear; l++) gearOreNeeded += (l < 110) ? (CONFIG.oreTable[l] || (310 + 90 * l)) : (310 + 90 * l); }
+            for (let cur of gearLvs) { for (let l = cur; l < manualTargets.gear; l++) gearOreNeeded += (CONFIG.base.ore + CONFIG.perlvl.ore * l); }
             const availOreForCalc = (baseProductionHours * (parseFloat(document.getElementById('cart_ore').value) || 0)) + (document.getElementById('use_stamina').checked ? (baseProductionHours * CONFIG.staminaYield) : 0) + (parseInt(document.getElementById('saved_ore').value) || 0);
             
             const totalScore = charScore + skillScoreVal + fantoScoreVal + relicScoreVal + gearScoreVal;
@@ -441,7 +442,7 @@
             const pointsFromGearNeeded = Math.max(0, ((targetPrimo - CONFIG.fixedPrimo) * 100) - (charScore + skillScoreVal + fantoScoreVal + relicScoreVal));
             const finalReqGearLv = Math.ceil(CONFIG.lvThresh + ((pointsFromGearNeeded / CONFIG.pts.gear) / CONFIG.slots.gear));
             let targetOreReq = 0;
-            for (let cur of gearLvs) { for (let l = cur; l < finalReqGearLv; l++) targetOreReq += (l < 110) ? (CONFIG.oreTable[l] || (310 + 90 * l)) : (310 + 90 * l); }
+            for (let cur of gearLvs) { for (let l = cur; l < finalReqGearLv; l++) targetOreReq += (CONFIG.base.ore + CONFIG.perlvl.ore * l); }
 
             document.getElementById('req_score').innerText = Math.floor(pointsFromGearNeeded).toLocaleString();
             document.getElementById('req_gear_lv').innerText = `Lv ${finalReqGearLv}`;
