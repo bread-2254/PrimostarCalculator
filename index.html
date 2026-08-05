@@ -283,8 +283,8 @@
             items: { hammer: 1200, shovel: 920, knuckles: 1500, treatExp: 50 },
             staminaYield: 1416,
             charExpTable: {max: 1000000000000000000},
-            base: { ore: 16900, sand: 30000, essense: 11900, treatExp: 56800 },
-            perlvl: { ore: 150, sand: 3500, essense: 100, treatExp: 500 }
+            base: { ore: 16520, sand: 30000, essense: 11850, treatExp: 56800 },
+            perlvl: { ore: 160, sand: 3500, essense: 120, treatExp: 500 }
         };
 
         function buildExpTable(season) {
@@ -389,9 +389,9 @@
             const capSkill = eosCharLv;
             const capFanto = Math.floor(eosCharLv / 10) * 10 + 10;
             const capRelic = capFanto / 10;
-            if (document.getElementById('skip_skills').checked || !overrideFlags.skill) manualTargets.skill = document.getElementById('input_skill_lv').value;
-            if (document.getElementById('skip_fantomon').checked || !overrideFlags.fanto) manualTargets.fanto = document.getElementById('input_fanto_lv').value;
-            if (document.getElementById('skip_relics').checked || !overrideFlags.relic) manualTargets.relic = document.getElementById('input_relic_lv').value;
+            if (document.getElementById('skip_skills').checked || !overrideFlags.skill) manualTargets.skill = parseInt(document.getElementById('input_skill_lv').value, 10);
+            if (document.getElementById('skip_fantomon').checked || !overrideFlags.fanto) manualTargets.fanto = parseInt(document.getElementById('input_fanto_lv').value, 10);
+            if (document.getElementById('skip_relics').checked || !overrideFlags.relic) manualTargets.relic = parseInt(document.getElementById('input_relic_lv').value, 10);
 
             const gearLvs = [parseInt(document.getElementById('eq_1').value)||CONFIG.lvThresh, parseInt(document.getElementById('eq_2').value)||CONFIG.lvThresh, parseInt(document.getElementById('eq_3').value)||CONFIG.lvThresh, parseInt(document.getElementById('eq_4').value)||CONFIG.lvThresh, parseInt(document.getElementById('eq_5').value)||CONFIG.lvThresh];
             if (!overrideFlags.gear) manualTargets.gear = Math.ceil(gearLvs.reduce((a,b)=>a+b, 0) / 5);
@@ -421,7 +421,7 @@
             
             const totalScore = charScore + skillScoreVal + fantoScoreVal + relicScoreVal + gearScoreVal;
             document.getElementById('res_total_score').innerText = Math.floor(totalScore).toLocaleString();
-            document.getElementById('res_total_primo').innerText = Math.floor(totalScore / CONFIG.rate) + CONFIG.fixedPrimo + Number(document.getElementById('past_primostars').value);
+            document.getElementById('res_total_primo').innerText = Math.floor(totalScore / CONFIG.rate) + CONFIG.fixedPrimo + parseInt(document.getElementById('past_primostars').value, 10);
 
             document.getElementById('label_skill_lv').innerText = manualTargets.skill;
             document.getElementById('label_fanto_lv').innerText = manualTargets.fanto;
