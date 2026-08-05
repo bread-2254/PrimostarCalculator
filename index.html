@@ -389,9 +389,12 @@
             const capSkill = eosCharLv;
             const capFanto = Math.floor(eosCharLv / 10) * 10 + 10;
             const capRelic = capFanto / 10;
-            if (document.getElementById('skip_skills').checked || !overrideFlags.skill) manualTargets.skill = parseInt(document.getElementById('input_skill_lv').value, 10);
-            if (document.getElementById('skip_fantomon').checked || !overrideFlags.fanto) manualTargets.fanto = parseInt(document.getElementById('input_fanto_lv').value, 10);
-            if (document.getElementById('skip_relics').checked || !overrideFlags.relic) manualTargets.relic = parseInt(document.getElementById('input_relic_lv').value, 10);
+            if (document.getElementById('skip_skills').checked || !overrideFlags.skill) manualTargets.skill = capSkill;
+            else manualTargets.skill = parseInt(document.getElementById('input_skill_lv').value, 10);
+            if (document.getElementById('skip_fantomon').checked || !overrideFlags.fanto) manualTargets.fanto = capFanto;
+            else manualTargets.fanto = parseInt(document.getElementById('input_fanto_lv').value, 10);
+            if (document.getElementById('skip_relics').checked || !overrideFlags.relic) manualTargets.relic = capRelic;
+            else manualTargets.relic = parseInt(document.getElementById('input_relic_lv').value, 10);
 
             const gearLvs = [parseInt(document.getElementById('eq_1').value)||CONFIG.lvThresh, parseInt(document.getElementById('eq_2').value)||CONFIG.lvThresh, parseInt(document.getElementById('eq_3').value)||CONFIG.lvThresh, parseInt(document.getElementById('eq_4').value)||CONFIG.lvThresh, parseInt(document.getElementById('eq_5').value)||CONFIG.lvThresh];
             if (!overrideFlags.gear) manualTargets.gear = Math.ceil(gearLvs.reduce((a,b)=>a+b, 0) / 5);
