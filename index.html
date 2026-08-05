@@ -276,7 +276,7 @@
     (function() {
         const CONFIG = {
             endDate: new Date('2026-07-10T13:00:00Z'), 
-            lvThresh: 130, relicThresh: 13, fixedPrimo: 45,
+            lvThresh: 130, relicThresh: 13, fixedPrimo: 45, rate: 27,
             pts: { char: 100, gear: 18, skill: 7, fanto: 8, relic: 33 },
             slots: { skill: 8, fanto: 4, relic: 20, gear: 5 },
             items: { hammer: 1200, shovel: 920, knuckles: 1500, treatExp: 50 },
@@ -392,24 +392,24 @@
             if (document.getElementById('skip_fantomon').checked || !overrideFlags.fanto) manualTargets.fanto = capFanto;
             if (document.getElementById('skip_relics').checked || !overrideFlags.relic) manualTargets.relic = capRelic;
 
-            const gearLvs = [parseInt(document.getElementById('eq_1').value)||100, parseInt(document.getElementById('eq_2').value)||100, parseInt(document.getElementById('eq_3').value)||100, parseInt(document.getElementById('eq_4').value)||100, parseInt(document.getElementById('eq_5').value)||100];
+            const gearLvs = [parseInt(document.getElementById('eq_1').value)||CONFIG.lvThresh, parseInt(document.getElementById('eq_2').value)||CONFIG.lvThresh, parseInt(document.getElementById('eq_3').value)||CONFIG.lvThresh, parseInt(document.getElementById('eq_4').value)||CONFIG.lvThresh, parseInt(document.getElementById('eq_5').value)||CONFIG.lvThresh];
             if (!overrideFlags.gear) manualTargets.gear = Math.ceil(gearLvs.reduce((a,b)=>a+b, 0) / 5);
 
             const skillScoreVal = Math.max(0, manualTargets.skill - CONFIG.lvThresh) * CONFIG.slots.skill * CONFIG.pts.skill;
             let essNeeded = 0;
-            const userSkillCur = parseInt(document.getElementById('input_skill_lv').value) || 100;
+            const userSkillCur = parseInt(document.getElementById('input_skill_lv').value) || CONFIG.lvThresh;
             for(let i=userSkillCur; i < manualTargets.skill; i++) essNeeded += (CONFIG.base.essense + (i - CONFIG.lvThresh) * CONFIG.perlvl.essense) * CONFIG.slots.skill;
             const essGen = (baseProductionHours * (parseFloat(document.getElementById('cart_essence').value) || 0)) + (parseInt(document.getElementById('saved_essence').value) || 0);
 
             const fantoScoreVal = Math.max(0, manualTargets.fanto - CONFIG.lvThresh) * CONFIG.slots.fanto * CONFIG.pts.fanto;
             let fantoExpNeeded = 0;
-            const userFantoCur = parseInt(document.getElementById('input_fanto_lv').value) || 100;
+            const userFantoCur = parseInt(document.getElementById('input_fanto_lv').value) || CONFIG.lvThresh;
             for(let i=userFantoCur; i < manualTargets.fanto; i++) fantoExpNeeded += (CONFIG.base.treatExp + (i - CONFIG.lvThresh) * CONFIG.perlvl.treatExp) * CONFIG.slots.fanto;
             const treatExpGen = (baseProductionHours * (parseFloat(document.getElementById('cart_treats').value) || 0) + (parseInt(document.getElementById('saved_treats').value) || 0)) * CONFIG.items.treatExp;
 
             const relicScoreVal = Math.max(0, manualTargets.relic - CONFIG.relicThresh) * CONFIG.slots.relic * CONFIG.pts.relic;
             let sandNeeded = 0;
-            const userRelicCur = parseInt(document.getElementById('input_relic_lv').value) || 10;
+            const userRelicCur = parseInt(document.getElementById('input_relic_lv').value) || CONFIG.relicThresh;
             for(let i=userRelicCur; i < manualTargets.relic; i++) sandNeeded += (CONFIG.base.sand + (i - CONFIG.relicThresh) * CONFIG.perlvl.sand) * CONFIG.slots.relic;
             const sandGen = (baseProductionHours * (parseFloat(document.getElementById('cart_sand').value) || 0)) + (parseInt(document.getElementById('saved_sand').value) || 0);
 
@@ -420,7 +420,7 @@
             
             const totalScore = charScore + skillScoreVal + fantoScoreVal + relicScoreVal + gearScoreVal;
             document.getElementById('res_total_score').innerText = Math.floor(totalScore).toLocaleString();
-            document.getElementById('res_total_primo').innerText = Math.floor(totalScore / 100) + CONFIG.fixedPrimo;
+            document.getElementById('res_total_primo').innerText = Math.floor(totalScore / CONFIG.rate) + CONFIG.fixedPrimo;
 
             document.getElementById('label_skill_lv').innerText = manualTargets.skill;
             document.getElementById('label_fanto_lv').innerText = manualTargets.fanto;
@@ -439,7 +439,7 @@
             document.getElementById('res_hammers_gear').innerText = Math.ceil(Math.max(0, gearOreNeeded - availOreForCalc) / CONFIG.items.hammer).toLocaleString();
 
             const targetPrimo = parseInt(document.getElementById('target_primostars').value) || 0;
-            const pointsFromGearNeeded = Math.max(0, ((targetPrimo - CONFIG.fixedPrimo) * 100) - (charScore + skillScoreVal + fantoScoreVal + relicScoreVal));
+            const pointsFromGearNeeded = Math.max(0, ((targetPrimo - CONFIG.fixedPrimo) * CONFIG.rate) - (charScore + skillScoreVal + fantoScoreVal + relicScoreVal));
             const finalReqGearLv = Math.ceil(CONFIG.lvThresh + ((pointsFromGearNeeded / CONFIG.pts.gear) / CONFIG.slots.gear));
             let targetOreReq = 0;
             for (let cur of gearLvs) { for (let l = cur; l < finalReqGearLv; l++) targetOreReq += (CONFIG.base.ore + CONFIG.perlvl.ore * l); }
