@@ -1360,8 +1360,8 @@
 
                 // Relic Sand balancing & Overworld combination
                 const sandFromCart = sim.passiveAccumulated.sand + (parseInt(document.getElementById('saved_sand').value) || 0);
-                const sandFromStamina = sandGainedRegular;
-                const sandFromBigNodes = sandGainedBig;
+                const sandFromStamina = staminaSand * 230;
+                const sandFromBigNodes = totalBigSand * 2300;
                 const totalSeasonSandWithoutRealm = sandFromCart + sandFromStamina + sandFromBigNodes;
                 const sandFromOverworld = sandFromStamina + sandFromBigNodes;
 
@@ -1376,8 +1376,8 @@
 
                 // Gear Ore balancing & Overworld combination
                 const oreFromCart = sim.passiveAccumulated.ore + (parseInt(document.getElementById('saved_ore').value) || 0);
-                const oreFromStamina = oreGainedRegular;
-                const oreFromBigNodes = oreGainedBig;
+                const oreFromStamina = staminaOre * 280;
+                const oreFromBigNodes = totalBigOre * 2800;
                 const oreFromDungeon = dungeonOreGained;
                 const totalSeasonOreWithoutRealm = oreFromCart + oreFromStamina + oreFromBigNodes + oreFromDungeon;
                 const oreFromOverworld = oreFromStamina + oreFromBigNodes + oreFromDungeon;
