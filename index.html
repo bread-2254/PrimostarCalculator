@@ -945,10 +945,6 @@
                             <strong>Nexus Time:</strong>
                             Time is synced to Nexus 16 use [Custom End Date] for your own server.
                         </li>
-                        <li>
-                            <strong>Update to Now:</strong>
-                            from the last time saved, adds Cart Resources to saved, adds x Statues/Tools after every daily Reset. If [Spend Stamina on Ore] is checked, this will also add ore to your saved Resources.
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -1032,7 +1028,7 @@
                 return t;
             }
             function getOreCost(lv) {
-                return 16400 + (int)((lv - 129) * 166.6667);
+                return 16400 + Math.floor((lv - 129) * 166.6667);
             }
             function getSkillCost(lv) {
                 return 11860 + (lv - 129) * 120;
@@ -1435,86 +1431,6 @@
                 };
                 localStorage.setItem('ss2_avalon_save', JSON.stringify(dataObj));
                 document.getElementById('last-saved-text').innerText = "Last saved/updated: " + new Date().toLocaleString();
-            }
-
-            function updateToNow() {
-                const raw = localStorage.getItem('ss2_avalon_save');
-                if (!raw)
-                    return;
-                const d = JSON.parse(raw);
-                const elap = (Date.now() - d._ts) / 36e5;
-                if (elap <= 0)
-                    return;
-                const msDay = 864e5;
-                const offset = 13 * 36e5;
-                const resets = Math.floor((Date.now() - offset) / msDay) - Math.floor((d._ts - offset) / msDay);
-                const spd = parseFloat(d.statues_per_day) || 0;
-                const newS = parseFloat(d.statues) + (resets * spd);
-                document.getElementById('statues').value = newS.toFixed(0);
-
-                if (resets > 0) {
-                    // Incorporate buy + daily reset (5 free tools) tools
-                    document.getElementById('saved_hammers').value = (parseInt(d.saved_hammers) || 0) + (parseInt(d.realm_buy_ore) || 0) * 5 * resets + (5 * resets);
-                    document.getElementById('saved_knuckles').value = (parseInt(d.saved_knuckles) || 0) + (parseInt(d.realm_buy_ess) || 0) * 5 * resets + (5 * resets);
-                    document.getElementById('saved_shovels').value = (parseInt(d.saved_shovels) || 0) + (parseInt(d.realm_buy_sand) || 0) * 5 * resets + (5 * resets);
-                    document.getElementById('saved_gold').value = (parseInt(d.saved_gold) || 0) + (parseInt(d.realm_buy_gold) || 0) * 5 * resets + (5 * resets);
-                }
-                const bless = CONFIG.blessing[d.blessing_lv]
-                  , pBonus = parseFloat(d.prod_bonus) || 0
-                  , disableDaily = d.disable_statue_cart;
-                let cE = parseInt(d.char_exp)
-                  , cL = parseInt(d.char_lv)
-                  , acc = {
-                    ore: 0,
-                    ess: 0,
-                    sand: 0,
-                    treats: 0
-                };
-                for (let i = 0; i < elap; i++) {
-                    const hourResets = Math.floor((d._ts + (i * 36e5) - offset) / msDay) - Math.floor((d._ts - offset) / msDay);
-                    const loopStats = parseFloat(d.statues) + (hourResets * spd);
-                    cE += Math.round(bless * (1 + loopStats / 100) * (1 + pBonus / 100));
-                    while (cE >= (CONFIG.expTable[cL] || 13478732)) {
-                        cE -= (CONFIG.expTable[cL] || 13478732);
-                        cL++;
-                    }
-                    const gMult = disableDaily ? 1.0 : (1 + (hourResets * spd) / 200);
-                    acc.ore += (parseFloat(d.cart_ore) || 0) * gMult;
-                    acc.ess += (parseFloat(d.cart_essence) || 0) * gMult;
-                    acc.sand += (parseFloat(d.cart_sand) || 0) * gMult;
-                    acc.treats += (parseFloat(d.cart_treats) || 0) * gMult;
-                }
-
-                // Stamina and Overworld calculation for catch up offline period
-                const elapsedStamina = (elap * (140 / 24)) + (resets * 50);
-                const rolaPercent = parseFloat(d.stamina_rola) || 0;
-                const orePercent = parseFloat(d.stamina_ore) || 0;
-                const sandPercent = parseFloat(d.stamina_sand) || 0;
-                const elaStaminaRola = elapsedStamina * (rolaPercent / 100);
-                const elaStaminaOre = elapsedStamina * (orePercent / 100);
-                const elaStaminaSand = elapsedStamina * (sandPercent / 100);
-
-                const bigRolaPerWeek = parseFloat(d.big_rola) || 0;
-                const bigOrePerWeek = parseFloat(d.big_ore) || 0;
-                const bigSandPerWeek = parseFloat(d.big_sand) || 0;
-                const elapsedWeeks = elap / 168;
-
-                const elaBigRola = Math.min(bigRolaPerWeek * elapsedWeeks, Math.floor(elaStaminaRola / 5));
-                const elaBigOre = Math.min(bigOrePerWeek * elapsedWeeks, Math.floor(elaStaminaOre / 5));
-                const elaBigSand = Math.min(bigSandPerWeek * elapsedWeeks, Math.floor(elaStaminaSand / 5));
-
-                const accOre = (elaBigOre * 2400) + ((elaStaminaOre - elaBigOre * 5) * 240);
-                const accSand = (elaBigSand * 2360) + ((elaStaminaSand - elaBigSand * 5) * 236);
-                const accDungeonOre = resets * (parseFloat(d.dungeon_ore_daily) || 0);
-
-                document.getElementById('char_lv').value = cL;
-                document.getElementById('char_exp').value = Math.floor(cE);
-                document.getElementById('saved_ore').value = (parseInt(d.saved_ore) || 0) + Math.floor(acc.ore + accOre + accDungeonOre);
-                document.getElementById('saved_essence').value = (parseInt(d.saved_essence) || 0) + Math.floor(acc.ess);
-                document.getElementById('saved_sand').value = (parseInt(d.saved_sand) || 0) + Math.floor(acc.sand + accSand);
-                document.getElementById('saved_treats').value = (parseInt(d.saved_treats) || 0) + Math.floor(acc.treats);
-                calculate();
-                saveData();
             }
 
             function resetAllData() {
