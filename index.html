@@ -955,6 +955,7 @@
                 baseEnd: new Date('2026-09-15T13:00:00Z'),
                 fixedPrimo: 45,
                 scoreDiv: 27,
+                baseLevel: 130,
                 pts: {
                     char: 100,
                     gear: 18,
@@ -966,6 +967,11 @@
                     hammer: 1240,
                     shovel: 940,
                     knuckles: 1540
+                },
+                stamina: {
+                    rola: 2800,
+                    ore: 280,
+                    sand: 230,
                 },
                 blessing: {
                     67: 95620,
@@ -1097,39 +1103,10 @@
             }
 
             function resetToProgression() {
-                manualTargets.skill = Math.round(Array.from(document.querySelectorAll('.skill-slot')).reduce( (a, b) => a + (parseInt(b.value) || 130), 0) / 8);
-                manualTargets.fanto = Math.round(Array.from(document.querySelectorAll('.fanto-slot')).reduce( (a, b) => a + (parseInt(b.value) || 130), 0) / 4);
-                manualTargets.relic = Math.round(Array.from(document.querySelectorAll('.relic-slot')).reduce( (a, b) => a + (parseInt(b.value) || 13), 0) / 5);
-                manualTargets.gear = Math.round(Array.from(document.querySelectorAll('.eq-slot')).reduce( (a, b) => a + (parseInt(b.value) || 130), 0) / 5);
-                calculate();
-            }
-
-            function maximizeFromCart() {
-                calculate();
-                const skArr = Array.from(document.querySelectorAll('.skill-slot')).map(e => parseInt(e.value) || 130);
-                let skT = Math.min(...skArr);
-                while (skT < 1000 && getRealCost(skArr, skT + 1, getSkillCost) <= (calcState.essTotalNoRealm - 5))
-                    skT++;
-                manualTargets.skill = skT;
-
-                const faArr = Array.from(document.querySelectorAll('.fanto-slot')).map(e => parseInt(e.value) || 130);
-                let faT = Math.min(...faArr);
-                while (faT < 1000 && getRealCost(faArr, faT + 1, getFantoCost) <= (calcState.treatsTotalNoRealm - 5))
-                    faT++;
-                manualTargets.fanto = faT;
-
-                const reArr = Array.from(document.querySelectorAll('.relic-slot')).map(e => parseInt(e.value) || 13);
-                let reT = Math.min(...reArr);
-                while (reT < 1000 && getRealCost(reArr, reT + 1, getRelicCost, 4) <= (calcState.sandTotalNoRealm - 5))
-                    reT++;
-                manualTargets.relic = reT;
-
-                const geArr = Array.from(document.querySelectorAll('.eq-slot')).map(e => parseInt(e.value) || 130);
-                let geT = Math.min(...geArr);
-                while (geT < 1000 && getRealCost(geArr, geT + 1, getOreCost) <= (calcState.oreTotalNoRealm - 5))
-                    geT++;
-                manualTargets.gear = geT;
-
+                manualTargets.skill = Math.round(Array.from(document.querySelectorAll('.skill-slot')).reduce( (a, b) => a + (parseInt(b.value) || CONFIG.baseLevel), 0) / 8);
+                manualTargets.fanto = Math.round(Array.from(document.querySelectorAll('.fanto-slot')).reduce( (a, b) => a + (parseInt(b.value) || CONFIG.baseLevel), 0) / 4);
+                manualTargets.relic = Math.round(Array.from(document.querySelectorAll('.relic-slot')).reduce( (a, b) => a + (parseInt(b.value) || CONFIG.baseLevel / 10), 0) / 5);
+                manualTargets.gear = Math.round(Array.from(document.querySelectorAll('.eq-slot')).reduce( (a, b) => a + (parseInt(b.value) || CONFIG.baseLevel), 0) / 5);
                 calculate();
             }
 
@@ -1262,7 +1239,7 @@
                     treats: parseFloat(document.getElementById('cart_treats').value) || 0
                 }, document.getElementById('disable_statue_cart').checked);
 
-                document.getElementById('res_char_score').innerText = Math.floor((charSim.eosLv - 130 + charSim.frac) * CONFIG.pts.char).toLocaleString();
+                document.getElementById('res_char_score').innerText = Math.floor((charSim.eosLv - CONFIG.baseLevel + charSim.frac) * CONFIG.pts.char).toLocaleString();
                 document.getElementById('eos_char_lv').innerText = `Lv ${charSim.eosLv} (${Math.floor(charSim.frac * 100)}%)`;
                 document.getElementById('calc_exp_hr').innerText = Math.round(CONFIG.blessing[document.getElementById('blessing_lv').value] * (1 + parseFloat(document.getElementById('statues').value) / 100) * (1 + parseFloat(document.getElementById('prod_bonus').value) / 100)).toLocaleString();
 
@@ -1289,9 +1266,9 @@
                 const totalBigOre = bigOrePerWeek * weeksRem;
                 const totalBigSand = bigSandPerWeek * weeksRem;
 
-                const rolaGained = staminaRola * 2800 + totalBigRola * 28000;
-                const oreGained = staminaOre * 280 + totalBigOre * 2800;
-                const sandGained = staminaSand * 230 + totalBigSand * 2300;
+                const rolaGained = staminaRola * CONFIG.stamina.rola + totalBigRola * CONFIG.stamina.rola * 10;
+                const oreGained = staminaOre * CONFIG.stamina.ore + totalBigOre * CONFIG.stamina.ore * 10;
+                const sandGained = staminaSand * CONFIG.stamina.sand + totalBigSand * CONFIG.stamina.sand * 10;
 
                 const dungeonOreDaily = parseFloat(document.getElementById('dungeon_ore_daily').value) || 0;
                 const dungeonOreGained = resetsRem * dungeonOreDaily;
@@ -1323,11 +1300,11 @@
                     };
                 }
 
-                const sS = (manualTargets.skill - 130) * 8 * 7
-                  , fS = (manualTargets.fanto - 130) * 4 * 8
-                  , rS = (manualTargets.relic - 13) * 20 * 33
-                  , gS = (manualTargets.gear - 130) * 5 * 18;
-                document.getElementById('res_total_primo').innerText = Math.floor(((charSim.eosLv - 130 + charSim.frac) * 100 + sS + fS + rS + gS) / 27) + 45;
+                const sS = (manualTargets.skill - CONFIG.baseLevel) * 8 * CONFIG.pts.skill
+                  , fS = (manualTargets.fanto - CONFIG.baseLevel) * 4 * CONFIG.pts.fanto
+                  , rS = (manualTargets.relic - CONFIG.baseLevel / 10) * 20 * CONFIG.pts.relic
+                  , gS = (manualTargets.gear - CONFIG.baseLevel) * 5 * CONFIG.pts.gear;
+                document.getElementById('res_total_primo').innerText = Math.floor(((charSim.eosLv - CONFIG.baseLevel + charSim.frac) * 100 + sS + fS + rS + gS) / CONFIG.pts.scoreDiv) + CONFIG.pts.fixedPrimo;
                 document.getElementById('res_skill_score').innerText = Math.floor(sS).toLocaleString();
                 document.getElementById('res_fanto_score').innerText = Math.floor(fS).toLocaleString();
                 document.getElementById('res_relic_score').innerText = Math.floor(rS).toLocaleString();
@@ -1337,15 +1314,15 @@
                 document.getElementById('label_relic_lv').innerText = manualTargets.relic;
                 document.getElementById('label_gear_lv').innerText = manualTargets.gear;
 
-                const skArr = Array.from(document.querySelectorAll('.skill-slot')).map(e => parseInt(e.value) || 130);
-                const skD = processRes(getRealCost(skArr, manualTargets.skill, getSkillCost), sim.passiveAccumulated.ess + (parseInt(document.getElementById('saved_essence').value) || 0), tK, 1500);
+                const skArr = Array.from(document.querySelectorAll('.skill-slot')).map(e => parseInt(e.value) || CONFIG.baseLevel);
+                const skD = processRes(getRealCost(skArr, manualTargets.skill, getSkillCost), sim.passiveAccumulated.ess + (parseInt(document.getElementById('saved_essence').value) || 0), tK, CONFIG.items.knuckles);
                 document.getElementById('v_ess_needed').innerText = Math.floor(skD.req).toLocaleString();
                 document.getElementById('v_ess_cart').innerText = Math.floor(skD.avail).toLocaleString();
                 document.getElementById('v_ess_realm').innerText = skD.pool.toLocaleString();
                 document.getElementById('v_ess_bal').innerText = (skD.bal >= 0 ? "+" : "") + skD.bal.toLocaleString();
                 document.getElementById('v_ess_bal').className = "font-bold txt-label-yellow " + (skD.bal >= 0 ? 'txt-positive' : 'txt-negative');
 
-                const faArr = Array.from(document.querySelectorAll('.fanto-slot')).map(e => parseInt(e.value) || 130);
+                const faArr = Array.from(document.querySelectorAll('.fanto-slot')).map(e => parseInt(e.value) || CONFIG.baseLevel);
                 const faReq = getRealCost(faArr, manualTargets.fanto, getFantoCost);
                 const faAvail = (sim.passiveAccumulated.treats + (parseInt(document.getElementById('saved_treats').value) || 0)) * 50;
                 const faBal = (faReq - faAvail) > 0.1 ? Math.ceil((faReq - faAvail) / 50) * -1 : Math.floor((faAvail - faReq) / 50);
@@ -1356,13 +1333,13 @@
 
                 // Relic Sand balancing & Overworld combination
                 const sandFromCart = sim.passiveAccumulated.sand + (parseInt(document.getElementById('saved_sand').value) || 0);
-                const sandFromStamina = staminaSand * 230;
-                const sandFromBigNodes = totalBigSand * 2300;
+                const sandFromStamina = staminaSand * CONFIG.stamina.sand;
+                const sandFromBigNodes = totalBigSand * CONFIG.stamina.sand * 10;
                 const totalSeasonSandWithoutRealm = sandFromCart + sandFromStamina + sandFromBigNodes;
                 const sandFromOverworld = sandFromStamina + sandFromBigNodes;
 
-                const reArr = Array.from(document.querySelectorAll('.relic-slot')).map(e => parseInt(e.value) || 13);
-                const reD = processRes(getRealCost(reArr, manualTargets.relic, getRelicCost, 4), totalSeasonSandWithoutRealm, tS, 1000);
+                const reArr = Array.from(document.querySelectorAll('.relic-slot')).map(e => parseInt(e.value) || CONFIG.baseLevel / 10);
+                const reD = processRes(getRealCost(reArr, manualTargets.relic, getRelicCost, 4), totalSeasonSandWithoutRealm, tS, CONFIG.items.shovel);
                 document.getElementById('v_re_needed').innerText = Math.floor(reD.req).toLocaleString();
                 document.getElementById('v_re_cart').innerText = Math.floor(sandFromCart).toLocaleString();
                 document.getElementById('v_re_overworld').innerText = Math.floor(sandFromOverworld).toLocaleString();
@@ -1372,14 +1349,14 @@
 
                 // Gear Ore balancing & Overworld combination
                 const oreFromCart = sim.passiveAccumulated.ore + (parseInt(document.getElementById('saved_ore').value) || 0);
-                const oreFromStamina = staminaOre * 280;
-                const oreFromBigNodes = totalBigOre * 2800;
+                const oreFromStamina = staminaOre * CONFIG.stamina.ore;
+                const oreFromBigNodes = totalBigOre * CONFIG.stamina.ore * 10;
                 const oreFromDungeon = dungeonOreGained;
                 const totalSeasonOreWithoutRealm = oreFromCart + oreFromStamina + oreFromBigNodes + oreFromDungeon;
                 const oreFromOverworld = oreFromStamina + oreFromBigNodes + oreFromDungeon;
 
-                const geArr = Array.from(document.querySelectorAll('.eq-slot')).map(e => parseInt(e.value) || 130);
-                const geD = processRes(getRealCost(geArr, manualTargets.gear, getOreCost), totalSeasonOreWithoutRealm, tH, 1200);
+                const geArr = Array.from(document.querySelectorAll('.eq-slot')).map(e => parseInt(e.value) || CONFIG.baseLevel);
+                const geD = processRes(getRealCost(geArr, manualTargets.gear, getOreCost), totalSeasonOreWithoutRealm, tH, CONFIG.items.hammer);
                 document.getElementById('v_ge_needed').innerText = Math.floor(geD.req).toLocaleString();
                 document.getElementById('v_ge_cart').innerText = Math.floor(oreFromCart).toLocaleString();
                 document.getElementById('v_ge_overworld').innerText = Math.floor(oreFromOverworld).toLocaleString();
@@ -1397,13 +1374,13 @@
                 const oldP = parseInt(document.getElementById('old_primo').value) || 0;
                 const targetTotal = parseInt(document.getElementById('target_primo').value) || 0;
                 const targetP = Math.max(0, targetTotal - oldP);
-                const ptsN = Math.max(0, (targetP - 45) * 27 - ((charSim.eosLv - 130 + charSim.frac) * 100 + sS + fS + rS));
-                const reqG = Math.ceil(130 + ((ptsN / 18) / 5));
+                const ptsN = Math.max(0, (targetP - CONFIG.fixedPrimo) * CONFIG.scoreDiv - ((charSim.eosLv - CONFIG.baseLevel + charSim.frac) * 100 + sS + fS + rS));
+                const reqG = Math.ceil(CONFIG.baseLevel + ((ptsN / CONFIG.pts.gear) / 5));
                 document.getElementById('req_points').innerText = Math.floor(ptsN).toLocaleString();
                 document.getElementById('req_gear_lv').innerText = `Lv ${reqG}`;
 
                 const tOreN = getRealCost(geArr, reqG, getOreCost);
-                const tD = processRes(tOreN, totalSeasonOreWithoutRealm, tH, 1200);
+                const tD = processRes(tOreN, totalSeasonOreWithoutRealm, tH, CONFIG.items.hammer);
                 document.getElementById('t_ore_needed').innerText = Math.floor(tOreN).toLocaleString();
                 document.getElementById('t_ore_cart').innerText = Math.floor(oreFromCart).toLocaleString();
                 document.getElementById('t_ore_overworld').innerText = Math.floor(oreFromOverworld).toLocaleString();
