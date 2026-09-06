@@ -1304,7 +1304,7 @@
                   , fS = (manualTargets.fanto - CONFIG.baseLevel) * 4 * CONFIG.pts.fanto
                   , rS = (manualTargets.relic - CONFIG.baseLevel / 10) * 20 * CONFIG.pts.relic
                   , gS = (manualTargets.gear - CONFIG.baseLevel) * 5 * CONFIG.pts.gear;
-                document.getElementById('res_total_primo').innerText = Math.floor(((charSim.eosLv - CONFIG.baseLevel + charSim.frac) * 100 + sS + fS + rS + gS) / CONFIG.pts.scoreDiv) + CONFIG.pts.fixedPrimo;
+                document.getElementById('res_total_primo').innerText = Math.floor(((charSim.eosLv - CONFIG.baseLevel + charSim.frac) * CONFIG.pts.char + sS + fS + rS + gS) / CONFIG.scoreDiv) + CONFIG.fixedPrimo;
                 document.getElementById('res_skill_score').innerText = Math.floor(sS).toLocaleString();
                 document.getElementById('res_fanto_score').innerText = Math.floor(fS).toLocaleString();
                 document.getElementById('res_relic_score').innerText = Math.floor(rS).toLocaleString();
@@ -1374,7 +1374,7 @@
                 const oldP = parseInt(document.getElementById('old_primo').value) || 0;
                 const targetTotal = parseInt(document.getElementById('target_primo').value) || 0;
                 const targetP = Math.max(0, targetTotal - oldP);
-                const ptsN = Math.max(0, (targetP - CONFIG.fixedPrimo) * CONFIG.scoreDiv - ((charSim.eosLv - CONFIG.baseLevel + charSim.frac) * 100 + sS + fS + rS));
+                const ptsN = Math.max(0, (targetP - CONFIG.fixedPrimo) * CONFIG.scoreDiv - ((charSim.eosLv - CONFIG.baseLevel + charSim.frac) * CONFIG.pts.char + sS + fS + rS));
                 const reqG = Math.ceil(CONFIG.baseLevel + ((ptsN / CONFIG.pts.gear) / 5));
                 document.getElementById('req_points').innerText = Math.floor(ptsN).toLocaleString();
                 document.getElementById('req_gear_lv').innerText = `Lv ${reqG}`;
