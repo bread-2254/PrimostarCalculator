@@ -950,43 +950,76 @@
             </div>
         </div>
         <script>
-            const CONFIG = {
-                start: new Date('2026-07-10T13:00:00Z'),
-                baseEnd: new Date('2026-09-15T13:00:00Z'),
-                season: 2,
-                fixedPrimo: 45,
-                scoreDiv: 27,
-                baseLevel: 130,
-                pts: {
-                    char: 100,
-                    gear: 18,
-                    skill: 7,
-                    fanto: 8,
-                    relic: 33
+            const CONFIGS = {
+                1: {
+                    start: new Date('2026-08-13T13:00:00Z'),
+                    baseEnd: new Date('2026-09-28T13:00:00Z'),
+                    fixedPrimo: 10,
+                    scoreDiv: 100,
+                    baseLevel: 100,
+                    pts: {
+                        char: 100,
+                        gear: 38,
+                        skill: 13,
+                        fanto: 14,
+                        relic: 57
+                    },
+                    items: {
+                        hammer: 800,
+                        shovel: 600,
+                        knuckles: 1000
+                    },
+                    stamina: {
+                        rola: 1800,
+                        ore: 180,
+                        sand: 150,
+                    },
+                    blessing: {
+                        49: 18760,
+                        50: 19325,
+                        51: 19905,
+                        52: 20500,
+                        53: 21115,
+                        54: 21750
+                    }
                 },
-                items: {
-                    hammer: 1240,
-                    shovel: 940,
-                    knuckles: 1540
-                },
-                stamina: {
-                    rola: 2800,
-                    ore: 280,
-                    sand: 230,
-                },
-                blessing: {
-                    67: 95620,
-                    68: 98695,
-                    69: 101655,
-                    70: 104705,
-                    71: 107845,
-                    72: 111080,
-                    73: 343245,
-                    74: 353540,
-                    75: 361450,
-                    76: 364145,
-                    77: 386325
-                },
+                2: {
+                    start: new Date('2026-07-10T13:00:00Z'),
+                    baseEnd: new Date('2026-09-15T13:00:00Z'),
+                    fixedPrimo: 45,
+                    scoreDiv: 27,
+                    baseLevel: 130,
+                    pts: {
+                        char: 100,
+                        gear: 18,
+                        skill: 7,
+                        fanto: 8,
+                        relic: 33
+                    },
+                    items: {
+                        hammer: 1240,
+                        shovel: 940,
+                        knuckles: 1540
+                    },
+                    stamina: {
+                        rola: 2800,
+                        ore: 280,
+                        sand: 230,
+                    },
+                    blessing: {
+                        67: 95620,
+                        68: 98695,
+                        69: 101655,
+                        70: 104705,
+                        71: 107845,
+                        72: 111080
+                    }
+                }
+            };
+
+            let season = 2;
+            let CONFIG = {
+                CONFIGS[season],
                 expTable: {}
             };
             
