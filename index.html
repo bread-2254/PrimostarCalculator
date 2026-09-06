@@ -1396,19 +1396,19 @@
                     fa: Array.from(document.querySelectorAll('.fanto-slot')).map(e => e.value),
                     re: Array.from(document.querySelectorAll('.relic-slot')).map(e => e.value)
                 };
-                localStorage.setItem(`season_${currentSeason}_save`, JSON.stringify(dataObj));
+                localStorage.setItem(`season_${season}_save`, JSON.stringify(dataObj));
                 document.getElementById('last-saved-text').innerText = "Last saved/updated: " + new Date().toLocaleString();
             }
             
             function resetAllData() {
-                if (confirm(`Reset all values for Season ${currentSeason}?`)) {
-                    localStorage.removeItem(`season_${currentSeason}_save`);
-                    switchSeason(currentSeason, true);
+                if (confirm(`Reset all values for Season ${season}?`)) {
+                    localStorage.removeItem(`season_${season}_save`);
+                    switchSeason(season, true);
                 }
             }
             
             function loadData() {
-                const raw = localStorage.getItem(`season_${currentSeason}_save`);
+                const raw = localStorage.getItem(`season_${season}_save`);
                 if (!raw) return;
                 const d = JSON.parse(raw);
                 if (d._mt) manualTargets = d._mt;
