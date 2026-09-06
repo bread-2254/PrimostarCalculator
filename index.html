@@ -4,14 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Primostar Calculator</title>
-        <div style="margin-top: 8px;">
-            <label for="season_select" style="display:inline; font-size: 0.75rem; margin-right: 6px;">Season:</label>
-            <select id="season_select" style="width: auto; display: inline-block;" onchange="switchSeason(Number(this.value))">
-                <option value="1">Season 1 (Aqualis)</option>
-                <option value="2" selected>Season 2 (Loong Haven)</option>
-                <option value="3">Season 3 (Aethyris)</option>
-            </select>
-        </div>
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
@@ -340,7 +332,15 @@
     </head>
     <body>
         <div class="header-section">
-            <h1>Loong Haven (SS2) Calculator</h1>
+            <h1>Primostar Calculator</h1>
+        </div>
+        <div style="margin-top: 8px;">
+            <label for="season_select" style="display:inline; font-size: 0.75rem; margin-right: 6px;">Season:</label>
+            <select id="season_select" style="width: auto; display: inline-block;" onchange="switchSeason(Number(this.value))">
+                <option value="1">Season 1 (Aqualis)</option>
+                <option value="2" selected>Season 2 (Loong Haven)</option>
+                <option value="3">Season 3 (Aethyris)</option>
+            </select>
         </div>
         <div id="ps-calculator-wrapper">
             <div class="save-bar">
@@ -1002,7 +1002,7 @@
 
             let season = 2;
             let CONFIG = {
-                CONFIGS[season],
+                ...CONFIGS[season],
                 expTable: {}
             };
             let expData = [];
@@ -1017,7 +1017,7 @@
             }
             function loadSeasonExp() {
                 CONFIG.expTable = expData
-                    .filter(item => item.season === seasonNum)
+                    .filter(item => item.season === season)
                     .reduce((acc, item) => {
                         acc[item.level] = item.exp;
                         return acc;
@@ -1026,10 +1026,10 @@
 
             let lastSnapshotPool = null;
             let manualTargets = {
-                skill: 140,
-                fanto: 140,
-                relic: 14,
-                gear: 140
+                skill: 100,
+                fanto: 100,
+                relic: 10,
+                gear: 100
             };
 
             function getDawniumCost(buys) {
@@ -1068,7 +1068,7 @@
                 if (!CONFIGS[seasonNum]) return;
                 season = seasonNum;
                 Object.assign(CONFIG, CONFIGS[seasonNum]);
-                loadSeasonExp(seasonNum);
+                loadSeasonExp();
                 updateBlessingDropdown();
                 document.getElementById('char_lv').value = CONFIG.baseLevel;
                 document.querySelectorAll('.eq-slot, .skill-slot, .fanto-slot').forEach(input => {
