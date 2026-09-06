@@ -973,14 +973,27 @@
                     levelCost: { gear: 166.6667, relic: 3375, skill: 120, fanto: 1150 }
                 },
                 2: {
-                    start: new Date('2026-07-10T13:00:00Z'),
-                    baseEnd: new Date('2026-09-15T13:00:00Z'),
+                    start: new Date('2026-07-15T13:00:00Z'),
+                    baseEnd: new Date('2026-09-20T13:00:00Z'),
                     fixedPrimo: 45,
                     scoreDiv: 27,
                     baseLevel: 130,
                     pts: { char: 100, gear: 18, skill: 7, fanto: 8, relic: 33 },
                     items: { hammer: 1240, shovel: 940, knuckles: 1540 },
                     stamina: { rola: 2800, ore: 280, sand: 230 },
+                    blessing: { 67: 95620, 68: 98695, 69: 101655, 70: 104705, 71: 107845, 72: 111080 },
+                    baseCost: { gear: 16400, relic: 30375, skill: 11860, fanto: 56200 },
+                    levelCost: { gear: 166.6667, relic: 3375, skill: 120, fanto: 1150 }
+                },
+                3: {
+                    start: new Date('2026-09-20T13:00:00Z'),
+                    baseEnd: new Date('2026-12-30T13:00:00Z'),
+                    fixedPrimo: 65,
+                    scoreDiv: 13,
+                    baseLevel: 160,
+                    pts: { char: 100, gear: 14, skill: 5, fanto: 6, relic: 26 },
+                    items: { hammer: 2080, shovel: 1580, knuckles: 2600 },
+                    stamina: { rola: 4800, ore: 480, sand: 400 },
                     blessing: { 67: 95620, 68: 98695, 69: 101655, 70: 104705, 71: 107845, 72: 111080 },
                     baseCost: { gear: 16400, relic: 30375, skill: 11860, fanto: 56200 },
                     levelCost: { gear: 166.6667, relic: 3375, skill: 120, fanto: 1150 }
@@ -1458,9 +1471,7 @@
             document.querySelectorAll('input, select').forEach(i => i.addEventListener('input', calculate));
             (async () => {
                 await initExpData();
-                loadSeasonExp();
-                loadData();
-                calculate();
+                switchSeason(2);
             })();
         </script>
     </body>
