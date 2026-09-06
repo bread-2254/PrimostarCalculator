@@ -3,7 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Loong Haven (SS2) Calculator</title>
+        <title>Primostar Calculator</title>
+        <div style="margin-top: 8px;">
+            <label for="season_select" style="display:inline; font-size: 0.75rem; margin-right: 6px;">Season:</label>
+            <select id="season_select" style="width: auto; display: inline-block;" onchange="switchSeason(Number(this.value))">
+                <option value="1">Season 1 (Aqualis)</option>
+                <option value="2" selected>Season 2 (Loong Haven)</option>
+                <option value="3">Season 3 (Aethyris)</option>
+            </select>
+        </div>
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
@@ -952,36 +960,17 @@
         <script>
             const CONFIGS = {
                 1: {
-                    start: new Date('2026-08-13T13:00:00Z'),
+                    start: new Date('2026-08-24T13:00:00Z'),
                     baseEnd: new Date('2026-09-28T13:00:00Z'),
                     fixedPrimo: 10,
                     scoreDiv: 100,
                     baseLevel: 100,
-                    pts: {
-                        char: 100,
-                        gear: 38,
-                        skill: 13,
-                        fanto: 14,
-                        relic: 57
-                    },
-                    items: {
-                        hammer: 800,
-                        shovel: 600,
-                        knuckles: 1000
-                    },
-                    stamina: {
-                        rola: 1800,
-                        ore: 180,
-                        sand: 150,
-                    },
-                    blessing: {
-                        49: 18760,
-                        50: 19325,
-                        51: 19905,
-                        52: 20500,
-                        53: 21115,
-                        54: 21750
-                    }
+                    pts: { char: 100, gear: 38, skill: 13, fanto: 14, relic: 57 },
+                    items: { hammer: 800, shovel: 600, knuckles: 1000 },
+                    stamina: { rola: 1800, ore: 180, sand: 150 },
+                    blessing: { 49: 18760, 50: 19325, 51: 19905, 52: 20500, 53: 21115, 54: 21750 },
+                    baseCost: { gear: 16400, relic: 30375, skill: 11860, fanto: 56200 },
+                    levelCost: { gear: 166.6667, relic: 3375, skill: 120, fanto: 1150 }
                 },
                 2: {
                     start: new Date('2026-07-10T13:00:00Z'),
@@ -989,31 +978,12 @@
                     fixedPrimo: 45,
                     scoreDiv: 27,
                     baseLevel: 130,
-                    pts: {
-                        char: 100,
-                        gear: 18,
-                        skill: 7,
-                        fanto: 8,
-                        relic: 33
-                    },
-                    items: {
-                        hammer: 1240,
-                        shovel: 940,
-                        knuckles: 1540
-                    },
-                    stamina: {
-                        rola: 2800,
-                        ore: 280,
-                        sand: 230,
-                    },
-                    blessing: {
-                        67: 95620,
-                        68: 98695,
-                        69: 101655,
-                        70: 104705,
-                        71: 107845,
-                        72: 111080
-                    }
+                    pts: { char: 100, gear: 18, skill: 7, fanto: 8, relic: 33 },
+                    items: { hammer: 1240, shovel: 940, knuckles: 1540 },
+                    stamina: { rola: 2800, ore: 280, sand: 230 },
+                    blessing: { 67: 95620, 68: 98695, 69: 101655, 70: 104705, 71: 107845, 72: 111080 },
+                    baseCost: { gear: 16400, relic: 30375, skill: 11860, fanto: 56200 },
+                    levelCost: { gear: 166.6667, relic: 3375, skill: 120, fanto: 1150 }
                 }
             };
 
@@ -1022,20 +992,23 @@
                 CONFIGS[season],
                 expTable: {}
             };
+            let expData = [];
             
             async function initExpData() {
                 try {
                     const res = await fetch('exp_required.json');
-                    const data = await res.json();
-                    CONFIG.expTable = data
-                        .filter(item => item.season === 2)
-                        .reduce((acc, item) => {
-                            acc[item.level] = item.exp;
-                            return acc;
-                        }, {});
+                    expData = await res.json();
                 } catch (err) {
                     console.error("Failed to load exp_required.json, using fallback caps", err);
                 }
+            }
+            function loadSeasonExp() {
+                CONFIG.expTable = expData
+                    .filter(item => item.season === seasonNum)
+                    .reduce((acc, item) => {
+                        acc[item.level] = item.exp;
+                        return acc;
+                    }, {});
             }
 
             let lastSnapshotPool = null;
@@ -1044,12 +1017,6 @@
                 fanto: 140,
                 relic: 14,
                 gear: 140
-            };
-            let calcState = {
-                oreTotalNoRealm: 0,
-                sandTotalNoRealm: 0,
-                essTotalNoRealm: 0,
-                treatsTotalNoRealm: 0
             };
 
             function getDawniumCost(buys) {
@@ -1060,16 +1027,48 @@
                 return t;
             }
             function getOreCost(lv) {
-                return 16400 + Math.floor((lv - 129) * 166.6667);
+                return CONFIG.baseCost.gear + Math.floor((lv + 1 - CONFIG.baseLevel) * CONFIG.levelCost.gear);
             }
             function getSkillCost(lv) {
-                return 11860 + (lv - 129) * 120;
+                return CONFIG.baseCost.skill + (lv + 1 - CONFIG.baseLevel) * CONFIG.levelCost.skill;
             }
             function getRelicCost(lv) {
-                return 30375 + (lv - 12) * 3375;
+                return CONFIG.baseCost.relic + (lv + 1 - CONFIG.baseLevel / 10) * CONFIG.levelCost.relic;
             }
             function getFantoCost(lv) {
-                return 56200 + (lv - 129) * 1150;
+                return CONFIG.baseCost.fanto + (lv + 1 - CONFIG.baseLevel) * CONFIG.levelCost.fanto;
+            }
+            
+            function updateBlessingDropdown() {
+                const select = document.getElementById('blessing_lv');
+                select.innerHTML = '';
+                const keys = Object.keys(CONFIG.blessing);
+                keys.forEach(lvl => {
+                    const opt = document.createElement('option');
+                    opt.value = lvl;
+                    opt.textContent = lvl;
+                    select.appendChild(opt);
+                });
+                select.value = keys[keys.length - 1];
+            }
+            function switchSeason(seasonNum, skipLoad = false) {
+                if (!CONFIGS[seasonNum]) return;
+                season = seasonNum;
+                Object.assign(CONFIG, CONFIGS[seasonNum]);
+                loadSeasonExp(seasonNum);
+                updateBlessingDropdown();
+                document.getElementById('char_lv').value = CONFIG.baseLevel;
+                document.querySelectorAll('.eq-slot, .skill-slot, .fanto-slot').forEach(input => {
+                    input.value = CONFIG.baseLevel;
+                });
+                document.querySelectorAll('.relic-slot').forEach(input => {
+                    input.value = Math.floor(CONFIG.baseLevel / 10);
+                });
+                if (!skipLoad) {
+                    loadData();
+                }
+                resetToProgression();
+                calculate();
             }
 
             function getRealCost(slotsArr, targetLv, costFn, mult=1) {
@@ -1386,12 +1385,6 @@
                 document.getElementById('v_ge_bal').innerText = (geD.bal >= 0 ? "+" : "") + geD.bal.toLocaleString();
                 document.getElementById('v_ge_bal').className = "font-bold txt-label-yellow " + (geD.bal >= 0 ? 'txt-positive' : 'txt-negative');
 
-                // Maximize Cart calculations caching
-                calcState.oreTotalNoRealm = totalSeasonOreWithoutRealm;
-                calcState.sandTotalNoRealm = totalSeasonSandWithoutRealm;
-                calcState.essTotalNoRealm = skD.avail;
-                calcState.treatsTotalNoRealm = faAvail;
-
                 // Target requirements
                 const oldP = parseInt(document.getElementById('old_primo').value) || 0;
                 const targetTotal = parseInt(document.getElementById('target_primo').value) || 0;
@@ -1418,56 +1411,54 @@
                     _ts: Date.now()
                 };
                 document.querySelectorAll('input, select').forEach(el => {
-                    if (el.id)
+                    if (el.id && el.id !== 'season_select') {
                         dataObj[el.id] = el.type === 'checkbox' ? el.checked : el.value;
-                }
-                );
+                    }
+                });
                 dataObj._slots = {
                     eq: Array.from(document.querySelectorAll('.eq-slot')).map(e => e.value),
                     sk: Array.from(document.querySelectorAll('.skill-slot')).map(e => e.value),
                     fa: Array.from(document.querySelectorAll('.fanto-slot')).map(e => e.value),
                     re: Array.from(document.querySelectorAll('.relic-slot')).map(e => e.value)
                 };
-                localStorage.setItem('ss2_avalon_save', JSON.stringify(dataObj));
+                localStorage.setItem(`season_${currentSeason}_save`, JSON.stringify(dataObj));
                 document.getElementById('last-saved-text').innerText = "Last saved/updated: " + new Date().toLocaleString();
             }
-
+            
             function resetAllData() {
-                if (confirm("Are you sure that you want to reset all values?")) {
-                    localStorage.removeItem('ss2_avalon_save');
-                    location.reload();
+                if (confirm(`Reset all values for Season ${currentSeason}?`)) {
+                    localStorage.removeItem(`season_${currentSeason}_save`);
+                    switchSeason(currentSeason, true);
                 }
             }
-
+            
             function loadData() {
-                const raw = localStorage.getItem('ss2_avalon_save');
-                if (!raw)
-                    return;
+                const raw = localStorage.getItem(`season_${currentSeason}_save`);
+                if (!raw) return;
                 const d = JSON.parse(raw);
-                if (d._mt)
-                    manualTargets = d._mt;
+                if (d._mt) manualTargets = d._mt;
                 Object.keys(d).forEach(k => {
                     const el = document.getElementById(k);
                     if (el) {
-                        if (el.type === 'checkbox')
-                            el.checked = d[k];
-                        else
-                            el.value = d[k];
+                        if (el.type === 'checkbox') el.checked = d[k];
+                        else el.value = d[k];
                     }
-                }
-                );
+                });
                 if (d._slots) {
-                    document.querySelectorAll('.eq-slot').forEach( (e, i) => e.value = d._slots.eq[i]);
-                    document.querySelectorAll('.skill-slot').forEach( (e, i) => e.value = d._slots.sk[i]);
-                    document.querySelectorAll('.fanto-slot').forEach( (e, i) => e.value = d._slots.fa[i]);
-                    document.querySelectorAll('.relic-slot').forEach( (e, i) => e.value = d._slots.re[i]);
+                    document.querySelectorAll('.eq-slot').forEach((e, i) => e.value = d._slots.eq[i]);
+                    document.querySelectorAll('.skill-slot').forEach((e, i) => e.value = d._slots.sk[i]);
+                    document.querySelectorAll('.fanto-slot').forEach((e, i) => e.value = d._slots.fa[i]);
+                    document.querySelectorAll('.relic-slot').forEach((e, i) => e.value = d._slots.re[i]);
                 }
-                if (d._ts)
+                if (d._ts) {
                     document.getElementById('last-saved-text').innerText = "Last saved/updated: " + new Date(d._ts).toLocaleString();
+                }
             }
+            
             document.querySelectorAll('input, select').forEach(i => i.addEventListener('input', calculate));
             (async () => {
                 await initExpData();
+                loadSeasonExp();
                 loadData();
                 calculate();
             })();
