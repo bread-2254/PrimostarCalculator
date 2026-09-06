@@ -953,6 +953,7 @@
             const CONFIG = {
                 start: new Date('2026-07-10T13:00:00Z'),
                 baseEnd: new Date('2026-09-15T13:00:00Z'),
+                season: 2,
                 fixedPrimo: 45,
                 scoreDiv: 27,
                 baseLevel: 130,
@@ -986,31 +987,23 @@
                     76: 364145,
                     77: 386325
                 },
-                expTable: {
-                    129: 6335318,
-                    130: 6342809,
-                    131: 6791971,
-                    132: 7349165,
-                    133: 7896724,
-                    134: 8431041,
-                    135: 8948504,
-                    136: 9536985,
-                    137: 10062872,
-                    138: 10591166,
-                    139: 11201308,
-                    140: 11280750,
-                    141: 11334730,
-                    142: 11387696,
-                    143: 11440662,
-                    144: 11493628,
-                    145: 11546594,
-                    146: 11599560,
-                    147: 11652526,
-                    148: 11679009,
-                    149: 11731975,
-                    150: 11784941
-                }
+                expTable: {}
             };
+            
+            async function initExpData() {
+                try {
+                    const res = await fetch('exp_required.json');
+                    const data = await res.json();
+                    CONFIG.expTable = data
+                        .filter(item => item.season === 2)
+                        .reduce((acc, item) => {
+                            acc[item.level] = item.exp;
+                            return acc;
+                        }, {});
+                } catch (err) {
+                    console.error("Failed to load exp_required.json, using fallback caps", err);
+                }
+            }
 
             let lastSnapshotPool = null;
             let manualTargets = {
@@ -1057,14 +1050,9 @@
             }
 
             function runSimulation(hours, initLv, initExp, bless, statues, growth, prodBonus, hourlyRes, disableGrowth) {
-                let charLv = initLv
-                  , totalExp = initExp;
-                let passiveAccumulated = {
-                    ore: 0,
-                    ess: 0,
-                    sand: 0,
-                    treats: 0
-                };
+                let charLv = initLv, totalExp = initExp;
+                let passiveAccumulated = { ore: 0, ess: 0, sand: 0, treats: 0 };
+                
                 for (let h = 0; h < hours; h++) {
                     const dayOffset = Math.floor(h / 24);
                     const currentStats = statues + (dayOffset * growth);
@@ -1076,13 +1064,14 @@
                     passiveAccumulated.sand += (hourlyRes.sand * boost);
                     passiveAccumulated.treats += (hourlyRes.treats * boost);
                 }
-                while (totalExp >= (CONFIG.expTable[charLv] || 13478732)) {
-                    totalExp -= (CONFIG.expTable[charLv] || 13478732);
+                const getReqExp = (lv) => CONFIG.expTable[lv] || CONFIG.expTable[210];
+                while (totalExp >= getReqExp(charLv)) {
+                    totalExp -= getReqExp(charLv);
                     charLv++;
                 }
                 return {
                     eosLv: charLv,
-                    frac: totalExp / (CONFIG.expTable[charLv] || 13478732),
+                    frac: totalExp / getReqExp(charLv),
                     passiveAccumulated
                 };
             }
@@ -1444,8 +1433,11 @@
                     document.getElementById('last-saved-text').innerText = "Last saved/updated: " + new Date(d._ts).toLocaleString();
             }
             document.querySelectorAll('input, select').forEach(i => i.addEventListener('input', calculate));
-            loadData();
-            calculate();
+            (async () => {
+                await initExpData();
+                loadData();
+                calculate();
+            })();
         </script>
     </body>
 </html>
