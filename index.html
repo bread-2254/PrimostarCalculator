@@ -930,8 +930,8 @@
                     items: { hammer: 800, shovel: 600, knuckles: 1000 },
                     stamina: { rola: 1800, ore: 180, sand: 150 },
                     blessing: { 49: 18760, 50: 19325, 51: 19905, 52: 20500, 53: 21115, 54: 21750 },
-                    baseCost: { gear: 16400, relic: 30375, skill: 11860, fanto: 56200 },
-                    levelCost: { gear: 166.6667, relic: 3375, skill: 120, fanto: 1150 }
+                    baseCost: { gear: 9190, relic: 14400, skill: 5960, fanto: 26000 },
+                    levelCost: { gear: 92.5, relic: 1600, skill: 60, fanto: 500 }
                 },
                 2: {
                     start: new Date('2026-07-15T13:00:00Z'),
@@ -943,7 +943,7 @@
                     items: { hammer: 1240, shovel: 940, knuckles: 1540 },
                     stamina: { rola: 2800, ore: 280, sand: 230 },
                     blessing: { 67: 95620, 68: 98695, 69: 101655, 70: 104705, 71: 107845, 72: 111080 },
-                    baseCost: { gear: 16400, relic: 30375, skill: 11860, fanto: 56200 },
+                    baseCost: { gear: 16433.3333, relic: 30375, skill: 11900, fanto: 56200 },
                     levelCost: { gear: 166.6667, relic: 3375, skill: 120, fanto: 1150 }
                 },
                 3: {
@@ -955,7 +955,7 @@
                     pts: { char: 100, gear: 14, skill: 5, fanto: 6, relic: 26 },
                     items: { hammer: 2080, shovel: 1580, knuckles: 2600 },
                     stamina: { rola: 4800, ore: 480, sand: 400 },
-                    blessing: { 67: 95620, 68: 98695, 69: 101655, 70: 104705, 71: 107845, 72: 111080 },
+                    blessing: { 73: 343245, 74: 353540, 75: 364145, 76: 375070, 77: 386325, 78: 111080 },
                     baseCost: { gear: 16400, relic: 30375, skill: 11860, fanto: 56200 },
                     levelCost: { gear: 166.6667, relic: 3375, skill: 120, fanto: 1150 }
                 }
@@ -1001,7 +1001,7 @@
                 return t;
             }
             function getOreCost(lv) {
-                return CONFIG.baseCost.gear + Math.floor((lv + 1 - CONFIG.baseLevel) * CONFIG.levelCost.gear);
+                return Math.floor(CONFIG.baseCost.gear + (lv + 1 - CONFIG.baseLevel) * CONFIG.levelCost.gear);
             }
             function getSkillCost(lv) {
                 return CONFIG.baseCost.skill + (lv + 1 - CONFIG.baseLevel) * CONFIG.levelCost.skill;
