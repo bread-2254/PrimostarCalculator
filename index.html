@@ -605,8 +605,7 @@
                             </div>
                             <div class="res-header">
                                 <div>
-                                    Skill Score (Lv <span id="label_skill_lv">0</span>
-                                    )
+                                    Skill Score (Lv <input type="number" id="label_skill_lv" value="0" min="100" max="500" oninput="manualTargets.skill = Number(this.value); calculate();" style="width: 60px; display: inline-block; padding: 2px 4px; font-size: 12px; height: auto;" />)
                                     <div class="adj-container">
                                         <span class="adj-btn" onclick="adj('skill', -1)">-</span>
                                         <span class="adj-btn" onclick="adj('skill', 1)">+</span>
@@ -632,8 +631,7 @@
                             </div>
                             <div class="res-header">
                                 <div>
-                                    Fantomon (Lv <span id="label_fanto_lv">0</span>
-                                    )
+                                    Fantomon Score (Lv <input type="number" id="label_fanto_lv" value="0" min="100" max="500" oninput="manualTargets.fanto = Number(this.value); calculate();" style="width: 60px; display: inline-block; padding: 2px 4px; font-size: 12px; height: auto;" />)
                                     <div class="adj-container">
                                         <span class="adj-btn" onclick="adj('fanto', -1)">-</span>
                                         <span class="adj-btn" onclick="adj('fanto', 1)">+</span>
@@ -655,8 +653,7 @@
                             </div>
                             <div class="res-header">
                                 <div>
-                                    Relic Score (Lv <span id="label_relic_lv">0</span>
-                                    )
+                                    Relic Score (Lv <input type="number" id="label_relic_lv" value="0" min="10" max="50" oninput="manualTargets.relic = Number(this.value); calculate();" style="width: 60px; display: inline-block; padding: 2px 4px; font-size: 12px; height: auto;" />)
                                     <div class="adj-container">
                                         <span class="adj-btn" onclick="adj('relic', -1)">-</span>
                                         <span class="adj-btn" onclick="adj('relic', 1)">+</span>
@@ -686,8 +683,7 @@
                             </div>
                             <div class="res-header">
                                 <div>
-                                    Gear Score (Lv <span id="label_gear_lv">0</span>
-                                    )
+                                    Gear Score (Lv <input type="number" id="label_gear_lv" value="0" min="100" max="300" oninput="manualTargets.gear = Number(this.value); calculate();" style="width: 60px; display: inline-block; padding: 2px 4px; font-size: 12px; height: auto;" />)
                                     <div class="adj-container">
                                         <span class="adj-btn" onclick="adj('gear', -1)">-</span>
                                         <span class="adj-btn" onclick="adj('gear', 1)">+</span>
