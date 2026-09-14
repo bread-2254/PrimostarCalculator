@@ -605,10 +605,12 @@
                             </div>
                             <div class="res-header">
                                 <div>
-                                    Skill Score (Lv <input type="number" id="label_skill_lv" value="0" min="100" max="500" oninput="manualTargets.skill = Number(this.value); calculate();" style="width: 60px; display: inline-block; padding: 2px 4px; font-size: 12px; height: auto;" />)
+                                    Skill Score (Lv <span id="label_skill_lv">0</span>)
                                     <div class="adj-container">
+                                        <span class="adj-btn" onclick="adj('skill', -10)">--</span>
                                         <span class="adj-btn" onclick="adj('skill', -1)">-</span>
                                         <span class="adj-btn" onclick="adj('skill', 1)">+</span>
+                                        <span class="adj-btn" onclick="adj('skill', 10)">++</span>
                                     </div>
                                 </div>
                                 <span id="res_skill_score">0</span>
@@ -631,10 +633,12 @@
                             </div>
                             <div class="res-header">
                                 <div>
-                                    Fantomon Score (Lv <input type="number" id="label_fanto_lv" value="0" min="100" max="500" oninput="manualTargets.fanto = Number(this.value); calculate();" style="width: 60px; display: inline-block; padding: 2px 4px; font-size: 12px; height: auto;" />)
+                                    Fantomon Score (Lv <span id="label_fanto_lv">0</span>)
                                     <div class="adj-container">
+                                        <span class="adj-btn" onclick="adj('fanto', -10)">--</span>
                                         <span class="adj-btn" onclick="adj('fanto', -1)">-</span>
                                         <span class="adj-btn" onclick="adj('fanto', 1)">+</span>
+                                        <span class="adj-btn" onclick="adj('fanto', 10)">++</span>
                                     </div>
                                 </div>
                                 <span id="res_fanto_score">0</span>
@@ -653,10 +657,12 @@
                             </div>
                             <div class="res-header">
                                 <div>
-                                    Relic Score (Lv <input type="number" id="label_relic_lv" value="0" min="10" max="50" oninput="manualTargets.relic = Number(this.value); calculate();" style="width: 60px; display: inline-block; padding: 2px 4px; font-size: 12px; height: auto;" />)
+                                    Relic Score (Lv <span id="label_relic_lv">0</span>)
                                     <div class="adj-container">
+                                        <span class="adj-btn" onclick="adj('relic', -10)">--</span>
                                         <span class="adj-btn" onclick="adj('relic', -1)">-</span>
                                         <span class="adj-btn" onclick="adj('relic', 1)">+</span>
+                                        <span class="adj-btn" onclick="adj('relic', 10)">++</span>
                                     </div>
                                 </div>
                                 <span id="res_relic_score" style="color: white;">0</span>
@@ -683,10 +689,12 @@
                             </div>
                             <div class="res-header">
                                 <div>
-                                    Gear Score (Lv <input type="number" id="label_gear_lv" value="0" min="100" max="300" oninput="manualTargets.gear = Number(this.value); calculate();" style="width: 60px; display: inline-block; padding: 2px 4px; font-size: 12px; height: auto;" />)
+                                    Gear Score (Lv <span id="label_gear_lv">0</span>)
                                     <div class="adj-container">
+                                        <span class="adj-btn" onclick="adj('gear', -10)">--</span>
                                         <span class="adj-btn" onclick="adj('gear', -1)">-</span>
                                         <span class="adj-btn" onclick="adj('gear', 1)">+</span>
+                                        <span class="adj-btn" onclick="adj('gear', 10)">++</span>
                                     </div>
                                 </div>
                                 <span id="res_cur_eq_score">0</span>
