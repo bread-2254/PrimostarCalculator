@@ -934,8 +934,8 @@
                     items: { hammer: 800, shovel: 600, knuckles: 1000 },
                     stamina: { rola: 1800, ore: 180, sand: 150 },
                     blessing: { 49: 18760, 50: 19325, 51: 19905, 52: 20500, 53: 21115, 54: 21750 },
-                    baseCost: { gear: 9190, relic: 14400, skill: 5960, fanto: 26000 },
-                    levelCost: { gear: 92.5, relic: 1600, skill: 60, fanto: 500 }
+                    baseCost: { gear: 9189.5, relic: 14400, skill: 5967, fanto: 25563 },
+                    levelCost: { gear: 92.8, relic: 1600, skill: 60.25, fanto: 521.6 }
                 },
                 2: {
                     start: new Date('2026-07-15T13:00:00Z'),
@@ -947,8 +947,8 @@
                     items: { hammer: 1240, shovel: 940, knuckles: 1540 },
                     stamina: { rola: 2800, ore: 280, sand: 230 },
                     blessing: { 67: 95620, 68: 98695, 69: 101655, 70: 104705, 71: 107845, 72: 111080 },
-                    baseCost: { gear: 16433.3333, relic: 30375, skill: 11900, fanto: 56200 },
-                    levelCost: { gear: 166.6667, relic: 3375, skill: 120, fanto: 1150 }
+                    baseCost: { gear: 16466.5, relic: 30375, skill: 11907, fanto: 56266 },
+                    levelCost: { gear: 166.3, relic: 3375, skill: 120.25, fanto: 1147.4 }
                 },
                 3: {
                     start: new Date('2026-09-20T13:00:00Z'),
@@ -960,8 +960,8 @@
                     items: { hammer: 2080, shovel: 1580, knuckles: 2600 },
                     stamina: { rola: 4800, ore: 480, sand: 400 },
                     blessing: { 85: 489385, 86: 504065, 87: 519185, 88: 534760, 89: 550805, 90: 567330 },
-                    baseCost: { gear: 16400, relic: 30375, skill: 11860, fanto: 56200 },
-                    levelCost: { gear: 166.6667, relic: 3375, skill: 120, fanto: 1150 }
+                    baseCost: { gear: 25740, relic: 51750, skill: 19035.25, fanto: 173778, fanto2: 264210 },
+                    levelCost: { gear: 260, relic: 5750, skill: 192.25, fanto: 3546.4, fanto2: 1773.2 }
                 }
             };
 
@@ -1004,17 +1004,23 @@
                     t += tiers[i];
                 return t;
             }
+            function floor(num, round) {
+                return Math.floor(num / round) * round;
+            }
             function getOreCost(lv) {
-                return Math.floor(CONFIG.baseCost.gear + (lv + 1 - CONFIG.baseLevel) * CONFIG.levelCost.gear);
+                return floor(CONFIG.baseCost.gear + (lv + 1 - CONFIG.baseLevel) * CONFIG.levelCost.gear, 5);
             }
             function getSkillCost(lv) {
-                return CONFIG.baseCost.skill + (lv + 1 - CONFIG.baseLevel) * CONFIG.levelCost.skill;
+                return floor(CONFIG.baseCost.skill + (lv + 1 - CONFIG.baseLevel) * CONFIG.levelCost.skill, 5);
             }
             function getRelicCost(lv) {
                 return CONFIG.baseCost.relic + (lv + 1 - CONFIG.baseLevel / 10) * CONFIG.levelCost.relic;
             }
             function getFantoCost(lv) {
-                return CONFIG.baseCost.fanto + (lv + 1 - CONFIG.baseLevel) * CONFIG.levelCost.fanto;
+                if (season > 3 && lv > 50) {
+                    return floor(CONFIG.baseCost.fanto2 + (lv + 1 - CONFIG.baseLevel) * CONFIG.levelCost.fanto2, 10);
+                }
+                return floor(CONFIG.baseCost.fanto + (lv + 1 - CONFIG.baseLevel) * CONFIG.levelCost.fanto, 10);
             }
             
             function updateBlessingDropdown() {
