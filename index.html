@@ -1048,10 +1048,9 @@
                 document.querySelectorAll('.relic-slot').forEach(input => {
                     input.value = Math.floor(CONFIG.baseLevel / 10);
                 });
-                if (!skipLoad) {
-                    loadData();
+                if (skipLoad || !loadData()) {
+                    resetToProgression();
                 }
-                resetToProgression();
                 calculate();
             }
 
@@ -1418,7 +1417,7 @@
             
             function loadData() {
                 const raw = localStorage.getItem(`season_${season}_save`);
-                if (!raw) return;
+                if (!raw) return false;
                 const d = JSON.parse(raw);
                 if (d._mt) manualTargets = d._mt;
                 Object.keys(d).forEach(k => {
@@ -1437,6 +1436,7 @@
                 if (d._ts) {
                     document.getElementById('last-saved-text').innerText = "Last saved/updated: " + new Date(d._ts).toLocaleString();
                 }
+                return true;
             }
             
             document.querySelectorAll('input, select').forEach(i => i.addEventListener('input', calculate));
